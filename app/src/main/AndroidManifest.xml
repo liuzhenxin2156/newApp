@@ -193,6 +193,7 @@
         <activity android:name=".activity.vip.special_pay_service.enddocking.EndDockingActivity"
             android:theme="@style/BaseAppTheme"/>
 
+        <!-- 精液 -->
         <activity android:name=".activity.live_pig.semen.SemenActivity"
             android:theme="@style/BaseAppTheme"/>
     </application>
