@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:padding="@dimen/view_space_12"
+    android:layout_height="wrap_content"
+
+    android:background="@drawable/shape_border_white"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_marginTop="@dimen/view_space_10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/name_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="宁夏养猪场"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/text_size_14">
+
+        </TextView>
+
+
+        <TextView
+            android:id="@+id/go_num_tv"
+            android:layout_marginTop="@dimen/view_space_4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="本周出栏300头"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/text_size_14">
+
+        </TextView>
+
+        <LinearLayout
+            android:layout_marginTop="@dimen/view_space_4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="价格"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/text_size_14">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/money_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="19.4/斤"
+                android:textColor="@color/colorRed"
+                android:textSize="@dimen/text_size_14">
+
+            </TextView>
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

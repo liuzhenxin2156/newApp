@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="BaseAppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- 如果加了上面的NoActionBar則windowNoTitle默認為true -->
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="colorPrimaryDark">@color/colorWhite</item>
+        <!-- 设置window过度效果 禁用窗口的预览动画 -->
+        <item name="android:windowDisablePreview">false</item>
+        <item name="android:textCursorDrawable">@drawable/shape_common_cursor</item>
+    </style>
+    <style name="MyTheme.SplashTheme" parent="BaseAppTheme.NoActionBar">
+        <!-- Android P 异性屏适配 可以达到全面屏的效果 -->
+        <item name="android:windowLayoutInDisplayCutoutMode">shortEdges</item>
+        <item name="android:windowBackground">@drawable/layer_splash</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+
+    <style name="MyTheme.AdvertisingTheme" parent="BaseAppTheme.NoActionBar">
+        <!-- Android P 异性屏适配 可以达到全面屏的效果 -->
+        <item name="android:windowFullscreen">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+</resources>

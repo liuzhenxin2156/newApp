@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp"
+    android:id="@+id/card_view_all"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:id="@+id/rl"
+        android:layout_marginBottom="@dimen/view_space_8"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:elevation="@dimen/view_space_12"
+            android:id="@+id/iv_record"
+            android:layout_marginTop="@dimen/view_space_12"
+            android:layout_width="@dimen/view_space_32"
+            android:layout_centerHorizontal="true"
+            android:layout_height="@dimen/view_space_32"/>
+        <TextView
+            android:id="@+id/tv_record"
+            android:layout_below="@+id/iv_record"
+            android:layout_width="match_parent"
+            tools:text ="标题"
+            android:layout_marginLeft="@dimen/view_space_6"
+            android:layout_marginRight="@dimen/view_space_6"
+
+
+            android:gravity="center"
+            android:layout_marginTop="@dimen/view_space_4"
+            android:textSize="@dimen/text_size_14"
+            android:singleLine="true"
+            android:textColor="@color/color_6"
+            android:layout_centerHorizontal="true"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+
+
+
+</LinearLayout>

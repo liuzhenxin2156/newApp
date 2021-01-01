@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.newapp">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+
+    <application
+        android:name=".base.MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/app_logo"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/BaseAppTheme">
+        <activity android:name=".activity.main.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".activity.vip.VipServiceActivity"
+            android:theme="@style/BaseAppTheme" />
+        <activity
+            android:name=".activity.financial_services.FinancialServicesActivity"
+            android:theme="@style/BaseAppTheme" />
+        <activity
+            android:name=".activity.financial_services.credit.CreditActivity"
+            android:theme="@style/BaseAppTheme" />
+        <activity
+            android:name=".activity.financial_services.Insurance.InsuranceActivity"
+            android:theme="@style/BaseAppTheme" />
+        <activity
+            android:name=".activity.financial_services.futures.FuturesActivity"
+            android:theme="@style/BaseAppTheme" />
+        <activity
+            android:name=".activity.financial_services.trust.TrustActivity"
+            android:theme="@style/BaseAppTheme"
+            />
+        <activity
+            android:name=".activity.financial_services.fund.FundActivity"
+            android:theme="@style/BaseAppTheme" />
+        <activity android:name=".activity.live_pig.LivePigActivity"
+            android:theme="@style/BaseAppTheme"
+            />
+        <activity android:name=".activity.pork_trade.PorkTradeActivity"
+            android:theme="@style/BaseAppTheme"
+            />
+        <activity android:name=".activity.bulk_trade.BulkTradeActivity"
+            android:theme="@style/BaseAppTheme"
+            />
+        <activity android:name=".activity.means_production.MeansProductionActivity"
+            android:theme="@style/BaseAppTheme"
+            />
+        <activity android:name=".activity.animal_protection_products.AnimalProtectionActivity"
+            android:theme="@style/BaseAppTheme"
+            />
+        <activity android:name=".activity.immunization_service.ImmunizationServiceActivity"
+            android:theme="@style/BaseAppTheme"
+            />
+        <activity android:name=".activity.epidemic.EpidemicActivity"
+            android:theme="@style/BaseAppTheme"
+            />
+        <activity android:name=".activity.quarantine.QuarantineActivity"
+        android:theme="@style/BaseAppTheme"
+        />
+
+        <activity android:name=".activity.breeding_consulting.BreeConsultActivity"
+            android:theme="@style/BaseAppTheme"
+            />
+        <activity android:name=".activity.pig_farm.PigFarmActivity"
+            android:theme="@style/BaseAppTheme"
+            />
+        <activity android:name=".activity.recruitment.RecruitmentActivity"
+            android:theme="@style/BaseAppTheme"
+            />
+        <activity android:name=".activity.cooperation.CooperationActivity"
+            android:theme="@style/BaseAppTheme"
+            />
+        <activity android:name=".activity.land_info.LandInfoActivity"
+            android:theme="@style/BaseAppTheme"
+            />
+        <activity android:name=".activity.transport_capacity.TransportCapacityActivity"
+            android:theme="@style/BaseAppTheme"
+            />
+        <activity android:name=".activity.environmental.EnvironmentalActivity"
+        android:theme="@style/BaseAppTheme"
+        />
+        <activity android:name=".activity.ai.AiActivity"
+            android:theme="@style/BaseAppTheme"
+            />
+        <activity android:name=".activity.software.SoftWareActivity"
+            android:theme="@style/BaseAppTheme"
+            />
+        <activity android:name=".activity.pig_online.PigOnlineActivity"
+            android:theme="@style/BaseAppTheme"
+            />
+        <activity android:name=".activity.video.VideoActivity"
+            android:theme="@style/BaseAppTheme"
+            />
+        <!-- 车辆备案-->
+        <activity android:name=".activity.transport_capacity.vehicle_filing.VehicleFilingActivity"
+            android:theme="@style/BaseAppTheme"/>
+        <!-- 运力发布-->
+        <activity android:name=".activity.transport_capacity.capacity_release.CapacityReleaseActivity"
+            android:theme="@style/BaseAppTheme"/>
+        <!-- 运输需求-->
+        <activity android:name=".activity.transport_capacity.demand.DemandActivity"
+            android:theme="@style/BaseAppTheme"/>
+        <!-- 猪饲料-->
+        <activity android:name=".activity.transport_capacity.want.WantActivity"
+            android:theme="@style/BaseAppTheme"/>
+
+        <!-- 仔猪-->
+        <activity android:name=".activity.live_pig.piglet.PigLetActivity"
+            android:theme="@style/BaseAppTheme"/>
+        <!-- 生猪-->
+        <activity android:name=".activity.live_pig.live.LiveActivity"
+            android:theme="@style/BaseAppTheme"/>
+        <!-- 母猪-->
+        <activity android:name=".activity.live_pig.sows.SowsActivity"
+            android:theme="@style/BaseAppTheme"/>
+        <!-- 种猪-->
+        <activity android:name=".activity.live_pig.breed.BreedActivity"
+            android:theme="@style/BaseAppTheme"/>
+
+        <!-- 会员注册-->
+        <activity android:name=".activity.vip.vip_register.VipRegisterActivity"
+            android:theme="@style/BaseAppTheme"/>
+
+        <!-- 会员特价-->
+        <activity android:name=".activity.vip.toll_vip_service.special_offer.VipSpecialOfferActivity"
+            android:theme="@style/BaseAppTheme"/>
+        <!-- 猪饲料-->
+        <activity android:name=".activity.pig_food.PigFoodActivity"
+            android:theme="@style/BaseAppTheme"/>
+        <!-- 猪肉香 -->
+        <activity android:name=".activity.pork_fragrant.PorkFragrantActivity"
+            android:theme="@style/BaseAppTheme"/>
+        <!-- 猪老土 -->
+        <activity android:name=".activity.old_fashioned.OldFashionedActivity"
+            android:theme="@style/BaseAppTheme"/>
+        <!-- 猪溯源 -->
+        <activity android:name=".activity.traceability.TraceabilityActivity"
+            android:theme="@style/BaseAppTheme"/>
+        <!-- 猪贸易 -->
+        <activity android:name=".activity.pig_trade.PigTradeActivity"
+            android:theme="@style/BaseAppTheme"/>
+
+        <!-- 猪教育 -->
+        <activity android:name=".activity.pig_teach.PigTeachActivity"
+            android:theme="@style/BaseAppTheme"/>
+        <!-- 猪奥运 -->
+        <activity android:name=".activity.pig_olympics.PigOlympicsActivity"
+            android:theme="@style/BaseAppTheme"/>
+
+        <!-- 猪工业 -->
+        <activity android:name=".activity.pig_industry.PigIndustryActivity"
+            android:theme="@style/BaseAppTheme"/>
+
+        <!-- 宠物猪 -->
+        <activity android:name=".activity.pig_pet.PigPetActivity"
+            android:theme="@style/BaseAppTheme"/>
+
+        <!-- 会员积分 -->
+        <activity android:name=".activity.vip.vip_member.VipMemberActivity"
+            android:theme="@style/BaseAppTheme"/>
+        <!-- 会员缴费 -->
+        <activity android:name=".activity.vip.vip_pay.VipPayActivity"
+            android:theme="@style/BaseAppTheme"/>
+        <!-- 申领发票 -->
+        <activity android:name=".activity.vip.apply_invoice.ApplyInvoiceActivity"
+            android:theme="@style/BaseAppTheme"/>
+        <!-- 退费注销 -->
+        <activity android:name=".activity.vip.refund_logout.RefundLogOutActivity"
+            android:theme="@style/BaseAppTheme"/>
+        <!-- 收费会员服务 -->
+        <activity android:name=".activity.vip.toll_vip_service.TollVipServiceActivity"
+            android:theme="@style/BaseAppTheme"/>
+        <!-- 特种收费服务 -->
+        <activity android:name=".activity.vip.special_pay_service.SpecialPayActivity"
+            android:theme="@style/BaseAppTheme"/>
+        <!-- 法律咨询 -->
+        <activity android:name=".activity.vip.toll_vip_service.legal.LegalActivity"
+            android:theme="@style/BaseAppTheme"/>
+        <!-- 法规咨询 -->
+        <activity android:name=".activity.vip.toll_vip_service.statute.StatuteActivity"
+            android:theme="@style/BaseAppTheme"/>
+        <!-- 终端对接 -->
+        <activity android:name=".activity.vip.special_pay_service.enddocking.EndDockingActivity"
+            android:theme="@style/BaseAppTheme"/>
+
+        <activity android:name=".activity.live_pig.semen.SemenActivity"
+            android:theme="@style/BaseAppTheme"/>
+    </application>
+
+</manifest>

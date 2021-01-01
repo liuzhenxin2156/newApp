@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    android:background="#F8F8F8"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:id="@+id/toolbar_ll"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/view_height_40">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:text="猪哥亮"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/text_size_18" />
+    </RelativeLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tab_layout"
+            android:layout_marginRight="@dimen/view_space_10"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            app:tabGravity="fill"
+            app:tabMaxWidth="0dp"
+            app:tabPaddingEnd="0dp"
+            app:tabPaddingStart="0dp"
+            app:tabSelectedTextColor="@color/colorRed"
+            app:tabTextAppearance="@style/MyCustomTabTextAppearance"
+            app:tabIndicatorColor="@color/transparent"
+            app:tabMode="fixed"
+            android:layout_height="@dimen/dp_40">
+        </com.google.android.material.tabs.TabLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_marginRight="@dimen/view_height_12"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/more"
+         >
+        </ImageView>
+
+    </LinearLayout>
+
+    <com.example.newapp.activity.weight.CustomViewPager
+        android:id="@+id/fragment_view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        />
+</LinearLayout>
