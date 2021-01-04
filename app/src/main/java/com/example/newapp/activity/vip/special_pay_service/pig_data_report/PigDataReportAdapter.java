@@ -91,6 +91,7 @@ public class PigDataReportAdapter extends BaseRecyclerViewAdapter<RecordData, Ba
             case 17:
                 imageView.setImageDrawable(mContext.getDrawable(R.drawable.gt1));
                 break;
+            default:
         }
     }
 }
