@@ -225,9 +225,9 @@
 
     <style name="containerView">
         <item name="android:background">@drawable/bg_container</item>
-        <item name="android:layout_marginBottom">@dimen/view_space_10</item>
-        <item name="android:paddingBottom">@dimen/view_space_10</item>
-        <item name="android:paddingTop">@dimen/view_space_10</item>
+        <item name="android:layout_marginBottom">@dimen/view_space_8</item>
+        <item name="android:paddingBottom">@dimen/view_space_8</item>
+        <item name="android:paddingTop">@dimen/view_space_8</item>
         <item name="android:textColor">@color/color_3</item>
     </style>
     <style name="containerView1">

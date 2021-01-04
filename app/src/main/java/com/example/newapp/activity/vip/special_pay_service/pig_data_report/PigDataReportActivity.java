@@ -1,16 +1,27 @@
 package com.example.newapp.activity.vip.special_pay_service.pig_data_report;
 
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
+import android.text.TextUtils;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.PopupWindow;
 import android.widget.RelativeLayout;
+import android.widget.Spinner;
 import android.widget.TextView;
 
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -21,14 +32,20 @@ import com.example.newapp.activity.vip.special_pay_service.enddocking.EndDocking
 import com.example.newapp.base.BaseActivity;
 import com.example.newapp.base.BasePresenter;
 import com.example.newapp.data.RecordData;
+import com.example.newapp.utils.AppConstants;
 import com.example.newapp.utils.AppManager;
+import com.example.newapp.utils.LogUtil;
 import com.example.newapp.utils.PhoneUtil;
+import com.example.newapp.utils.ScreenUtils;
+import com.example.newapp.utils.ToastUtil;
 import com.example.newapp.utils.recyclerview.BaseRecyclerViewAdapter;
 import com.example.newapp.utils.recyclerview.BaseRecyclerViewHolder;
 import com.example.newapp.utils.recyclerview.GridSpacingItemDecoration;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 /**
  * 生猪数据报告
@@ -42,6 +59,29 @@ public class PigDataReportActivity extends BaseActivity implements View.OnClickL
     private ArrayList<RecordData> recordDataList;
     private PopupWindow popupWindow;
     private RelativeLayout toolbar_ll;
+    private Spinner province_spinner;
+    private Spinner city_spinner;
+    private TextView report_spinner;
+    private CardView all_report_ll;
+    private TextView city_tv;
+    private TextView column_volume_tv;
+    private TextView slaughter_tv;
+    private TextView sow_slaughter_tv;
+    private TextView transit_tv;
+    private TextView one_month_stocks_tv;
+    private TextView two_month_stocks_tv;
+    private TextView three_month_stocks_tv;
+    private TextView four_month_stocks_tv;
+    private TextView five_month_stocks_tv;
+    private TextView six_month_stocks_tv;
+    private AlertDialog alertDialog;
+    private LinearLayout report_ll;
+    private String province;
+    private String city;
+    private Button add_btn;
+    private TextView inventory_tv;
+    private List<String> list;
+
 
     /**
      * 启动activity
@@ -60,8 +100,6 @@ public class PigDataReportActivity extends BaseActivity implements View.OnClickL
 
     @Override
     protected void initViews() {
-        addData();
-
         mBackTv = findViewById(R.id.back_tv);
         toolbar_ll = findViewById(R.id.toolbar_ll);
         recyclerView = findViewById(R.id.recyclerview);
@@ -70,42 +108,39 @@ public class PigDataReportActivity extends BaseActivity implements View.OnClickL
         back_level_tv.setOnClickListener(this);
         back_level_tv_one = findViewById(R.id.back_level_tv_one);
         back_level_tv_one.setOnClickListener(this);
-        GridLayoutManager layoutManager = new GridLayoutManager(this, 4);
-        recyclerView.setLayoutManager(layoutManager);
-        pigDataReportAdapter = new PigDataReportAdapter(R.layout.gangtie_item, recordDataList, this);
-        HashMap<String, Integer> stringIntegerHashMap = new HashMap<>();
-        stringIntegerHashMap.put(GridSpacingItemDecoration.TOP_DECORATION, 10);//top间距
-        stringIntegerHashMap.put(GridSpacingItemDecoration.BOTTOM_DECORATION, 10);//底部间距
-        stringIntegerHashMap.put(GridSpacingItemDecoration.LEFT_DECORATION, 10);//左间距
-        stringIntegerHashMap.put(GridSpacingItemDecoration.RIGHT_DECORATION, 10);//右间距
-        recyclerView.addItemDecoration(new GridSpacingItemDecoration(stringIntegerHashMap));
-        recyclerView.setAdapter(pigDataReportAdapter);
-        pigDataReportAdapter.refreshDataList(recordDataList);
-        pigDataReportAdapter.setOnItemClickListener(new BaseRecyclerViewAdapter.OnItemClickListener() {
-            @Override
-            public void onItemClick(View view, BaseRecyclerViewHolder viewHolder, int position) {
-                switch (position) {
-                    case 0://
-                        break;
-                    case 1://
-                        break;
-                    case 2://
-                        break;
-                    default:
+        province_spinner = findViewById(R.id.province_spinner);
+        city_spinner = findViewById(R.id.city_spinner);
+        report_spinner = findViewById(R.id.report_spinner);
+        setProvince();
+        setCity();
+        report_spinner.setOnClickListener(this);
+        all_report_ll = findViewById(R.id.all_report_ll);
 
-                }
-            }
+        city_tv = findViewById(R.id.city_tv);
+        column_volume_tv = findViewById(R.id.column_volume_tv);
+        slaughter_tv = findViewById(R.id.slaughter_tv);
+        sow_slaughter_tv = findViewById(R.id.sow_slaughter_tv);
+        transit_tv = findViewById(R.id.transit_tv);
+        one_month_stocks_tv = findViewById(R.id.one_month_stocks_tv);
+        two_month_stocks_tv = findViewById(R.id.two_month_stocks_tv);
+        three_month_stocks_tv = findViewById(R.id.three_month_stocks_tv);
+        four_month_stocks_tv = findViewById(R.id.four_month_stocks_tv);
+        five_month_stocks_tv = findViewById(R.id.four_month_stocks_tv);
+        six_month_stocks_tv = findViewById(R.id.six_month_stocks_tv);
+        report_ll = findViewById(R.id.report_ll);
+        report_ll.setOnClickListener(this);
+        add_btn = findViewById(R.id.add_btn);
+        add_btn.setOnClickListener(this);
+        inventory_tv = findViewById(R.id.inventory_tv);
 
-            @Override
-            public boolean onItemLongClick(View view, BaseRecyclerViewHolder viewHolder, int position) {
-                return false;
-            }
-        });
+
+
     }
 
     @Override
     protected void initDatas() {
-
+        list = new ArrayList<>();
+        list.clear();
     }
 
     @Override
@@ -127,10 +162,191 @@ public class PigDataReportActivity extends BaseActivity implements View.OnClickL
             case R.id.back_level_tv_one://上级
                 finish();
                 break;
+            case R.id.report_spinner:
+                setReport();
+                break;
+            case R.id.add_btn:
+                all_report_ll.setVisibility(View.VISIBLE);
+                setShow();
+                if (!TextUtils.isEmpty(province) && !TextUtils.isEmpty(city)) {
+                    city_tv.setText("您选择得城市:" + province +"->" +  city);
+                } else if (!TextUtils.isEmpty(province) && TextUtils.isEmpty(city)) {
+                    city_tv.setText("您选择得城市:" + province);
+                }
+                break;
             default:
         }
     }
 
+    private void setProvince() {
+
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
+                R.layout.spinner_textview, AppConstants.TYPE.stringsAnimal);
+        adapter.setDropDownViewResource(R.layout.spinner_checkedtextview);
+        province_spinner.setAdapter(adapter);
+        province_spinner.setPrompt("请选择省/市");
+        province_spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+
+            @Override
+            public void onItemSelected(AdapterView<?> arg0, View arg1,
+                                       int arg2, long arg3) {
+                province = AppConstants.TYPE.stringsAnimal[arg2];
+                Log.d("lzx----》",province + "province");
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> arg0) {
+
+            }
+        });
+    }
+
+    private void setCity() {
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
+                R.layout.spinner_textview, AppConstants.TYPE.city);
+        adapter.setDropDownViewResource(R.layout.spinner_checkedtextview);
+        city_spinner.setAdapter(adapter);
+        city_spinner.setPrompt("请选择市");
+        city_spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+
+            @Override
+            public void onItemSelected(AdapterView<?> arg0, View arg1,
+                                       int arg2, long arg3) {
+                city = AppConstants.TYPE.city[arg2];
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> arg0) {
+
+            }
+        });
+    }
+
+    boolean[] isCheck = new boolean[AppConstants.TYPE.Report.length];
+    Map<Integer, String> map = new HashMap<>();
+
+    private void setReport() {
+        AlertDialog.Builder alertBuilder = new AlertDialog.Builder(this);
+        alertBuilder.setTitle("选择数据报告类型（多选）");
+        /**
+         *第一个参数:弹出框的消息集合，一般为字符串集合
+         * 第二个参数：默认被选中的，布尔类数组
+         * 第三个参数：勾选事件监听
+         */
+        alertBuilder.setMultiChoiceItems(AppConstants.TYPE.Report, isCheck, new DialogInterface.OnMultiChoiceClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i, boolean isChecked) {
+                if (isChecked) {
+                    map.put(i, AppConstants.TYPE.Report[i].toString());
+                    isCheck[i] = true;
+                } else {
+                    map.remove(i);
+                    isCheck[i] = false;
+                }
+            }
+        });
+        alertBuilder.setPositiveButton("确定", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                String content = "";
+                if (!map.isEmpty()) {
+                    for (Map.Entry<Integer, String> entry : map.entrySet()) {
+                        content += entry.getValue() + ",";
+                        list.clear();
+                        list.add(entry.getValue().toString());
+
+                        Log.d("lzx-----》", "entry.getValue()" + entry.getValue().toString());
+                        if (!TextUtils.isEmpty(content)) {
+                            String substring = content.substring(0, content.length() - 1);
+                            report_spinner.setText(substring + "");
+                        }
+                    }
+                } else {
+                    report_spinner.setText("");
+                }
+                alertDialog.dismiss();
+            }
+        });
+        alertBuilder.setNegativeButton("取消", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                if (map.isEmpty()) {
+
+                }
+                alertDialog.dismiss();
+            }
+        });
+        alertDialog = alertBuilder.create();
+        alertDialog.getWindow().setBackgroundDrawableResource(android.R.color.transparent);
+        alertDialog.getWindow().setBackgroundDrawable(getResources().getDrawable(R.drawable.shape_border_white));
+        alertDialog.show();
+        WindowManager.LayoutParams params = alertDialog.getWindow().getAttributes();
+        params.width = (int) (ScreenUtils.getScreenWidth(this) * 0.85);
+        alertDialog.getWindow().setAttributes(params);
+    }
+
+    private void setShow() {
+        if (report_spinner.getText().toString().contains("存栏数")){
+            inventory_tv.setVisibility(View.VISIBLE);
+        }else {
+            inventory_tv.setVisibility(View.GONE);
+        }
+
+        if (report_spinner.getText().toString().contains("出栏数")){
+            column_volume_tv.setVisibility(View.VISIBLE);
+        }else {
+            column_volume_tv.setVisibility(View.GONE);
+        }
+   if (report_spinner.getText().toString().contains("屠宰量")){
+       slaughter_tv.setVisibility(View.VISIBLE);
+        }else {
+       slaughter_tv.setVisibility(View.GONE);
+        }
+        if (report_spinner.getText().toString().contains("母猪存栏量")){
+            sow_slaughter_tv.setVisibility(View.VISIBLE);
+        }else {
+            sow_slaughter_tv.setVisibility(View.GONE);
+        }
+
+        if (report_spinner.getText().toString().contains("在途运输数量")){
+            transit_tv.setVisibility(View.VISIBLE);
+        }else {
+            transit_tv.setVisibility(View.GONE);
+        }
+
+        if (report_spinner.getText().toString().contains("一月龄存栏数")){
+            one_month_stocks_tv.setVisibility(View.VISIBLE);
+        }else {
+            one_month_stocks_tv.setVisibility(View.GONE);
+        }
+        if (report_spinner.getText().toString().contains("二月龄存栏数")){
+            two_month_stocks_tv.setVisibility(View.VISIBLE);
+        }else {
+            two_month_stocks_tv.setVisibility(View.GONE);
+        }
+
+        if (report_spinner.getText().toString().contains("三月龄存栏数")){
+            three_month_stocks_tv.setVisibility(View.VISIBLE);
+        }else {
+            three_month_stocks_tv.setVisibility(View.GONE);
+        }
+        if (report_spinner.getText().toString().contains("四月龄存栏数")){
+            four_month_stocks_tv.setVisibility(View.VISIBLE);
+        }else {
+            four_month_stocks_tv.setVisibility(View.GONE);
+        }
+        if (report_spinner.getText().toString().contains("五月龄存栏数")){
+            five_month_stocks_tv.setVisibility(View.VISIBLE);
+        }else {
+            five_month_stocks_tv.setVisibility(View.GONE);
+        }
+        if (report_spinner.getText().toString().contains("六月龄存栏数")){
+            six_month_stocks_tv.setVisibility(View.VISIBLE);
+        }else {
+            six_month_stocks_tv.setVisibility(View.GONE);
+        }
+
+    }
     /**
      *地区选择
      * 存栏数
@@ -145,16 +361,7 @@ public class PigDataReportActivity extends BaseActivity implements View.OnClickL
      * 五月
      * 六月
      */
-    private void addData() {
-        recordDataList = new ArrayList<>();
-        String[] strings = {"地区选择", "存栏数", "出栏数","屠宰量", "母猪存栏量", "在途运输数量","一月龄存栏数","二月龄存栏数","三月龄存栏数"
-        ,"四月龄存栏数","五月龄存栏数","六月龄存栏数"};
-        for (String string : strings) {
-            RecordData recordData = new RecordData(-1, null);
-            recordData.setTitle(string);
-            recordDataList.add(recordData);
-        }
-    }
+
 
     /**
      * 弹出popWindow
