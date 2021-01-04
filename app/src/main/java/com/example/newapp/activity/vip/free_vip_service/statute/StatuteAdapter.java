@@ -1,4 +1,4 @@
-package com.example.newapp.activity.vip.toll_vip_service.statute;
+package com.example.newapp.activity.vip.free_vip_service.statute;
 
 import android.content.Context;
 import android.os.Build;

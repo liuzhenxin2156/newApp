@@ -80,11 +80,11 @@ public class HomePigFragment extends BaseFragment {
     }
 
     /**
-     * 生猪代养、生猪销售、生猪采购、生猪饲料、生猪免疫、生猪运输、生猪保险、生猪检疫、生猪屠宰、生猪动保、养殖贷款、保险贷款
+     * 生猪代养、生猪销售、生猪采购、生生猪饲喂、生猪免疫、生猪运输、生猪保险、生猪检疫、生猪屠宰、生猪动保、养殖贷款、保险贷款
      */
     private void addData(){
         recordDataList = new ArrayList<>();
-        String [] strings = {"生猪代养","生猪销售","生猪采购","生猪饲料","生猪免疫","生猪运输","生猪保险","生猪检疫","生猪屠宰","生猪动保","养殖贷款","保险贷款"};
+        String [] strings = {"生猪代养","生猪销售","生猪采购","生生猪饲喂","生猪免疫","生猪运输","生猪保险","生猪检疫","生猪屠宰","生猪动保","养殖贷款","保险贷款"};
         for (String string : strings) {
             RecordData recordData = new RecordData(-1,null);
             recordData.setTitle(string);

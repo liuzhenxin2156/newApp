@@ -10,10 +10,9 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.newapp.R;
 import com.example.newapp.activity.vip.VipServiceActivity;
-import com.example.newapp.activity.vip.apply_invoice.ApplyInvoiceAdapter;
-import com.example.newapp.activity.vip.toll_vip_service.legal.LegalActivity;
+import com.example.newapp.activity.vip.free_vip_service.legal.LegalActivity;
 import com.example.newapp.activity.vip.toll_vip_service.special_offer.VipSpecialOfferActivity;
-import com.example.newapp.activity.vip.toll_vip_service.statute.StatuteActivity;
+import com.example.newapp.activity.vip.free_vip_service.statute.StatuteActivity;
 import com.example.newapp.base.BaseActivity;
 import com.example.newapp.base.BasePresenter;
 import com.example.newapp.data.RecordData;
@@ -82,17 +81,12 @@ public class TollVipServiceActivity extends BaseActivity implements View.OnClick
                     case 3://
                         break;
                     case 4://
+                        //会员特价
+                        VipSpecialOfferActivity.start(TollVipServiceActivity.this);
                         break;
                     case 5://
                         break;
-                    case 6://法规咨询
-                        StatuteActivity.start(TollVipServiceActivity.this);
-                        break;
-                    case 7://法律咨询
-                        LegalActivity.start(TollVipServiceActivity.this);
-                        break;
-                    case 8://会员特价
-                        VipSpecialOfferActivity.start(TollVipServiceActivity.this);
+                    case 6:
                         break;
                     default:
 
@@ -144,7 +138,7 @@ public class TollVipServiceActivity extends BaseActivity implements View.OnClick
      */
     private void addData(){
         recordDataList = new ArrayList<>();
-        String [] strings = {"期货资讯","信贷咨询","保险咨询","现货资讯","防疫咨询","养殖咨询","法规咨询","法律咨询","会员特价"};
+        String [] strings = {"期货资讯","现货资讯","防疫咨询","养殖咨询","会员特价"};
         for (String string : strings) {
             RecordData recordData = new RecordData(-1,null);
             recordData.setTitle(string);

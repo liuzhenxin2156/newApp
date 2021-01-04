@@ -12,6 +12,7 @@ import com.example.newapp.R;
 import com.example.newapp.activity.vip.VipServiceActivity;
 import com.example.newapp.activity.vip.apply_invoice.ApplyInvoiceAdapter;
 import com.example.newapp.activity.vip.special_pay_service.enddocking.EndDockingActivity;
+import com.example.newapp.activity.vip.special_pay_service.pig_data_report.PigDataReportActivity;
 import com.example.newapp.base.BaseActivity;
 import com.example.newapp.base.BasePresenter;
 import com.example.newapp.data.RecordData;
@@ -84,6 +85,15 @@ public class SpecialPayActivity extends BaseActivity implements View.OnClickList
                         break;
                     case 5://
                         break;
+                    case 6://
+                        break;
+                    case 7:
+                        break;
+                    case 8:
+                        break;
+                    case 9://生猪数据报告
+                        PigDataReportActivity.start(SpecialPayActivity.this);
+                        break;
                     default:
 
                 }
@@ -131,7 +141,7 @@ public class SpecialPayActivity extends BaseActivity implements View.OnClickList
      */
     private void addData(){
         recordDataList = new ArrayList<>();
-        String [] strings = {"猪场建设咨询","土地信息提供","养猪大赛","品牌打造","终端对接","市场宣传"};
+        String [] strings = {"猪场建设咨询","土地信息提供","养猪大赛","品牌打造","终端对接","市场宣传","套期保值","期货基差","期货期权","生猪数据报告"};
         for (String string : strings) {
             RecordData recordData = new RecordData(-1,null);
             recordData.setTitle(string);

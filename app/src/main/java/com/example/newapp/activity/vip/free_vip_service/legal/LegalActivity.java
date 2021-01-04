@@ -1,4 +1,4 @@
-package com.example.newapp.activity.vip.toll_vip_service.statute;
+package com.example.newapp.activity.vip.free_vip_service.legal;
 
 import android.content.Context;
 import android.content.Intent;
@@ -14,18 +14,14 @@ import android.widget.TextView;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.azhon.appupdate.utils.ScreenUtil;
 import com.example.newapp.R;
 import com.example.newapp.activity.vip.VipServiceActivity;
 import com.example.newapp.activity.vip.toll_vip_service.TollVipServiceActivity;
-import com.example.newapp.activity.vip.toll_vip_service.legal.LegalAdapter;
-import com.example.newapp.activity.vip.toll_vip_service.special_offer.VipSpecialOfferActivity;
 import com.example.newapp.base.BaseActivity;
 import com.example.newapp.base.BasePresenter;
 import com.example.newapp.data.RecordData;
 import com.example.newapp.utils.AppManager;
 import com.example.newapp.utils.PhoneUtil;
-import com.example.newapp.utils.ScreenUtils;
 import com.example.newapp.utils.recyclerview.BaseRecyclerViewAdapter;
 import com.example.newapp.utils.recyclerview.BaseRecyclerViewHolder;
 import com.example.newapp.utils.recyclerview.GridSpacingItemDecoration;
@@ -33,19 +29,17 @@ import com.example.newapp.utils.recyclerview.GridSpacingItemDecoration;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-import rx.functions.Action1;
-
 /**
- * 法规咨询
+ * 法律咨询
  */
-public class StatuteActivity extends BaseActivity implements View.OnClickListener {
+public class LegalActivity extends BaseActivity implements View.OnClickListener {
     private TextView mBackTv;
     private RecyclerView recyclerView;
     private TextView back_level_tv;
     private TextView  back_level_tv_one;
-    private StatuteAdapter statuteAdapter;
+    private LegalAdapter legalAdapter;
     private ArrayList<RecordData> recordDataList;
-    private PopupWindow popupWindow;
+    private PopupWindow  popupWindow;
     private RelativeLayout  toolbar_ll;
 
     /**
@@ -54,13 +48,13 @@ public class StatuteActivity extends BaseActivity implements View.OnClickListene
      * @param context
      */
     public static void start(Context context) {
-        Intent intent = new Intent(context, StatuteActivity.class);
+        Intent intent = new Intent(context, LegalActivity.class);
         context.startActivity(intent);
     }
 
     @Override
     protected int getContentViewId() {
-        return R.layout.activity_statute;
+        return R.layout.activity_legal;
     }
 
     @Override
@@ -76,16 +70,16 @@ public class StatuteActivity extends BaseActivity implements View.OnClickListene
         back_level_tv_one.setOnClickListener(this);
         GridLayoutManager layoutManager = new GridLayoutManager(this,4);
         recyclerView.setLayoutManager(layoutManager);
-        statuteAdapter = new StatuteAdapter(R.layout.gangtie_item, recordDataList,this);
+        legalAdapter = new LegalAdapter(R.layout.gangtie_item, recordDataList,this);
         HashMap<String, Integer> stringIntegerHashMap = new HashMap<>();
         stringIntegerHashMap.put(GridSpacingItemDecoration.TOP_DECORATION,10);//top间距
         stringIntegerHashMap.put(GridSpacingItemDecoration.BOTTOM_DECORATION,10);//底部间距
         stringIntegerHashMap.put(GridSpacingItemDecoration.LEFT_DECORATION,10);//左间距
         stringIntegerHashMap.put(GridSpacingItemDecoration.RIGHT_DECORATION,10);//右间距
         recyclerView.addItemDecoration(new GridSpacingItemDecoration(stringIntegerHashMap));
-        recyclerView.setAdapter(statuteAdapter);
-        statuteAdapter.refreshDataList(recordDataList);
-        statuteAdapter.setOnItemClickListener(new BaseRecyclerViewAdapter.OnItemClickListener() {
+        recyclerView.setAdapter(legalAdapter);
+        legalAdapter.refreshDataList(recordDataList);
+        legalAdapter.setOnItemClickListener(new BaseRecyclerViewAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(View view, BaseRecyclerViewHolder viewHolder, int position) {
                 switch (position){
@@ -121,33 +115,32 @@ public class StatuteActivity extends BaseActivity implements View.OnClickListene
     public void onClick(View v) {
         super.onClick(v);
         switch (v.getId()){
-            case R.id.back_level_tv://猪会员
+            case R.id.back_level_tv://会员服务
                 finish();
                 AppManager.getInstance().finishActivity(TollVipServiceActivity.class);
                 break;
             case R.id.back_tv://主页
-//                finish();
-//                AppManager.getInstance().finishActivity(TollVipServiceActivity.class);
-//                AppManager.getInstance().finishActivity(VipServiceActivity.class);
-                showMorePopWindow();
+                 showMorePopWindow();
                 break;
             case R.id.back_level_tv_one://上级
-
+                finish();
                 break;
             default:
         }
     }
 
+    /**
+     * 咨询、顾问（律师提供）
+     */
     private void addData(){
         recordDataList = new ArrayList<>();
-        String [] strings = {"农业执法机构提供"};
+        String [] strings = {"咨询","顾问（律师提供）"};
         for (String string : strings) {
             RecordData recordData = new RecordData(-1,null);
             recordData.setTitle(string);
             recordDataList.add(recordData);
         }
     }
-
     /**
      * 弹出popWindow
      */
@@ -174,7 +167,7 @@ public class StatuteActivity extends BaseActivity implements View.OnClickListene
         popupWindow.setOnDismissListener(new PopupWindow.OnDismissListener() {
             @Override
             public void onDismiss() {
-                PhoneUtil.setBackgroundAlpha(StatuteActivity.this, 1.0f);
+                PhoneUtil.setBackgroundAlpha(LegalActivity.this, 1.0f);
             }
         });
 

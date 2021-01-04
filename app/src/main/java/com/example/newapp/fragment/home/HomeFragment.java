@@ -122,91 +122,91 @@ public class HomeFragment extends BaseFragment implements OnBannerListener {
                     case 0://著会员
                         VipServiceActivity.start(getActivity());
                         break;
-                    case 1://猪金融
+                    case 1://金融服务
                         FinancialServicesActivity.start(getActivity());
                         break;
-                    case 2://猪交易
+                    case 2://活体交易
                         LivePigActivity.start(getActivity());
                         break;
-                    case 3://肉交易
+                    case 3://产品交易
                         PorkTradeActivity.start(getActivity());
                         break;
-                    case 4://猪饲料
+                    case 4://生猪饲喂
                         PigFoodActivity.start(getActivity());
                         break;
-                    case 5://大买卖
+                    case 5://大宗贸易
                         BulkTradeActivity.start(getActivity());
                         break;
                     case 6://著工具
                         MeansProductionActivity.start(getActivity());
                         break;
-                    case 7://猪保健
+                    case 7://动保产品
                         AnimalProtectionActivity.start(getActivity());
                         break;
-                    case 8://猪免疫
+                    case 8://免疫服务
                         ImmunizationServiceActivity.start(getActivity());
                         break;
-                    case 9://猪防疫
+                    case 9://防疫消毒
                         EpidemicActivity.start(getActivity());
                         break;
-                    case 10://猪检疫
+                    case 10://检疫申报
                         QuarantineActivity.start(getActivity());
                         break;
                     case 11://著咨询
                         BreeConsultActivity.start(getActivity());
                         break;
-                    case 12://猪建设
+                    case 12://猪场建设
                         PigFarmActivity.start(getActivity());
                         break;
-                    case 13://猪员工
+                    case 13://人员招聘
                         RecruitmentActivity.start(getActivity());
                         break;
-                    case 14://猪合作
+                    case 14://合作招募
                         CooperationActivity.start(getActivity());
                         break;
-                    case 15://猪用地
+                    case 15://土地信息
                         LandInfoActivity.start(getActivity());
                         break;
-                    case 16://猪运输
+                    case 16://运输运力
                         TransportCapacityActivity.start(getActivity());
                         break;
-                    case 17://猪环保
+                    case 17://环保测评
                         EnvironmentalActivity.start(getActivity());
                         break;
-                    case 18://猪智能
+                    case 18://人工智能
                         AiActivity.start(getActivity());
                         break;
-                    case 19://猪软件
+                    case 19://软件定制
                         SoftWareActivity.start(getActivity());
                         break;
-                    case 20://猪视频
+                    case 20://视频监管
                         VideoActivity.start(getActivity());
                         break;
-                    case 21://猪上网
+                    case 21://互联互通
                         PigOnlineActivity.start(getActivity());
                         break;
-                    case 22://猪肉香
+                    case 22://逢年过节
                         PorkFragrantActivity.start(getActivity());
                         break;
-                    case 23://猪老土
+                    case 23://特别品种
                         OldFashionedActivity.start(getActivity());
                         break;
-                    case 24://猪溯源
+                    case 24://溯源中国
                         TraceabilityActivity.start(getActivity());
                         break;
-                    case 25://猪贸易
+                    case 25://国际贸易
                         PigTradeActivity.start(getActivity());
                         break;
-                    case 26://猪教育
+                    case 26://教育培训
                         PigTeachActivity.start(getActivity());
                         break;
-                    case 27://猪奥运
+                    case 27://养猪大赛
                         PigOlympicsActivity.start(getActivity());
                         break;
-                    case 28://猪工业
+                    case 28://供销总社
                         PigIndustryActivity.start(getActivity());
                         break;
-                    case 29://宠物猪
+                    case 29://特别嗜好
                         PigPetActivity.start(getActivity());
                         break;
                     default:

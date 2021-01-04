@@ -80,11 +80,11 @@ public class HomePigSowFragment extends BaseFragment {
     }
 
     /**
-     * 母猪购置、母猪出售、母猪监测、母猪免疫、母猪检疫、母猪运输、母猪屠宰、母猪饲料、母猪保险、母猪贷款、母猪配种、母猪消杀
+     * 母猪购置、母猪出售、母猪监测、母猪免疫、母猪检疫、母猪运输、母猪屠宰、母生猪饲喂、母猪保险、母猪贷款、母猪配种、母猪消杀
      */
     private void addData(){
         recordDataList = new ArrayList<>();
-        String [] strings = {"母猪购置","母猪出售","母猪监测","母猪免疫","母猪检疫","母猪运输","母猪屠宰","母猪饲料","母猪保险","母猪贷款","母猪配种","母猪消杀"};
+        String [] strings = {"母猪购置","母猪出售","母猪监测","母猪免疫","母猪检疫","母猪运输","母猪屠宰","母生猪饲喂","母猪保险","母猪贷款","母猪配种","母猪消杀"};
         for (String string : strings) {
             RecordData recordData = new RecordData(-1,null);
             recordData.setTitle(string);

@@ -79,11 +79,11 @@ public class HomePigLetFragment extends BaseFragment {
     }
 
     /**
-     * 仔猪销售、仔猪购买、仔猪贷款、仔猪饲料、教槽料、仔猪免疫、仔猪检疫、仔猪阉割、仔猪保暖、仔猪降温、仔猪饲养、仔猪消杀、仔猪戴标、仔猪保育
+     * 仔猪销售、仔猪购买、仔猪贷款、仔生猪饲喂、教槽料、仔猪免疫、仔猪检疫、仔猪阉割、仔猪保暖、仔猪降温、仔猪饲养、仔猪消杀、仔猪戴标、仔猪保育
      */
     private void addData(){
         recordDataList = new ArrayList<>();
-        String [] strings = {"仔猪销售","仔猪购买","仔猪贷款","仔猪饲料","教槽料","仔猪免疫","仔猪检疫","仔猪阉割","仔猪保暖","仔猪降温","仔猪饲养","仔猪消杀","仔猪戴标","仔猪保育"};
+        String [] strings = {"仔猪销售","仔猪购买","仔猪贷款","仔生猪饲喂","教槽料","仔猪免疫","仔猪检疫","仔猪阉割","仔猪保暖","仔猪降温","仔猪饲养","仔猪消杀","仔猪戴标","仔猪保育"};
         for (String string : strings) {
             RecordData recordData = new RecordData(-1,null);
             recordData.setTitle(string);

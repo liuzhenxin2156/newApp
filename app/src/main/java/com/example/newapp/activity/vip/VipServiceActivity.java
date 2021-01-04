@@ -10,6 +10,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.newapp.R;
 import com.example.newapp.activity.vip.apply_invoice.ApplyInvoiceActivity;
+import com.example.newapp.activity.vip.free_vip_service.FreeVipServiceActivity;
+import com.example.newapp.activity.vip.free_vip_service.FreeVipServiceAdapter;
 import com.example.newapp.activity.vip.refund_logout.RefundLogOutActivity;
 import com.example.newapp.activity.vip.special_pay_service.SpecialPayActivity;
 import com.example.newapp.activity.vip.toll_vip_service.TollVipServiceActivity;
@@ -84,15 +86,16 @@ public class VipServiceActivity extends BaseActivity implements View.OnClickList
                     case 4://退费注销
                         RefundLogOutActivity.start(VipServiceActivity.this);
                         break;
-                    case 5://收费会员服务
+                    case 5://收费服务
                         TollVipServiceActivity.start(VipServiceActivity.this);
                         break;
-                    case 6://特种收费服务
+                    case 6://免费服务
+                        FreeVipServiceActivity.start(VipServiceActivity.this);
+                        break;
+                    case 7://特种收费服务
                         SpecialPayActivity.start(VipServiceActivity.this);
                         break;
-                    case 7:
-                        break;
-                    case 8://会员特价
+                    case 8:
                         break;
                     case 9:
 
@@ -155,7 +158,7 @@ public class VipServiceActivity extends BaseActivity implements View.OnClickList
 
     private void addData(){
         recordDataList = new ArrayList<>();
-        String [] strings = {"会员注册"," 会员积分"," 会员缴费","申领发票","退费注销","收费会员服务","特种收费服务"};
+        String [] strings = {"会员注册"," 会员积分"," 会员缴费","申领发票","退费注销","收费服务","免费服务","特别服务"};
         for (String string : strings) {
             RecordData recordData = new RecordData(-1,null);
             recordData.setTitle(string);

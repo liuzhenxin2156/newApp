@@ -17,9 +17,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.newapp.R;
 import com.example.newapp.activity.vip.VipServiceActivity;
 import com.example.newapp.activity.vip.special_pay_service.SpecialPayActivity;
-import com.example.newapp.activity.vip.toll_vip_service.TollVipServiceActivity;
-import com.example.newapp.activity.vip.toll_vip_service.legal.LegalAdapter;
-import com.example.newapp.activity.vip.toll_vip_service.statute.StatuteActivity;
 import com.example.newapp.base.BaseActivity;
 import com.example.newapp.base.BasePresenter;
 import com.example.newapp.data.RecordData;
@@ -119,7 +116,7 @@ public class EndDockingActivity extends BaseActivity implements View.OnClickList
     public void onClick(View v) {
         super.onClick(v);
         switch (v.getId()) {
-            case R.id.back_level_tv://猪会员
+            case R.id.back_level_tv://会员服务
                 finish();
                 AppManager.getInstance().finishActivity(SpecialPayActivity.class);
                 break;
@@ -157,7 +154,7 @@ public class EndDockingActivity extends BaseActivity implements View.OnClickList
         TextView main_tv = (TextView) popView.findViewById(R.id.main_tv);
         TextView return_tv = (TextView) popView.findViewById(R.id.return_tv);
         TextView return_one_tv = (TextView) popView.findViewById(R.id.return_one_tv);
-        return_one_tv.setText("特种收费服务");
+        return_one_tv.setText("特别服务");
         popupWindow = new PopupWindow(popView, PhoneUtil.dip2px(134), ViewGroup.LayoutParams.WRAP_CONTENT, true);
         popupWindow.setTouchable(true);// 设置弹出窗体可触摸
         popupWindow.setOutsideTouchable(true); // 设置点击弹出框之外的区域后，弹出框消失

@@ -39,7 +39,7 @@ public class CooperationActivity extends BaseActivity implements View.OnClickLis
 
     @Override
     protected int getContentViewId() {
-        return R.layout.activity_immunization_service;
+        return R.layout.activity_cooperation;
     }
 
     @Override

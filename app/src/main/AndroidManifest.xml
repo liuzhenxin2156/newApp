@@ -110,7 +110,7 @@
         <!-- 运输需求-->
         <activity android:name=".activity.transport_capacity.demand.DemandActivity"
             android:theme="@style/BaseAppTheme"/>
-        <!-- 猪饲料-->
+        <!-- 生猪饲喂-->
         <activity android:name=".activity.transport_capacity.want.WantActivity"
             android:theme="@style/BaseAppTheme"/>
 
@@ -134,34 +134,34 @@
         <!-- 会员特价-->
         <activity android:name=".activity.vip.toll_vip_service.special_offer.VipSpecialOfferActivity"
             android:theme="@style/BaseAppTheme"/>
-        <!-- 猪饲料-->
+        <!-- 生猪饲喂-->
         <activity android:name=".activity.pig_food.PigFoodActivity"
             android:theme="@style/BaseAppTheme"/>
-        <!-- 猪肉香 -->
+        <!-- 逢年过节 -->
         <activity android:name=".activity.pork_fragrant.PorkFragrantActivity"
             android:theme="@style/BaseAppTheme"/>
-        <!-- 猪老土 -->
+        <!-- 特别品种 -->
         <activity android:name=".activity.old_fashioned.OldFashionedActivity"
             android:theme="@style/BaseAppTheme"/>
-        <!-- 猪溯源 -->
+        <!-- 溯源中国 -->
         <activity android:name=".activity.traceability.TraceabilityActivity"
             android:theme="@style/BaseAppTheme"/>
-        <!-- 猪贸易 -->
+        <!-- 国际贸易 -->
         <activity android:name=".activity.pig_trade.PigTradeActivity"
             android:theme="@style/BaseAppTheme"/>
 
-        <!-- 猪教育 -->
+        <!-- 教育培训 -->
         <activity android:name=".activity.pig_teach.PigTeachActivity"
             android:theme="@style/BaseAppTheme"/>
-        <!-- 猪奥运 -->
+        <!-- 养猪大赛 -->
         <activity android:name=".activity.pig_olympics.PigOlympicsActivity"
             android:theme="@style/BaseAppTheme"/>
 
-        <!-- 猪工业 -->
+        <!-- 供销总社 -->
         <activity android:name=".activity.pig_industry.PigIndustryActivity"
             android:theme="@style/BaseAppTheme"/>
 
-        <!-- 宠物猪 -->
+        <!-- 特别嗜好 -->
         <activity android:name=".activity.pig_pet.PigPetActivity"
             android:theme="@style/BaseAppTheme"/>
 
@@ -184,17 +184,22 @@
         <activity android:name=".activity.vip.special_pay_service.SpecialPayActivity"
             android:theme="@style/BaseAppTheme"/>
         <!-- 法律咨询 -->
-        <activity android:name=".activity.vip.toll_vip_service.legal.LegalActivity"
+        <activity android:name=".activity.vip.free_vip_service.legal.LegalActivity"
             android:theme="@style/BaseAppTheme"/>
         <!-- 法规咨询 -->
-        <activity android:name=".activity.vip.toll_vip_service.statute.StatuteActivity"
+        <activity android:name=".activity.vip.free_vip_service.statute.StatuteActivity"
             android:theme="@style/BaseAppTheme"/>
         <!-- 终端对接 -->
         <activity android:name=".activity.vip.special_pay_service.enddocking.EndDockingActivity"
             android:theme="@style/BaseAppTheme"/>
-
         <!-- 精液 -->
         <activity android:name=".activity.live_pig.semen.SemenActivity"
+            android:theme="@style/BaseAppTheme"/>
+        <!-- 免费服务 -->
+        <activity android:name=".activity.vip.free_vip_service.FreeVipServiceActivity"
+            android:theme="@style/BaseAppTheme"/>
+        <!-- 生猪数据报告 -->
+        <activity android:name=".activity.vip.special_pay_service.pig_data_report.PigDataReportActivity"
             android:theme="@style/BaseAppTheme"/>
     </application>
 

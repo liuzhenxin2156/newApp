@@ -17,7 +17,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.newapp.R;
 import com.example.newapp.activity.vip.VipServiceActivity;
 import com.example.newapp.activity.vip.toll_vip_service.TollVipServiceActivity;
-import com.example.newapp.activity.vip.toll_vip_service.legal.LegalActivity;
 import com.example.newapp.base.BaseActivity;
 import com.example.newapp.base.BasePresenter;
 import com.example.newapp.data.RecordData;
@@ -113,7 +112,7 @@ public class VipSpecialOfferActivity extends BaseActivity implements View.OnClic
     public void onClick(View v) {
         super.onClick(v);
         switch (v.getId()){
-            case R.id.back_level_tv://猪会员
+            case R.id.back_level_tv://会员服务
                 finish();
                 AppManager.getInstance().finishActivity(TollVipServiceActivity.class);
                 break;

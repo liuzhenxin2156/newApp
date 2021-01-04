@@ -27,7 +27,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:text="猪工业"
+            android:text="供销总社"
             android:textColor="@color/colorBlack"
             android:textSize="@dimen/text_size_16" />
     </RelativeLayout>
