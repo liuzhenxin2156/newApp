@@ -3,6 +3,7 @@ package com.example.newapp.activity.financial_services.credit;
 import android.content.Context;
 import android.content.Intent;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.recyclerview.widget.GridLayoutManager;
@@ -28,14 +29,17 @@ public class CreditActivity extends BaseActivity implements View.OnClickListener
     private TextView back_level_tv;
     private FinancialServicesAdapter financialServicesAdapter;
     private ArrayList<RecordData> recordDataList;
+    private ImageView arrow_kill;
+    private int typeID;
 
     /**
      * 启动activity
      *
      * @param context
      */
-    public static void start(Context context) {
+    public static void start(Context context,int type) {
         Intent intent = new Intent(context, CreditActivity.class);
+        intent.putExtra("id", type);
         context.startActivity(intent);
     }
 
@@ -44,9 +48,17 @@ public class CreditActivity extends BaseActivity implements View.OnClickListener
         return R.layout.activity_credit;
     }
 
+    /**
+     * 获取参数
+     */
+    private void getArguments() {
+        this.typeID = this.getIntent().getIntExtra("id", -1);
+    }
     @Override
     protected void initViews() {
         addData();
+        getArguments();
+        arrow_kill = findViewById(R.id.arrow_kill);
         mBackTv = findViewById(R.id.back_tv);
         recyclerView = findViewById(R.id.recyclerview);
         mBackTv.setOnClickListener(this);
@@ -83,6 +95,10 @@ public class CreditActivity extends BaseActivity implements View.OnClickListener
                 return false;
             }
         });
+        if (typeID==1){
+            arrow_kill.setVisibility(View.GONE);
+            back_level_tv.setVisibility(View.GONE);
+        }
     }
 
     @Override
@@ -103,8 +119,12 @@ public class CreditActivity extends BaseActivity implements View.OnClickListener
                 finish();
                 break;
             case R.id.back_tv:
-                finish();
-                AppManager.getInstance().finishActivity(FinancialServicesActivity.class);
+                if (typeID==1){
+                   finish();
+                }else {
+                    finish();
+                    AppManager.getInstance().finishActivity(FinancialServicesActivity.class);
+                }
                 break;
             default:
         }

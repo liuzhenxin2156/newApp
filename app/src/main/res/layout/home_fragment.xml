@@ -18,7 +18,6 @@
             android:orientation="vertical">
 
 
-
             <com.youth.banner.Banner
                 android:id="@+id/banner"
                 android:layout_width="match_parent"
@@ -29,14 +28,12 @@
             </com.youth.banner.Banner>
 
 
-
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recyclerview"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/view_space_4"
-                android:layout_marginRight="@dimen/view_space_4"
-               >
+                android:layout_marginRight="@dimen/view_space_4">
 
             </androidx.recyclerview.widget.RecyclerView>
 
@@ -51,15 +48,15 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/view_space_12"
-
                 android:layout_marginRight="@dimen/view_space_12"
                 android:orientation="horizontal">
 
                 <LinearLayout
+                    android:id="@+id/loan_ll"
                     android:layout_width="wrap_content"
-
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:background="?attr/selectableItemBackground"
                     android:gravity="center_horizontal"
                     android:orientation="vertical">
 
@@ -68,8 +65,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/view_space_10"
-                        android:clickable="true"
-                        android:focusable="true"
+
                         android:gravity="center_horizontal"
                         android:text="贷款服务"
                         android:textColor="#26242a"
@@ -86,9 +82,11 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/insurance_ll"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:background="?attr/selectableItemBackground"
                     android:gravity="center_horizontal"
                     android:orientation="vertical">
 
@@ -96,8 +94,6 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/view_space_10"
-                        android:clickable="true"
-                        android:focusable="true"
                         android:gravity="center_horizontal"
                         android:text="保险服务"
                         android:textColor="#26242a"
@@ -106,8 +102,7 @@
                     <ImageView
                         android:layout_width="60dp"
                         android:layout_height="60dp"
-                        android:clickable="true"
-                        android:focusable="true"
+
                         android:scaleType="centerInside"
                         android:src="@drawable/gt_baoxian" />
 
@@ -115,10 +110,11 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/futures_ll"
                     android:layout_width="wrap_content"
-
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:background="?attr/selectableItemBackground"
                     android:gravity="center_horizontal"
                     android:orientation="vertical">
 
@@ -126,27 +122,25 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/view_space_10"
-                        android:clickable="true"
-                        android:focusable="true"
                         android:gravity="center_horizontal"
-                        android:text="期货咨询"
+                        android:text="期货服务"
                         android:textColor="#26242a"
                         android:textSize="@dimen/text_size_16" />
 
                     <ImageView
                         android:layout_width="60dp"
                         android:layout_height="60dp"
-                        android:clickable="true"
-                        android:focusable="true"
                         android:scaleType="centerInside"
                         android:src="@drawable/gt_qihuo" />
 
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/trust_ll"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:background="?attr/selectableItemBackground"
                     android:gravity="center_horizontal"
                     android:orientation="vertical">
 
@@ -154,8 +148,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/view_space_10"
-                        android:clickable="true"
-                        android:focusable="true"
+
                         android:gravity="center_horizontal"
                         android:text="信托服务"
                         android:textColor="#26242a"
@@ -164,8 +157,7 @@
                     <ImageView
                         android:layout_width="60dp"
                         android:layout_height="60dp"
-                        android:clickable="true"
-                        android:focusable="true"
+
                         android:scaleType="centerInside"
                         android:src="@drawable/gt_xintuo" />
 
@@ -173,9 +165,11 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/fund_ll"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:background="?attr/selectableItemBackground"
                     android:gravity="center_horizontal"
                     android:orientation="vertical">
 
@@ -183,8 +177,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/view_space_10"
-                        android:clickable="true"
-                        android:focusable="true"
+
                         android:gravity="center_horizontal"
                         android:text="基金服务"
                         android:textColor="#26242a"
@@ -193,8 +186,7 @@
                     <ImageView
                         android:layout_width="60dp"
                         android:layout_height="60dp"
-                        android:clickable="true"
-                        android:focusable="true"
+
                         android:scaleType="centerInside"
                         android:src="@drawable/gt_jijin" />
 

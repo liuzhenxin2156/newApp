@@ -3,6 +3,7 @@ package com.example.newapp.activity.financial_services.fund;
 import android.content.Context;
 import android.content.Intent;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.recyclerview.widget.GridLayoutManager;
@@ -11,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.newapp.R;
 import com.example.newapp.activity.financial_services.FinancialServicesActivity;
 import com.example.newapp.activity.financial_services.adapter.FinancialServicesAdapter;
+import com.example.newapp.activity.financial_services.trust.TrustActivity;
 import com.example.newapp.base.BaseActivity;
 import com.example.newapp.base.BasePresenter;
 import com.example.newapp.data.RecordData;
@@ -28,17 +30,25 @@ public class FundActivity extends BaseActivity {
     private FinancialServicesAdapter financialServicesAdapter;
     private ArrayList<RecordData> recordDataList;
     private TextView back_level_tv;
+    private int typeID;
+    private ImageView arrow_kill;
 
     /**
      * 启动activity
      *
      * @param context
      */
-    public static void start(Context context) {
+    public static void start(Context context,int type) {
         Intent intent = new Intent(context, FundActivity.class);
+        intent.putExtra("id", type);
         context.startActivity(intent);
     }
-
+    /**
+     * 获取参数
+     */
+    private void getArguments() {
+        this.typeID = this.getIntent().getIntExtra("id", -1);
+    }
     @Override
     protected int getContentViewId() {
         return R.layout.activity_fund;
@@ -47,6 +57,8 @@ public class FundActivity extends BaseActivity {
     @Override
     protected void initViews() {
         addData();
+        getArguments();
+        arrow_kill = findViewById(R.id.arrow_kill);
         mBackTv = findViewById(R.id.back_tv);
         recyclerView = findViewById(R.id.recyclerview);
         mBackTv.setOnClickListener(this);
@@ -86,6 +98,10 @@ public class FundActivity extends BaseActivity {
                 return false;
             }
         });
+        if (typeID==1){
+            arrow_kill.setVisibility(View.GONE);
+            back_level_tv.setVisibility(View.GONE);
+        }
     }
 
     @Override
@@ -105,8 +121,12 @@ public class FundActivity extends BaseActivity {
                 finish();
                 break;
             case R.id.back_tv:
-                finish();
-                AppManager.getInstance().finishActivity(FinancialServicesActivity.class);
+                if (typeID==1){
+                    finish();
+                }else {
+                    finish();
+                    AppManager.getInstance().finishActivity(FinancialServicesActivity.class);
+                }
                 break;
             default:
         }

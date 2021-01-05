@@ -2,6 +2,7 @@ package com.example.newapp.fragment.home;
 
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -19,6 +20,11 @@ import com.example.newapp.activity.cooperation.CooperationActivity;
 import com.example.newapp.activity.environmental.EnvironmentalActivity;
 import com.example.newapp.activity.epidemic.EpidemicActivity;
 import com.example.newapp.activity.financial_services.FinancialServicesActivity;
+import com.example.newapp.activity.financial_services.Insurance.InsuranceActivity;
+import com.example.newapp.activity.financial_services.credit.CreditActivity;
+import com.example.newapp.activity.financial_services.fund.FundActivity;
+import com.example.newapp.activity.financial_services.futures.FuturesActivity;
+import com.example.newapp.activity.financial_services.trust.TrustActivity;
 import com.example.newapp.activity.immunization_service.ImmunizationServiceActivity;
 import com.example.newapp.activity.land_info.LandInfoActivity;
 import com.example.newapp.activity.live_pig.LivePigActivity;
@@ -62,7 +68,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-public class HomeFragment extends BaseFragment implements OnBannerListener {
+public class HomeFragment extends BaseFragment implements OnBannerListener , View.OnClickListener {
 
     private List<Integer> listPic;
     private Banner banner;
@@ -75,6 +81,11 @@ public class HomeFragment extends BaseFragment implements OnBannerListener {
     private RecyclerView recyclerview_shop;
     private RecyclerView recyclerview_futures;
     private List<BaseNode> list;
+    private LinearLayout loan_ll;
+    private LinearLayout  insurance_ll;
+    private LinearLayout  futures_ll;
+    private LinearLayout  trust_ll;
+    private LinearLayout  fund_ll;
 
 
 
@@ -96,6 +107,18 @@ public class HomeFragment extends BaseFragment implements OnBannerListener {
     @Override
     protected void initView() {
         super.initView();
+        loan_ll = mRootView.findViewById(R.id.loan_ll);
+        insurance_ll = mRootView.findViewById(R.id.insurance_ll);
+        futures_ll = mRootView.findViewById(R.id.futures_ll);
+        trust_ll = mRootView.findViewById(R.id.trust_ll);
+        fund_ll = mRootView.findViewById(R.id.fund_ll);
+
+        loan_ll.setOnClickListener(this);
+        insurance_ll.setOnClickListener(this);
+        futures_ll.setOnClickListener(this);
+        trust_ll.setOnClickListener(this);
+        fund_ll.setOnClickListener(this);
+
         listPic = new ArrayList<>();
         listPic.clear();
         addData();
@@ -251,6 +274,37 @@ public class HomeFragment extends BaseFragment implements OnBannerListener {
         super.initData();
         initBanner();
     }
+
+    /**
+     * 保险服务
+     * 期货服务
+     * 信托服务
+     * 基金服务
+     * @param v
+     */
+    @Override
+    public void onClick(View v) {
+        super.onClick(v);
+        switch (v.getId()){
+            case R.id.loan_ll://贷款服务
+                CreditActivity.start(getActivity(),1);
+                break;
+            case R.id.insurance_ll://保险服务
+                InsuranceActivity.start(getActivity(),1);
+                break;
+            case R.id.futures_ll://期货服务
+                FuturesActivity.start(getActivity(),1);
+                break;
+            case R.id.trust_ll://信托服务
+                TrustActivity.start(getActivity(),1);
+                break;
+            case R.id.fund_ll://基金服务
+                FundActivity.start(getActivity(),1);
+                break;
+            default:
+        }
+    }
+
     private void addData(){
         list = new ArrayList<>();
         list.clear();

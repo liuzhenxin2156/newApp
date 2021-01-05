@@ -70,19 +70,19 @@ public class FinancialServicesActivity extends BaseActivity {
             public void onItemClick(View view, BaseRecyclerViewHolder viewHolder, int position) {
                 switch (position){
                     case 0://信贷
-                        CreditActivity.start(FinancialServicesActivity.this);
+                        CreditActivity.start(FinancialServicesActivity.this,2);
                         break;
                     case 1://保险
-                        InsuranceActivity.start(FinancialServicesActivity.this);
+                        InsuranceActivity.start(FinancialServicesActivity.this,2);
                         break;
                     case 2://期货
-                        FuturesActivity.start(FinancialServicesActivity.this);
+                        FuturesActivity.start(FinancialServicesActivity.this,2);
                         break;
                     case 3://信托
-                        TrustActivity.start(FinancialServicesActivity.this);
+                        TrustActivity.start(FinancialServicesActivity.this,2);
                         break;
                     case 4://基金
-                        FundActivity.start(FinancialServicesActivity.this);
+                        FundActivity.start(FinancialServicesActivity.this,2);
                         break;
                     default:
 
