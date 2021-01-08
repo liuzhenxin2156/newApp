@@ -66,6 +66,8 @@ public class KeyBoardUtil {
      * @param editText
      */
     public static void openKeyboard(Context context, EditText editText) {
+        editText.setFocusable(true);
+        editText.setFocusableInTouchMode(true);
         editText.requestFocus();
         InputMethodManager imm = (InputMethodManager) context.getSystemService(Context.INPUT_METHOD_SERVICE);
         imm.showSoftInput(editText, InputMethodManager.SHOW_IMPLICIT);
@@ -83,7 +85,16 @@ public class KeyBoardUtil {
         InputMethodManager imm = (InputMethodManager) context.getSystemService(Context.INPUT_METHOD_SERVICE);
         imm.showSoftInput(editText, InputMethodManager.SHOW_FORCED);
     }
-
+    /**
+     * 显示软键盘，Dialog使用
+     *
+     * @param activity 当前Activity
+     */
+    public static void showSoftInput(Activity activity) {
+        InputMethodManager inputMethodManager =
+                (InputMethodManager) activity.getSystemService(Context.INPUT_METHOD_SERVICE);
+        inputMethodManager.toggleSoftInput(0, InputMethodManager.HIDE_NOT_ALWAYS);
+    }
     /**
      * 关闭软键盘
      *

@@ -1,4 +1,4 @@
-package com.example.newapp.activity.weight;
+package com.example.newapp.weight;
 
 import android.content.Context;
 import android.util.AttributeSet;

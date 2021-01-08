@@ -201,6 +201,33 @@
         <!-- 生猪数据报告 -->
         <activity android:name=".activity.vip.special_pay_service.pig_data_report.PigDataReportActivity"
             android:theme="@style/BaseAppTheme"/>
+        <!-- 众筹养猪 -->
+        <activity android:name=".activity.financial_services.crowdfunding_pig.CrowdfundingPigActivity"
+            android:theme="@style/BaseAppTheme"/>
+        <!-- 养殖险 -->
+        <activity android:name=".activity.financial_services.Insurance.farming.FarmingInsuranceActivity"
+            android:theme="@style/BaseAppTheme"/>
+        <!-- 养殖险详情 -->
+        <activity android:name=".activity.financial_services.Insurance.details.FarmingInsuranceDetailsActivity"
+            android:theme="@style/BaseAppTheme"/>
+        <!-- 运输险 -->
+        <activity android:name=".activity.financial_services.Insurance.transport.TransportInsuranceActivity"
+            android:theme="@style/BaseAppTheme"/>
+        <!-- 运输险详情 -->
+        <activity android:name=".activity.financial_services.Insurance.details.TransportInsuranceDetailsActivity"
+            android:theme="@style/BaseAppTheme"/>
+        <!-- 生猪短途运输险保险 -->
+        <activity android:name=".activity.financial_services.Insurance.transport.transport_insured.TransportInsuredActivity"
+            android:theme="@style/BaseAppTheme"/>
+        <!-- 扑杀险 -->
+        <activity android:name=".activity.financial_services.Insurance.culling.CullingInsuranceActivity"
+            android:theme="@style/BaseAppTheme"/>
+        <!-- 扑杀险详情 -->
+        <activity android:name=".activity.financial_services.Insurance.details.CullingInsuranceDetailsActivity"
+            android:theme="@style/BaseAppTheme"/>
+        <!-- 扑杀险信息 -->
+        <activity android:name=".activity.financial_services.Insurance.culling.info.CullingInsuranceInfoActivity"
+            android:theme="@style/BaseAppTheme"/>
     </application>
 
 </manifest>

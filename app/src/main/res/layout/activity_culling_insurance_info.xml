@@ -1,0 +1,1676 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:fitsSystemWindows="true"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/toolbar_ll"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/view_height_48">
+
+        <ImageView
+            android:id="@+id/back_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/view_space_4"
+            android:background="?attr/selectableItemBackground"
+            android:padding="@dimen/view_space_10"
+            android:src="@drawable/back_iv" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="平安扑杀险"
+            android:textColor="@color/color_3"
+            android:textSize="@dimen/text_size_16" />
+    </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/view_space_18"
+                    android:layout_marginTop="@dimen/view_space_12"
+                    android:layout_marginRight="@dimen/view_space_18"
+                    android:text="订单编号"
+                    android:textColor="@color/color_6"
+                    android:textSize="@dimen/text_size_14" />
+
+                <EditText
+                    android:id="@+id/start_date_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/view_height_44"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/view_space_18"
+                    android:layout_marginTop="@dimen/view_space_12"
+                    android:layout_marginRight="@dimen/view_space_18"
+                    android:background="@drawable/focusable_edittext_bg"
+                    android:focusable="false"
+                    android:gravity="left|center"
+                    android:maxLines="1"
+                    android:paddingLeft="@dimen/view_space_8"
+                    android:singleLine="true"
+                    android:text="PA210108114029173"
+                    android:textColor="@color/colorBlack"
+                    android:textColorHint="@color/color_6"
+                    android:textSize="@dimen/text_size_16" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/view_space_18"
+                android:layout_marginRight="@dimen/view_space_18"
+                android:background="@drawable/transport_btn_bg"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/xml_bg"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/view_space_8"
+                        android:layout_marginTop="@dimen/view_space_12"
+                        android:layout_marginRight="@dimen/view_space_22"
+                        android:layout_marginBottom="@dimen/view_space_12"
+                        android:text="投保人信息"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/text_size_16" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/view_space_18"
+                        android:layout_marginTop="@dimen/view_space_12"
+                        android:layout_marginRight="@dimen/view_space_18"
+                        android:text="投保人名称*"
+                        android:textColor="@color/color_6"
+                        android:textSize="@dimen/text_size_14" />
+
+                    <EditText
+                        android:id="@+id/insured_name_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/view_height_44"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/view_space_18"
+                        android:layout_marginTop="@dimen/view_space_12"
+                        android:layout_marginRight="@dimen/view_space_18"
+                        android:background="@drawable/edittext_bg"
+                        android:gravity="left|center"
+                        android:maxLines="1"
+                        android:paddingLeft="@dimen/view_space_8"
+                        android:singleLine="true"
+                        android:text="刘振新"
+                        android:textColor="@color/colorBlack"
+                        android:textColorHint="@color/color_6"
+                        android:textSize="@dimen/text_size_16" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/view_space_22"
+                        android:layout_marginTop="@dimen/view_space_12"
+                        android:layout_marginRight="@dimen/view_space_22"
+                        android:text="投保人证件类型*"
+                        android:textColor="@color/color_6"
+                        android:textSize="@dimen/text_size_14" />
+
+                    <EditText
+                        android:id="@+id/insured_card_type_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/view_height_44"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/view_space_22"
+                        android:layout_marginTop="@dimen/view_space_12"
+                        android:layout_marginRight="@dimen/view_space_22"
+                        android:background="@drawable/edittext_bg"
+                        android:focusable="false"
+                        android:gravity="left|center"
+                        android:maxLines="1"
+                        android:paddingLeft="@dimen/view_space_8"
+                        android:singleLine="true"
+                        android:text="身份证"
+                        android:textColor="@color/colorBlack"
+                        android:textColorHint="@color/color_6"
+                        android:textSize="@dimen/text_size_16" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/view_space_22"
+                        android:layout_marginTop="@dimen/view_space_12"
+                        android:layout_marginRight="@dimen/view_space_22"
+                        android:text="投保人证件号码*"
+                        android:textColor="@color/color_6"
+                        android:textSize="@dimen/text_size_14" />
+
+                    <EditText
+                        android:id="@+id/insured_id_card_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/view_height_44"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/view_space_22"
+                        android:layout_marginTop="@dimen/view_space_12"
+                        android:layout_marginRight="@dimen/view_space_22"
+                        android:background="@drawable/edittext_bg"
+                        android:gravity="left|center"
+                        android:maxLines="1"
+                        android:paddingLeft="@dimen/view_space_8"
+                        android:singleLine="true"
+                        android:text="142729195512345678"
+                        android:textColor="@color/colorBlack"
+                        android:textColorHint="@color/color_6"
+                        android:textSize="@dimen/text_size_16" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/view_space_22"
+                        android:layout_marginTop="@dimen/view_space_12"
+                        android:layout_marginRight="@dimen/view_space_22"
+                        android:text="投保人电话号码*"
+                        android:textColor="@color/color_6"
+                        android:textSize="@dimen/text_size_14" />
+
+                    <EditText
+                        android:id="@+id/insured_phone_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/view_height_44"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/view_space_22"
+                        android:layout_marginTop="@dimen/view_space_12"
+                        android:layout_marginRight="@dimen/view_space_22"
+                        android:background="@drawable/edittext_bg"
+                        android:gravity="left|center"
+                        android:maxLines="1"
+                        android:paddingLeft="@dimen/view_space_8"
+                        android:singleLine="true"
+                        android:text="17600044200"
+                        android:textColor="@color/colorBlack"
+                        android:textColorHint="@color/color_6"
+                        android:textSize="@dimen/text_size_16" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/view_space_22"
+                        android:layout_marginTop="@dimen/view_space_12"
+                        android:layout_marginRight="@dimen/view_space_22"
+                        android:text="投保人地址*"
+                        android:textColor="@color/color_6"
+                        android:textSize="@dimen/text_size_14" />
+
+                    <EditText
+                        android:id="@+id/insured_address_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/view_height_44"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/view_space_22"
+                        android:layout_marginTop="@dimen/view_space_12"
+                        android:layout_marginRight="@dimen/view_space_22"
+                        android:background="@drawable/edittext_bg"
+                        android:gravity="left|center"
+                        android:maxLines="1"
+                        android:paddingLeft="@dimen/view_space_8"
+                        android:singleLine="true"
+                        android:text="四川省成都市"
+                        android:textColor="@color/colorBlack"
+                        android:textColorHint="@color/color_6"
+                        android:textSize="@dimen/text_size_16" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/view_space_22"
+                        android:layout_marginTop="@dimen/view_space_12"
+                        android:layout_marginRight="@dimen/view_space_22"
+                        android:text="保单承保标的地址*"
+                        android:textColor="@color/color_6"
+                        android:textSize="@dimen/text_size_14" />
+
+                    <EditText
+                        android:id="@+id/insured_underwriting_address_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/view_height_44"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/view_space_22"
+                        android:layout_marginTop="@dimen/view_space_12"
+                        android:layout_marginRight="@dimen/view_space_22"
+                        android:background="@drawable/edittext_bg"
+                        android:gravity="left|center"
+                        android:maxLines="1"
+                        android:paddingLeft="@dimen/view_space_8"
+                        android:singleLine="true"
+                        android:text="四川省成都市"
+                        android:textColor="@color/colorBlack"
+                        android:textColorHint="@color/color_6"
+                        android:textSize="@dimen/text_size_16" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/view_space_22"
+                        android:layout_marginTop="@dimen/view_space_12"
+                        android:layout_marginRight="@dimen/view_space_22"
+                        android:text="选择所在村落*"
+                        android:textColor="@color/color_6"
+                        android:textSize="@dimen/text_size_14" />
+
+                    <EditText
+                        android:id="@+id/insured_choose_address_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/view_height_44"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/view_space_22"
+                        android:layout_marginTop="@dimen/view_space_12"
+                        android:layout_marginRight="@dimen/view_space_22"
+                        android:background="@drawable/edittext_bg"
+                        android:focusable="false"
+                        android:gravity="left|center"
+                        android:maxLines="1"
+                        android:paddingLeft="@dimen/view_space_8"
+                        android:singleLine="true"
+                        android:textColor="@color/colorBlack"
+                        android:textColorHint="@color/color_6"
+                        android:textSize="@dimen/text_size_16" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/view_space_22"
+                        android:layout_marginTop="@dimen/view_space_12"
+                        android:layout_marginRight="@dimen/view_space_22"
+                        android:text="选择精准定位*"
+                        android:textColor="@color/color_6"
+                        android:textSize="@dimen/text_size_14" />
+
+                    <EditText
+                        android:id="@+id/insured_location_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/view_height_44"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/view_space_22"
+                        android:layout_marginTop="@dimen/view_space_12"
+                        android:layout_marginRight="@dimen/view_space_22"
+                        android:background="@drawable/focusable_edittext_bg"
+                        android:focusable="false"
+                        android:gravity="left|center"
+                        android:maxLines="1"
+                        android:paddingLeft="@dimen/view_space_8"
+                        android:singleLine="true"
+                        android:text="0,0"
+                        android:textColor="@color/colorBlack"
+                        android:textColorHint="@color/color_6"
+                        android:textSize="@dimen/text_size_16" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/view_space_12">
+
+
+                    <Button
+                        android:id="@+id/add_beneficiary_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/view_space_40"
+                        android:layout_marginLeft="@dimen/view_space_20"
+                        android:layout_marginRight="@dimen/view_space_8"
+                        android:layout_weight="1"
+                        style="?android:attr/borderlessButtonStyle"
+                        android:background="@drawable/transport_btn_bg"
+                        android:text="+受益人"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/text_size_14"></Button>
+
+                    <Button
+                        style="?android:attr/borderlessButtonStyle"
+                        android:id="@+id/be_insured_people_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/view_space_40"
+                        android:layout_marginLeft="@dimen/view_space_8"
+                        android:layout_marginRight="@dimen/view_space_20"
+                        android:layout_weight="1"
+                        android:background="@drawable/transport_btn_bg"
+                        android:text="+添加被保险人"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/text_size_14">
+
+                    </Button>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/view_space_22"
+                    android:layout_marginTop="@dimen/view_space_12"
+                    android:layout_marginRight="@dimen/view_space_22"
+                    android:text="注：默认被保险人、受益人信息和投保保持一致的，若不一致请添加受益人和被保险人，并完善信息"
+                    android:textColor="@color/color_3"
+                    android:textSize="@dimen/text_size_14"></TextView>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/view_space_30">
+                </View>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/beneficiary_ll"
+                android:layout_marginTop="@dimen/view_space_12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/view_space_18"
+                android:layout_marginRight="@dimen/view_space_18"
+                android:background="@drawable/transport_btn_bg"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/xml_bg"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/view_space_8"
+                        android:layout_marginTop="@dimen/view_space_12"
+                        android:layout_marginRight="@dimen/view_space_22"
+                        android:layout_marginBottom="@dimen/view_space_12"
+                        android:text="受益人信息"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/text_size_16" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/view_space_18"
+                        android:layout_marginTop="@dimen/view_space_12"
+                        android:layout_marginRight="@dimen/view_space_18"
+                        android:text="收益人名称*"
+                        android:textColor="@color/color_6"
+                        android:textSize="@dimen/text_size_14" />
+
+                    <EditText
+                        android:id="@+id/beneficiary_name_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/view_height_44"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/view_space_18"
+                        android:layout_marginTop="@dimen/view_space_12"
+                        android:layout_marginRight="@dimen/view_space_18"
+                        android:background="@drawable/edittext_bg"
+                        android:gravity="left|center"
+                        android:maxLines="1"
+                        android:paddingLeft="@dimen/view_space_8"
+                        android:singleLine="true"
+                        android:text="刘振新"
+                        android:textColor="@color/colorBlack"
+                        android:textColorHint="@color/color_6"
+                        android:textSize="@dimen/text_size_16" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/view_space_22"
+                        android:layout_marginTop="@dimen/view_space_12"
+                        android:layout_marginRight="@dimen/view_space_22"
+                        android:text="受益人证件类型*"
+                        android:textColor="@color/color_6"
+                        android:textSize="@dimen/text_size_14" />
+
+                    <EditText
+                        android:id="@+id/beneficiary_card_type_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/view_height_44"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/view_space_22"
+                        android:layout_marginTop="@dimen/view_space_12"
+                        android:layout_marginRight="@dimen/view_space_22"
+                        android:background="@drawable/edittext_bg"
+                        android:focusable="false"
+                        android:gravity="left|center"
+                        android:maxLines="1"
+                        android:paddingLeft="@dimen/view_space_8"
+                        android:singleLine="true"
+                        android:text="身份证"
+                        android:textColor="@color/colorBlack"
+                        android:textColorHint="@color/color_6"
+                        android:textSize="@dimen/text_size_16" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/view_space_22"
+                        android:layout_marginTop="@dimen/view_space_12"
+                        android:layout_marginRight="@dimen/view_space_22"
+                        android:text="受益人证件号码*"
+                        android:textColor="@color/color_6"
+                        android:textSize="@dimen/text_size_14" />
+
+                    <EditText
+                        android:id="@+id/beneficiary_id_card_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/view_height_44"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/view_space_22"
+                        android:layout_marginTop="@dimen/view_space_12"
+                        android:layout_marginRight="@dimen/view_space_22"
+                        android:background="@drawable/edittext_bg"
+                        android:gravity="left|center"
+                        android:maxLines="1"
+                        android:paddingLeft="@dimen/view_space_8"
+                        android:singleLine="true"
+                        android:text="142729195512345678"
+                        android:textColor="@color/colorBlack"
+                        android:textColorHint="@color/color_6"
+                        android:textSize="@dimen/text_size_16" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/view_space_22"
+                        android:layout_marginTop="@dimen/view_space_12"
+                        android:layout_marginRight="@dimen/view_space_22"
+                        android:text="受益人电话号码 *"
+                        android:textColor="@color/color_6"
+                        android:textSize="@dimen/text_size_14" />
+
+                    <EditText
+                        android:id="@+id/beneficiary_phone_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/view_height_44"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/view_space_22"
+                        android:layout_marginTop="@dimen/view_space_12"
+                        android:layout_marginRight="@dimen/view_space_22"
+                        android:background="@drawable/edittext_bg"
+                        android:gravity="left|center"
+                        android:maxLines="1"
+                        android:paddingLeft="@dimen/view_space_8"
+                        android:singleLine="true"
+                        android:text="17600044200"
+                        android:textColor="@color/colorBlack"
+                        android:textColorHint="@color/color_6"
+                        android:textSize="@dimen/text_size_16" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/view_space_22"
+                        android:layout_marginTop="@dimen/view_space_12"
+                        android:layout_marginRight="@dimen/view_space_22"
+                        android:text="受益人地址（营业执照地址） *"
+                        android:textColor="@color/color_6"
+                        android:textSize="@dimen/text_size_14" />
+
+                    <EditText
+                        android:id="@+id/beneficiary_address_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/view_height_44"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/view_space_22"
+                        android:layout_marginTop="@dimen/view_space_12"
+                        android:layout_marginRight="@dimen/view_space_22"
+                        android:background="@drawable/edittext_bg"
+                        android:gravity="left|center"
+                        android:maxLines="1"
+                        android:paddingLeft="@dimen/view_space_8"
+                        android:singleLine="true"
+                        android:text="四川省成都市"
+                        android:textColor="@color/colorBlack"
+                        android:textColorHint="@color/color_6"
+                        android:textSize="@dimen/text_size_16" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/view_space_20">
+                </View>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/be_be_insured_ll"
+                android:layout_marginTop="@dimen/view_space_12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/view_space_18"
+                android:layout_marginRight="@dimen/view_space_18"
+                android:background="@drawable/transport_btn_bg"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/xml_bg"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/view_space_8"
+                        android:layout_marginTop="@dimen/view_space_12"
+                        android:layout_marginRight="@dimen/view_space_22"
+                        android:layout_marginBottom="@dimen/view_space_12"
+                        android:text="被保险人信息"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/text_size_16" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/view_space_18"
+                        android:layout_marginTop="@dimen/view_space_12"
+                        android:layout_marginRight="@dimen/view_space_18"
+                        android:text="被保险人名称 *"
+                        android:textColor="@color/color_6"
+                        android:textSize="@dimen/text_size_14" />
+
+                    <EditText
+                        android:id="@+id/be_insured_name_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/view_height_44"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/view_space_18"
+                        android:layout_marginTop="@dimen/view_space_12"
+                        android:layout_marginRight="@dimen/view_space_18"
+                        android:background="@drawable/edittext_bg"
+                        android:gravity="left|center"
+                        android:maxLines="1"
+                        android:paddingLeft="@dimen/view_space_8"
+                        android:singleLine="true"
+                        android:text="刘振新"
+                        android:textColor="@color/colorBlack"
+                        android:textColorHint="@color/color_6"
+                        android:textSize="@dimen/text_size_16" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/view_space_22"
+                        android:layout_marginTop="@dimen/view_space_12"
+                        android:layout_marginRight="@dimen/view_space_22"
+                        android:text="被保险人类型（规模场）*"
+                        android:textColor="@color/color_6"
+                        android:textSize="@dimen/text_size_14" />
+
+                    <EditText
+                        android:id="@+id/be_insured_type_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/view_height_44"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/view_space_22"
+                        android:layout_marginTop="@dimen/view_space_12"
+                        android:layout_marginRight="@dimen/view_space_22"
+                        android:background="@drawable/edittext_bg"
+                        android:focusable="false"
+                        android:gravity="left|center"
+                        android:maxLines="1"
+                        android:paddingLeft="@dimen/view_space_8"
+                        android:singleLine="true"
+                        android:text="规模场"
+                        android:textColor="@color/colorBlack"
+                        android:textColorHint="@color/color_6"
+                        android:textSize="@dimen/text_size_16" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/view_space_22"
+                        android:layout_marginTop="@dimen/view_space_12"
+                        android:layout_marginRight="@dimen/view_space_22"
+                        android:text="被保险人地址（营业执照地址）*"
+                        android:textColor="@color/color_6"
+                        android:textSize="@dimen/text_size_14" />
+
+                    <EditText
+                        android:id="@+id/be_insured_address_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/view_height_44"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/view_space_22"
+                        android:layout_marginTop="@dimen/view_space_12"
+                        android:layout_marginRight="@dimen/view_space_22"
+                        android:background="@drawable/edittext_bg"
+                        android:focusable="false"
+                        android:gravity="left|center"
+                        android:maxLines="1"
+                        android:paddingLeft="@dimen/view_space_8"
+                        android:singleLine="true"
+                        android:text="陕西省西安市"
+                        android:textColor="@color/colorBlack"
+                        android:textColorHint="@color/color_6"
+                        android:textSize="@dimen/text_size_16" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/view_space_22"
+                        android:layout_marginTop="@dimen/view_space_12"
+                        android:layout_marginRight="@dimen/view_space_22"
+                        android:text="被保险人证件类型*"
+                        android:textColor="@color/color_6"
+                        android:textSize="@dimen/text_size_14" />
+
+                    <EditText
+                        android:id="@+id/be_insured_card_type_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/view_height_44"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/view_space_22"
+                        android:layout_marginTop="@dimen/view_space_12"
+                        android:layout_marginRight="@dimen/view_space_22"
+                        android:background="@drawable/edittext_bg"
+                        android:focusable="false"
+                        android:gravity="left|center"
+                        android:maxLines="1"
+                        android:paddingLeft="@dimen/view_space_8"
+                        android:singleLine="true"
+                        android:text="身份证"
+                        android:textColor="@color/colorBlack"
+                        android:textColorHint="@color/color_6"
+                        android:textSize="@dimen/text_size_16" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/view_space_22"
+                        android:layout_marginTop="@dimen/view_space_12"
+                        android:layout_marginRight="@dimen/view_space_22"
+                        android:text="被保险人证件号码*"
+                        android:textColor="@color/color_6"
+                        android:textSize="@dimen/text_size_14" />
+
+                    <EditText
+                        android:id="@+id/be_insured_id_card_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/view_height_44"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/view_space_22"
+                        android:layout_marginTop="@dimen/view_space_12"
+                        android:layout_marginRight="@dimen/view_space_22"
+                        android:background="@drawable/edittext_bg"
+                        android:gravity="left|center"
+                        android:maxLines="1"
+                        android:paddingLeft="@dimen/view_space_8"
+                        android:singleLine="true"
+                        android:text="142729195512345678"
+                        android:textColor="@color/colorBlack"
+                        android:textColorHint="@color/color_6"
+                        android:textSize="@dimen/text_size_16" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/view_space_22"
+                        android:layout_marginTop="@dimen/view_space_12"
+                        android:layout_marginRight="@dimen/view_space_22"
+                        android:text="被保险人电话号码 *"
+                        android:textColor="@color/color_6"
+                        android:textSize="@dimen/text_size_14" />
+
+                    <EditText
+                        android:id="@+id/be_insured_phone_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/view_height_44"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/view_space_22"
+                        android:layout_marginTop="@dimen/view_space_12"
+                        android:layout_marginRight="@dimen/view_space_22"
+                        android:background="@drawable/edittext_bg"
+                        android:gravity="left|center"
+                        android:maxLines="1"
+                        android:paddingLeft="@dimen/view_space_8"
+                        android:singleLine="true"
+                        android:text="17600044200"
+                        android:textColor="@color/colorBlack"
+                        android:textColorHint="@color/color_6"
+                        android:textSize="@dimen/text_size_16" />
+                </LinearLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/view_space_20">
+                </View>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_marginTop="@dimen/view_space_12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/view_space_18"
+                android:layout_marginRight="@dimen/view_space_18"
+                android:background="@drawable/transport_btn_bg"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/xml_bg"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/view_space_8"
+                        android:layout_marginTop="@dimen/view_space_12"
+                        android:layout_marginRight="@dimen/view_space_22"
+                        android:layout_marginBottom="@dimen/view_space_12"
+                        android:text="农户养殖信息"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/text_size_16" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/view_space_18"
+                        android:layout_marginTop="@dimen/view_space_12"
+                        android:layout_marginRight="@dimen/view_space_18"
+                        android:text="贫困户标识 *"
+                        android:textColor="@color/color_6"
+                        android:textSize="@dimen/text_size_14" />
+
+                    <EditText
+                        android:id="@+id/farm_poor_type_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/view_height_44"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/view_space_18"
+                        android:layout_marginTop="@dimen/view_space_12"
+                        android:layout_marginRight="@dimen/view_space_18"
+                        android:background="@drawable/edittext_bg"
+                        android:gravity="left|center"
+                        android:maxLines="1"
+                        android:focusable="false"
+                        android:paddingLeft="@dimen/view_space_8"
+                        android:singleLine="true"
+                        android:text="全部贫困户"
+                        android:textColor="@color/colorBlack"
+                        android:textColorHint="@color/color_6"
+                        android:textSize="@dimen/text_size_16" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/view_space_22"
+                        android:layout_marginTop="@dimen/view_space_12"
+                        android:layout_marginRight="@dimen/view_space_22"
+                        android:text="规模场名称*"
+                        android:textColor="@color/color_6"
+                        android:textSize="@dimen/text_size_14" />
+
+                    <EditText
+                        android:id="@+id/scale_name_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/view_height_44"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/view_space_22"
+                        android:layout_marginTop="@dimen/view_space_12"
+                        android:layout_marginRight="@dimen/view_space_22"
+                        android:background="@drawable/edittext_bg"
+                        android:gravity="left|center"
+                        android:maxLines="1"
+                        android:paddingLeft="@dimen/view_space_8"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textColor="@color/colorBlack"
+                        android:textColorHint="@color/color_6"
+                        android:textSize="@dimen/text_size_16" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/view_space_22"
+                        android:layout_marginTop="@dimen/view_space_12"
+                        android:layout_marginRight="@dimen/view_space_22"
+                        android:text="银行名称*"
+                        android:textColor="@color/color_6"
+                        android:textSize="@dimen/text_size_14" />
+
+                    <EditText
+                        android:id="@+id/bank_name_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/view_height_44"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/view_space_22"
+                        android:layout_marginTop="@dimen/view_space_12"
+                        android:layout_marginRight="@dimen/view_space_22"
+                        android:background="@drawable/edittext_bg"
+                        android:gravity="left|center"
+                        android:maxLines="1"
+                        android:paddingLeft="@dimen/view_space_8"
+                        android:singleLine="true"
+                        android:text="中国银行"
+                        android:textColor="@color/colorBlack"
+                        android:textColorHint="@color/color_6"
+                        android:textSize="@dimen/text_size_16" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/view_space_22"
+                        android:layout_marginTop="@dimen/view_space_12"
+                        android:layout_marginRight="@dimen/view_space_22"
+                        android:text="银行账号/一卡通号码 *"
+                        android:textColor="@color/color_6"
+                        android:textSize="@dimen/text_size_14" />
+
+                    <EditText
+                        android:id="@+id/bank_account_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/view_height_44"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/view_space_22"
+                        android:layout_marginTop="@dimen/view_space_12"
+                        android:layout_marginRight="@dimen/view_space_22"
+                        android:background="@drawable/edittext_bg"
+                        android:gravity="left|center"
+                        android:maxLines="1"
+                        android:paddingLeft="@dimen/view_space_8"
+                        android:singleLine="true"
+                        android:text="4654564545646546"
+                        android:textColor="@color/colorBlack"
+                        android:textColorHint="@color/color_6"
+                        android:textSize="@dimen/text_size_16" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/view_space_22"
+                        android:layout_marginTop="@dimen/view_space_12"
+                        android:layout_marginRight="@dimen/view_space_22"
+                        android:text="生猪数量 *"
+                        android:textColor="@color/color_6"
+                        android:textSize="@dimen/text_size_14" />
+
+                    <EditText
+                        android:id="@+id/pig_num_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/view_height_44"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/view_space_22"
+                        android:layout_marginTop="@dimen/view_space_12"
+                        android:layout_marginRight="@dimen/view_space_22"
+                        android:background="@drawable/edittext_bg"
+                        android:gravity="left|center"
+                        android:maxLines="1"
+                        android:paddingLeft="@dimen/view_space_8"
+                        android:singleLine="true"
+                        android:text="0"
+                        android:textColor="@color/colorBlack"
+                        android:textColorHint="@color/color_6"
+                        android:textSize="@dimen/text_size_16" />
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/view_space_20">
+                </View>
+            </LinearLayout>
+
+
+
+
+            <LinearLayout
+                android:layout_marginTop="@dimen/view_space_12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/view_space_18"
+                android:layout_marginRight="@dimen/view_space_18"
+                android:background="@drawable/transport_btn_bg"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/xml_bg"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/view_space_8"
+                        android:layout_marginTop="@dimen/view_space_12"
+                        android:layout_marginRight="@dimen/view_space_22"
+                        android:layout_marginBottom="@dimen/view_space_12"
+                        android:text="保额选择"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/text_size_16" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/premium_short_ll"
+                    android:layout_marginBottom="@dimen/view_space_12"
+                    android:background="@drawable/choose_sum_assured_bg"
+                    android:layout_marginTop="@dimen/view_space_12"
+                    android:layout_marginLeft="@dimen/view_space_18"
+                    android:layout_marginRight="@dimen/view_space_18"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_marginTop="@dimen/view_space_12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/view_space_18"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="@dimen/view_space_18"
+                        android:text="保险期限：六个月 "
+                        android:textColor="@color/colorRed"
+                        android:textSize="@dimen/text_size_16" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/view_space_8"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/view_space_18"
+                        android:layout_marginRight="@dimen/view_space_18"
+                        android:text="保费：6元/头 "
+                        android:textColor="@color/colorRed"
+                        android:textSize="@dimen/text_size_16" />
+                    <TextView
+                        android:layout_marginBottom="@dimen/view_space_8"
+                        android:layout_marginTop="@dimen/view_space_8"
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/view_space_18"
+                        android:layout_marginRight="@dimen/view_space_18"
+                        android:text="保额：500/头 "
+                        android:textColor="@color/colorRed"
+                        android:textSize="@dimen/text_size_16" />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/premium_long_ll"
+                    android:layout_marginBottom="@dimen/view_space_18"
+                    android:background="@drawable/choose_sum_assured_bg"
+                    android:layout_marginTop="@dimen/view_space_10"
+                    android:layout_marginLeft="@dimen/view_space_18"
+                    android:layout_marginRight="@dimen/view_space_18"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_marginTop="@dimen/view_space_12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/view_space_18"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="@dimen/view_space_18"
+                        android:text="保险期限：六个月 "
+                        android:textColor="@color/colorRed"
+                        android:textSize="@dimen/text_size_16" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/view_space_8"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/view_space_18"
+                        android:layout_marginRight="@dimen/view_space_18"
+                        android:text="保费：12元/头 "
+                        android:textColor="@color/colorRed"
+                        android:textSize="@dimen/text_size_16" />
+                    <TextView
+                        android:layout_marginBottom="@dimen/view_space_8"
+                        android:layout_marginTop="@dimen/view_space_8"
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/view_space_18"
+                        android:layout_marginRight="@dimen/view_space_18"
+                        android:text="保额：1000/头 "
+                        android:textColor="@color/colorRed"
+                        android:textSize="@dimen/text_size_16" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/view_space_18"
+                android:layout_marginTop="@dimen/view_space_12"
+                android:layout_marginRight="@dimen/view_space_18"
+                android:background="@drawable/transport_btn_bg"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/xml_bg"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/view_space_8"
+                        android:layout_marginTop="@dimen/view_space_12"
+                        android:layout_marginRight="@dimen/view_space_22"
+                        android:layout_marginBottom="@dimen/view_space_12"
+                        android:text="附件信息"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/text_size_16" />
+                </LinearLayout>
+
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tips_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/id_card_iv"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginLeft="@dimen/view_space_12"
+                        android:layout_marginTop="@dimen/view_space_4"
+                        android:text="上传身份信息 *"
+                        android:textColor="@color/color_3"
+                        android:textSize="@dimen/text_size_16"></TextView>
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/id_card_iv"
+                        android:layout_marginTop="@dimen/view_space_12"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/view_height_160"
+                        android:layout_marginLeft="@dimen/view_space_18"
+                        android:layout_marginRight="@dimen/view_space_18"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ic_default"></androidx.appcompat.widget.AppCompatImageView>
+
+                    <Button
+                        android:id="@+id/idcard_iv_bt"
+                        style="?android:attr/borderlessButtonStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/view_height_40"
+                        android:layout_below="@+id/tips_tv"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="@dimen/view_space_28"
+                        android:layout_marginTop="@dimen/view_space_8"
+                        android:layout_marginRight="@dimen/view_space_28"
+                        android:background="@drawable/commit_bg"
+                        android:enabled="true"
+                        android:text="上传身份证正面"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/text_size_16" />
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/other_id_card_iv"
+                        android:layout_marginTop="@dimen/view_space_18"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/view_height_160"
+                        android:layout_marginLeft="@dimen/view_space_18"
+                        android:layout_marginRight="@dimen/view_space_18"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ic_default"></androidx.appcompat.widget.AppCompatImageView>
+
+                    <Button
+                        android:id="@+id/other_idcard_iv_bt"
+                        style="?android:attr/borderlessButtonStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/view_height_40"
+                        android:layout_below="@+id/tips_tv"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="@dimen/view_space_28"
+                        android:layout_marginTop="@dimen/view_space_8"
+                        android:layout_marginRight="@dimen/view_space_28"
+                        android:background="@drawable/commit_bg"
+                        android:enabled="true"
+                        android:text="上传身份证反面"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/text_size_16" />
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/divider_size_0.5"
+                        android:layout_marginLeft="@dimen/view_space_12"
+                        android:layout_marginTop="@dimen/view_space_18"
+                        android:layout_marginRight="@dimen/view_space_12"
+                        android:background="@color/diver_bg" />
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_marginTop="@dimen/view_space_18"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/id_card_iv"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginLeft="@dimen/view_space_12"
+                        android:layout_marginTop="@dimen/view_space_4"
+                        android:text="银行卡照片*"
+                        android:textColor="@color/color_3"
+                        android:textSize="@dimen/text_size_16"></TextView>
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/id_bank_card_iv"
+                        android:layout_marginTop="@dimen/view_space_12"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/view_height_160"
+                        android:layout_marginLeft="@dimen/view_space_18"
+                        android:layout_marginRight="@dimen/view_space_18"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ic_default"></androidx.appcompat.widget.AppCompatImageView>
+
+                    <Button
+                        android:id="@+id/iid_bank_card_bt"
+                        style="?android:attr/borderlessButtonStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/view_height_40"
+                        android:layout_below="@+id/tips_tv"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="@dimen/view_space_28"
+                        android:layout_marginTop="@dimen/view_space_8"
+                        android:layout_marginRight="@dimen/view_space_28"
+                        android:background="@drawable/commit_bg"
+                        android:enabled="true"
+                        android:text="上传银行卡"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/text_size_16" />
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/divider_size_0.5"
+                        android:layout_marginLeft="@dimen/view_space_12"
+                        android:layout_marginTop="@dimen/view_space_12"
+                        android:layout_marginRight="@dimen/view_space_12"
+                        android:background="@color/diver_bg" />
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_marginTop="@dimen/view_space_18"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/id_card_iv"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginLeft="@dimen/view_space_12"
+                        android:text="上传验标资料*"
+                        android:textColor="@color/color_3"
+                        android:textSize="@dimen/text_size_16"></TextView>
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/verification_iv"
+                        android:layout_marginTop="@dimen/view_space_12"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/view_height_160"
+                        android:layout_marginLeft="@dimen/view_space_18"
+                        android:layout_marginRight="@dimen/view_space_18"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ic_default"></androidx.appcompat.widget.AppCompatImageView>
+
+                    <Button
+                        android:id="@+id/verification_btn"
+                        style="?android:attr/borderlessButtonStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/view_height_40"
+                        android:layout_below="@+id/tips_tv"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="@dimen/view_space_28"
+                        android:layout_marginTop="@dimen/view_space_8"
+                        android:layout_marginRight="@dimen/view_space_28"
+                        android:background="@drawable/commit_bg"
+                        android:enabled="true"
+                        android:text="上传验标资料"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/text_size_16" />
+
+                    <TextView
+                        android:layout_marginTop="@dimen/view_space_8"
+                        android:layout_marginLeft="@dimen/view_space_12"
+                        android:textColor="@color/colorRed"
+                        android:textSize="@dimen/text_size_14"
+                        android:text="@string/tips_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+
+                    </TextView>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/divider_size_0.5"
+                        android:layout_marginLeft="@dimen/view_space_12"
+                        android:layout_marginTop="@dimen/view_space_12"
+                        android:layout_marginRight="@dimen/view_space_12"
+                        android:background="@color/diver_bg" />
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_marginTop="@dimen/view_space_18"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/id_card_iv"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginLeft="@dimen/view_space_12"
+                        android:text="动物防疫合格证照片"
+                        android:textColor="@color/color_3"
+                        android:textSize="@dimen/text_size_16"></TextView>
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/animal_epidemic_iv"
+                        android:layout_marginTop="@dimen/view_space_12"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/view_height_160"
+                        android:layout_marginLeft="@dimen/view_space_18"
+                        android:layout_marginRight="@dimen/view_space_18"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ic_default"></androidx.appcompat.widget.AppCompatImageView>
+
+                    <Button
+                        android:id="@+id/animal_epidemic_btn"
+                        style="?android:attr/borderlessButtonStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/view_height_40"
+                        android:layout_below="@+id/tips_tv"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="@dimen/view_space_28"
+                        android:layout_marginTop="@dimen/view_space_8"
+                        android:layout_marginRight="@dimen/view_space_28"
+                        android:background="@drawable/commit_bg"
+                        android:enabled="true"
+                        android:text="上传动物防疫合格证"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/text_size_16" />
+
+                    <TextView
+                        android:layout_marginTop="@dimen/view_space_8"
+                        android:layout_marginLeft="@dimen/view_space_12"
+                        android:layout_marginRight="@dimen/view_space_12"
+                        android:textColor="@color/colorRed"
+                        android:textSize="@dimen/text_size_16"
+                        android:text="动物防疫合格证单位名称必须与被保险人/养殖场名称相同，否则保单无效。 "
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                    </TextView>
+
+
+
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/view_space_30">
+
+                </View>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:textSize="@dimen/text_size_16"
+                    android:textColor="@color/color_3"
+                    android:text="手写签名  *"
+                    android:layout_marginLeft="@dimen/view_space_18"
+                    android:layout_marginTop="@dimen/view_space_12"
+                    android:layout_marginRight="@dimen/view_space_18"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                </TextView>
+
+
+                <LinearLayout
+                    android:layerType="software"
+                    android:background="@drawable/dotted_line_bg"
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="@dimen/view_space_18"
+                    android:layout_marginTop="@dimen/view_space_12"
+                    android:layout_marginRight="@dimen/view_space_18"
+                    android:layout_height="wrap_content">
+                    <com.example.newapp.weight.SignatureView
+                        android:id="@+id/signature_view"
+                        android:layout_marginTop="@dimen/view_space_2"
+                        android:layout_marginLeft="@dimen/view_space_2"
+                        android:layout_marginRight="@dimen/view_space_2"
+                        android:layout_marginBottom="@dimen/view_space_2"
+                        app:penColor="@color/colorBlack"
+                        app:penWidth="20"
+                        app:backColor="#D3D3D3"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/view_height_180">
+                    </com.example.newapp.weight.SignatureView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/view_space_12">
+
+
+                    <Button
+                        android:id="@+id/clear_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/view_space_40"
+                        android:layout_marginLeft="@dimen/view_space_20"
+                        android:layout_marginRight="@dimen/view_space_8"
+                        android:layout_weight="1"
+                        android:background="@drawable/commit_bg"
+                        android:text="重置"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/text_size_16"></Button>
+
+                    <Button
+                        android:id="@+id/sure_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/view_space_40"
+                        android:layout_marginLeft="@dimen/view_space_8"
+                        android:layout_marginRight="@dimen/view_space_20"
+                        android:layout_weight="1"
+                        android:background="@drawable/sure_signature_bg"
+                        android:text="确认签名"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/text_size_16">
+
+                    </Button>
+                </LinearLayout>
+
+                <TextView
+                    android:textSize="@dimen/text_size_16"
+                    android:textColor="@color/color_3"
+                    android:text="本签名只用于本次投保的保险合同使用（包含投保单和分户清单），确认签名表示您对保险条款和投保内容完全理解和同意。"
+                    android:layout_marginLeft="@dimen/view_space_18"
+                    android:layout_marginTop="@dimen/view_space_12"
+                    android:layout_marginRight="@dimen/view_space_18"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                </TextView>
+                <Button
+                    android:id="@+id/notice_btn"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/view_height_44"
+                    android:layout_marginBottom="@dimen/view_space_12"
+                    android:layout_marginLeft="@dimen/view_space_18"
+                    android:layout_marginRight="@dimen/view_space_18"
+                    android:layout_marginTop="@dimen/view_space_18"
+                    android:background="@drawable/transport_btn_bg"
+                    android:text="生猪疫病强制扑杀补偿保险投保须知"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/color_3"
+                    android:textSize="@dimen/text_size_16" />
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/view_space_10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <CheckBox
+                        android:paddingLeft="@dimen/view_space_10"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/view_space_18"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                    </CheckBox>
+
+                    <TextView
+                        android:id="@+id/terms_tv"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/dp_4"
+                        android:layout_marginRight="@dimen/view_space_18"
+                        android:textSize="@dimen/text_size_14"
+                        android:textColor="@color/colorBlack"
+                        android:text="本人已阅读并同意 《生猪疫病强制扑杀补偿保险投保须知》 ,并承诺实际为本人操作。"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                    </TextView>
+                </LinearLayout>
+                <Button
+                    android:id="@+id/commit_btn"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/view_height_44"
+                    android:layout_marginBottom="@dimen/view_space_12"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:layout_marginTop="@dimen/view_space_30"
+                    android:background="@drawable/commit_bg"
+                    android:text="确认信息"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/text_size_16" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/view_space_40">
+
+                </View>
+            </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </LinearLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

@@ -13,6 +13,7 @@ import com.example.newapp.R;
 import com.example.newapp.activity.financial_services.Insurance.InsuranceActivity;
 import com.example.newapp.activity.financial_services.adapter.FinancialServicesAdapter;
 import com.example.newapp.activity.financial_services.credit.CreditActivity;
+import com.example.newapp.activity.financial_services.crowdfunding_pig.CrowdfundingPigActivity;
 import com.example.newapp.activity.financial_services.fund.FundActivity;
 import com.example.newapp.activity.financial_services.futures.FuturesActivity;
 import com.example.newapp.activity.financial_services.trust.TrustActivity;
@@ -84,6 +85,13 @@ public class FinancialServicesActivity extends BaseActivity {
                     case 4://基金
                         FundActivity.start(FinancialServicesActivity.this,2);
                         break;
+                    case 5://参股养猪
+                        break;
+                    case 6://众筹养猪
+                        CrowdfundingPigActivity.start(FinancialServicesActivity.this);
+                        break;
+                    case 7://金融租赁
+                        break;
                     default:
 
                 }
@@ -108,7 +116,7 @@ public class FinancialServicesActivity extends BaseActivity {
 
     private void addData(){
         recordDataList = new ArrayList<>();
-        String [] strings = {"信贷","保险","期货","信托","基金","参股","众筹","金融租赁"};
+        String [] strings = {"信贷服务","保险服务","期货服务","信托服务","基金服务","参股养猪","众筹养猪","金融租赁"};
         for (String string : strings) {
             RecordData recordData = new RecordData(-1,null);
             recordData.setTitle(string);

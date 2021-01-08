@@ -131,4 +131,15 @@
     <string name="take_photo">拍照</string>
     <string name="tag_key_translation_z">translation_z</string>
 
+    <string name="insurance_details">&#12288;&#12288;在保险期间内，由于发生疫病，区(县)级及以上政府在保险期间内发布命令对该地区生猪进行强制扑杀导致保险生猪死亡的，视为保险事故发生，保险人按照保险合同的约定负责赔偿。区(县)级及以上政府扑杀命令发布日期具体以该政府文件落款日期为准。</string>
+    <string name="insurance_standard">6元/头（保额500元）、12元/头（保额1000元）</string>
+    <string name="within_insurance">保险生猪自本保险期间起始之日起十五日内（含）为保险生猪的疾病观察期。在观察期内，由于发生疫病导致保险生猪被扑杀造成死亡的，保险人不承担赔偿责任，但可退还死亡保险标的对应保险费。</string>
+<string name="consumer_phone">95511</string>
+
+    <string name="transport_details_special_tips">1.本保险合同承担生猪、仔猪在运输途中因非疾病导致的死亡责任。\n2.出险时需提供生猪、仔猪无害化处理证明，如无此证明将不承担保险责任。\n3.	本保单约定每头生猪赔偿限额为人民币3000元，每头仔猪赔偿限额为人民币1500元。\n4.	告知：公司2019年4季度综合偿付能力充足率为207.87%，最近风险综合评级（分类监管）被评定为A级，符合监管要求，请知悉。</string>
+
+    <string name="transport_within_insurance">自动物检疫合格证注明的出发地离开时起，运至动物检疫合格证注明的接收目的地终止，最长不超过检疫合格证注明的有效时间。</string>
+    <string name="tips_content">1.验标资料包含猪舍外观照片；\n2.猪场外观照片；\n3.猪舍内部对角照片（含猪）2–3张;\n4.总数量不少于4张 </string>
+
+
 </resources>

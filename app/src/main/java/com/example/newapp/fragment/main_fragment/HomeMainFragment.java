@@ -3,7 +3,7 @@ package com.example.newapp.fragment.main_fragment;
 import androidx.fragment.app.Fragment;
 
 import com.example.newapp.R;
-import com.example.newapp.activity.weight.CustomViewPager;
+import com.example.newapp.weight.CustomViewPager;
 import com.example.newapp.base.BaseFragment;
 import com.example.newapp.base.BasePresenter;
 import com.example.newapp.fragment.home.HomeFragment;

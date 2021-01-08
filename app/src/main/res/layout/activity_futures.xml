@@ -49,7 +49,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:text="期货"
+            android:text="期货服务"
             android:textColor="@color/colorBlack"
             android:textSize="@dimen/text_size_16" />
     </RelativeLayout>

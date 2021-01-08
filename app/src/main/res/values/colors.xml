@@ -41,6 +41,7 @@
 
     <color name="diver_bg">#dfdfdf</color>
     <color name="space_bg">#f2f6f9</color>
+    <color name="xml_bg">#F1F1F1</color>
     <color name="selected_item_bg">#f5fafe</color>  <!-- 选中的item背景色 -->
     <color name="assist_text">#aaaaaa</color> <!-- 辅助文字色 -->
 

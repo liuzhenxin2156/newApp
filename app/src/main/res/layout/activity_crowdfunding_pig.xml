@@ -49,7 +49,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:text="保险服务"
+            android:text="众筹养猪"
             android:textColor="@color/colorBlack"
             android:textSize="@dimen/text_size_16" />
     </RelativeLayout>

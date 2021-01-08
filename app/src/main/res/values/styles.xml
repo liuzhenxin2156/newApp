@@ -96,6 +96,7 @@
         <item name="android:windowFullscreen">true</item>
         <item name="android:windowBackground">@android:color/transparent</item>
         <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowSoftInputMode">stateAlwaysVisible</item>
     </style>
 
     <style name="ActionSheetDialogStyle" parent="@android:style/Theme.Dialog">
