@@ -6,8 +6,8 @@ import android.content.Context;
 import android.os.Bundle;
 import android.os.Environment;
 
-import androidx.multidex.BuildConfig;
 import androidx.multidex.MultiDex;
+
 
 import com.elvishew.xlog.LogConfiguration;
 import com.elvishew.xlog.LogLevel;
@@ -16,6 +16,7 @@ import com.elvishew.xlog.printer.AndroidPrinter;
 import com.elvishew.xlog.printer.Printer;
 import com.elvishew.xlog.printer.file.FilePrinter;
 import com.elvishew.xlog.printer.file.naming.DateFileNameGenerator;
+import com.example.newapp.BuildConfig;
 import com.example.newapp.sp.ConfigSP;
 import com.example.newapp.utils.AppUtil;
 import com.example.newapp.utils.CrashHandler;
@@ -66,7 +67,7 @@ public class MyApplication extends Application implements Application.ActivityLi
 
         Printer androidPrinter = new AndroidPrinter();             // 通过 android.util.Log 打印日志的打印器
         Printer filePrinter = new FilePrinter                      // 打印日志到文件的打印器
-                .Builder(Environment.getExternalStorageDirectory().getPath() + "/NongAnXing/xlog")    // 指定保存日志文件的路径
+                .Builder(Environment.getExternalStorageDirectory().getPath() + "/ZhuGeLiang/xlog")    // 指定保存日志文件的路径
                 .fileNameGenerator(new DateFileNameGenerator() {
                     @Override
                     public String generateFileName(int logLevel, long timestamp) {

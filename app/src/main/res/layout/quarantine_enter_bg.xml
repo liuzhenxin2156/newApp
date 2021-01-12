@@ -34,7 +34,6 @@
                 android:layout_height="@dimen/view_height_44"
                 android:cursorVisible="true"
                 android:inputType="number"
-                android:textCursorDrawable="@null"
                 android:layout_gravity="center"
                 android:layout_marginTop="@dimen/view_space_12"
                 android:layout_marginRight="@dimen/view_space_4"

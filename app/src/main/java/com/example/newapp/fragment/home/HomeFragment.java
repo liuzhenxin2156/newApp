@@ -40,6 +40,7 @@ import com.example.newapp.activity.pig_teach.PigTeachActivity;
 import com.example.newapp.activity.pig_trade.PigTradeActivity;
 import com.example.newapp.activity.pork_fragrant.PorkFragrantActivity;
 import com.example.newapp.activity.pork_trade.PorkTradeActivity;
+import com.example.newapp.activity.publicwelfare.PublicWelfareActivity;
 import com.example.newapp.activity.quarantine.QuarantineActivity;
 import com.example.newapp.activity.recruitment.RecruitmentActivity;
 import com.example.newapp.activity.traceability.TraceabilityActivity;
@@ -232,6 +233,9 @@ public class HomeFragment extends BaseFragment implements OnBannerListener , Vie
                     case 29://特别嗜好
                         PigPetActivity.start(getActivity());
                         break;
+                    case 30://公益活动
+                        PublicWelfareActivity.start(getActivity());
+                        break;
                     default:
                 }
             }
@@ -313,7 +317,7 @@ public class HomeFragment extends BaseFragment implements OnBannerListener , Vie
         String [] strings = {"会员服务","金融服务"
                ,"活体交易","产品交易","生猪饲喂","大宗贸易","生产资料","动保产品","免疫服务","防疫消毒","检疫申报","养殖咨询","猪场建设",
                 "人员招聘","合作招募","土地信息","运输运力","环保测评","人工智能","软件定制","视频监管","互联互通","逢年过节",
-                "特别品种","溯源中国","国际贸易","教育培训","养猪大赛","供销总社","特别嗜好"
+                "特别品种","溯源中国","国际贸易","教育培训","养猪大赛","供销总社","特别嗜好","公益活动"
         };
         for (String string : strings) {
             RecordData recordData = new RecordData(-1,null);

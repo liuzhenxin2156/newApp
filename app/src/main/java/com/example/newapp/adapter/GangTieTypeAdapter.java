@@ -132,6 +132,9 @@ public class GangTieTypeAdapter extends BaseRecyclerViewAdapter<RecordData, Base
             case 30:
                 imageView.setImageDrawable(mContext.getDrawable(R.drawable.gt29));
                 break;
+            case 31:
+                imageView.setImageDrawable(mContext.getDrawable(R.drawable.gt22));
+                break;
             default:
 
         }

@@ -22,7 +22,7 @@ import com.example.newapp.utils.NetworkStateReceiver;
 import com.example.newapp.utils.ToastUtil;
 import com.example.newapp.utils.rx.RxManager;
 import com.gyf.immersionbar.ImmersionBar;
-import com.tbruyelle.rxpermissions3.RxPermissions;
+import com.tbruyelle.rxpermissions2.RxPermissions;
 
 
 /**

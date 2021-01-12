@@ -17,11 +17,14 @@ import android.widget.TextView;
 import com.example.newapp.R;
 import com.example.newapp.activity.financial_services.FinancialServicesActivity;
 import com.example.newapp.activity.financial_services.Insurance.InsuranceActivity;
+import com.example.newapp.activity.financial_services.Insurance.details.CullingInsuranceDetailsActivity;
 import com.example.newapp.activity.financial_services.Insurance.details.FarmingInsuranceDetailsActivity;
+import com.example.newapp.activity.financial_services.Insurance.details.TransportInsuranceDetailsActivity;
 import com.example.newapp.base.BaseActivity;
 import com.example.newapp.base.BasePresenter;
 import com.example.newapp.utils.AppManager;
 import com.example.newapp.utils.PhoneUtil;
+import com.example.newapp.utils.ToastUtil;
 
 /**
  * 养殖险
@@ -120,22 +123,22 @@ public class FarmingInsuranceActivity extends BaseActivity implements View.OnCli
                 }
                 break;
             case R.id.sun_insurance_ll://阳光保险简介
-                FarmingInsuranceDetailsActivity.start(this,1);
+                TransportInsuranceDetailsActivity.start(this,2);
                 break;
             case R.id.sun_insurance_btn://阳光保险投保
-
+                ToastUtil.showToast(this,"暂无养殖险");
                 break;
             case R.id.quanlian_insurance_ll://全脸保险简介
-                FarmingInsuranceDetailsActivity.start(this,1);
+                CullingInsuranceDetailsActivity.start(this,2);
                 break;
             case R.id.quanlian_insurance_btn://全脸保险投保
-
+                ToastUtil.showToast(this,"暂无养殖险");
                 break;
             case R.id.detalis_btn:
-                FarmingInsuranceDetailsActivity.start(this,1);
+                TransportInsuranceDetailsActivity.start(this,2);
                 break;
             case R.id.quanlian_detalis_btn:
-                FarmingInsuranceDetailsActivity.start(this,1);
+                CullingInsuranceDetailsActivity.start(this,2);
                 break;
             default:
         }

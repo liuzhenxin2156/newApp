@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_border_white"
+    android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/view_space_18"
+        android:paddingRight="@dimen/view_space_18"
+        android:paddingTop="@dimen/view_space_26"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/title_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingBottom="@dimen/view_space_16"
+            android:text="1245"
+            android:textColor="@color/color_3"
+            android:textSize="@dimen/text_size_18"
+            android:textStyle="bold"
+            />
+
+        <WebView
+            android:id="@+id/webview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></WebView>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

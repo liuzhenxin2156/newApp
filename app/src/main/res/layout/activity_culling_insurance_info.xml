@@ -399,7 +399,7 @@
                         android:layout_marginRight="@dimen/view_space_8"
                         android:layout_weight="1"
                         style="?android:attr/borderlessButtonStyle"
-                        android:background="@drawable/transport_btn_bg"
+                        android:background="@drawable/state_btn_bg"
                         android:text="+受益人"
                         android:textColor="@color/colorBlack"
                         android:textSize="@dimen/text_size_14"></Button>
@@ -412,7 +412,7 @@
                         android:layout_marginLeft="@dimen/view_space_8"
                         android:layout_marginRight="@dimen/view_space_20"
                         android:layout_weight="1"
-                        android:background="@drawable/transport_btn_bg"
+                        android:background="@drawable/state_btn_bg"
                         android:text="+添加被保险人"
                         android:textColor="@color/colorBlack"
                         android:textSize="@dimen/text_size_14">
@@ -649,7 +649,7 @@
 
             <LinearLayout
                 android:visibility="gone"
-                android:id="@+id/be_be_insured_ll"
+                android:id="@+id/be_insured_ll"
                 android:layout_marginTop="@dimen/view_space_12"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -769,7 +769,6 @@
                         android:layout_marginTop="@dimen/view_space_12"
                         android:layout_marginRight="@dimen/view_space_22"
                         android:background="@drawable/edittext_bg"
-                        android:focusable="false"
                         android:gravity="left|center"
                         android:maxLines="1"
                         android:paddingLeft="@dimen/view_space_8"
@@ -1158,7 +1157,7 @@
                         android:textColor="@color/colorRed"
                         android:textSize="@dimen/text_size_16" />
                     <TextView
-                        android:layout_marginBottom="@dimen/view_space_8"
+                        android:layout_marginBottom="@dimen/view_space_12"
                         android:layout_marginTop="@dimen/view_space_8"
                         android:layout_gravity="center"
                         android:layout_width="wrap_content"
@@ -1172,7 +1171,7 @@
                 <LinearLayout
                     android:id="@+id/premium_long_ll"
                     android:layout_marginBottom="@dimen/view_space_18"
-                    android:background="@drawable/choose_sum_assured_bg"
+                    android:background="@drawable/choose_sum_assured_focused"
                     android:layout_marginTop="@dimen/view_space_10"
                     android:layout_marginLeft="@dimen/view_space_18"
                     android:layout_marginRight="@dimen/view_space_18"
@@ -1201,7 +1200,7 @@
                         android:textColor="@color/colorRed"
                         android:textSize="@dimen/text_size_16" />
                     <TextView
-                        android:layout_marginBottom="@dimen/view_space_8"
+                        android:layout_marginBottom="@dimen/view_space_12"
                         android:layout_marginTop="@dimen/view_space_8"
                         android:layout_gravity="center"
                         android:layout_width="wrap_content"
@@ -1274,7 +1273,7 @@
                         android:src="@drawable/ic_default"></androidx.appcompat.widget.AppCompatImageView>
 
                     <Button
-                        android:id="@+id/idcard_iv_bt"
+                        android:id="@+id/id_card_iv_bt"
                         style="?android:attr/borderlessButtonStyle"
                         android:layout_width="match_parent"
                         android:layout_height="@dimen/view_height_40"
@@ -1300,7 +1299,7 @@
                         android:src="@drawable/ic_default"></androidx.appcompat.widget.AppCompatImageView>
 
                     <Button
-                        android:id="@+id/other_idcard_iv_bt"
+                        android:id="@+id/other_id_card_iv_bt"
                         style="?android:attr/borderlessButtonStyle"
                         android:layout_width="match_parent"
                         android:layout_height="@dimen/view_height_40"
@@ -1353,7 +1352,7 @@
                         android:src="@drawable/ic_default"></androidx.appcompat.widget.AppCompatImageView>
 
                     <Button
-                        android:id="@+id/iid_bank_card_bt"
+                        android:id="@+id/id_bank_card_bt"
                         style="?android:attr/borderlessButtonStyle"
                         android:layout_width="match_parent"
                         android:layout_height="@dimen/view_height_40"
@@ -1396,32 +1395,17 @@
                         android:textColor="@color/color_3"
                         android:textSize="@dimen/text_size_16"></TextView>
 
-                    <androidx.appcompat.widget.AppCompatImageView
-                        android:id="@+id/verification_iv"
-                        android:layout_marginTop="@dimen/view_space_12"
-                        android:layout_width="match_parent"
-                        android:layout_height="@dimen/view_height_160"
-                        android:layout_marginLeft="@dimen/view_space_18"
-                        android:layout_marginRight="@dimen/view_space_18"
-                        android:scaleType="fitXY"
-                        android:src="@drawable/ic_default"></androidx.appcompat.widget.AppCompatImageView>
-
-                    <Button
-                        android:id="@+id/verification_btn"
-                        style="?android:attr/borderlessButtonStyle"
-                        android:layout_width="match_parent"
-                        android:layout_height="@dimen/view_height_40"
-                        android:layout_below="@+id/tips_tv"
-                        android:layout_alignParentBottom="true"
-                        android:layout_marginLeft="@dimen/view_space_28"
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerview"
+                        android:layout_marginLeft="@dimen/view_space_12"
                         android:layout_marginTop="@dimen/view_space_8"
-                        android:layout_marginRight="@dimen/view_space_28"
-                        android:background="@drawable/commit_bg"
-                        android:enabled="true"
-                        android:text="上传验标资料"
-                        android:textAppearance="?android:attr/textAppearanceMedium"
-                        android:textColor="@color/colorWhite"
-                        android:textSize="@dimen/text_size_16" />
+                        android:layout_marginBottom="@dimen/view_space_8"
+                        android:layout_marginRight="@dimen/view_space_12"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    </androidx.recyclerview.widget.RecyclerView>
+
 
                     <TextView
                         android:layout_marginTop="@dimen/view_space_8"
@@ -1592,6 +1576,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
                 </TextView>
+
+
+
                 <Button
                     android:id="@+id/notice_btn"
                     style="?android:attr/borderlessButtonStyle"
@@ -1601,11 +1588,23 @@
                     android:layout_marginLeft="@dimen/view_space_18"
                     android:layout_marginRight="@dimen/view_space_18"
                     android:layout_marginTop="@dimen/view_space_18"
-                    android:background="@drawable/transport_btn_bg"
+                    android:background="@drawable/state_btn_bg"
                     android:text="生猪疫病强制扑杀补偿保险投保须知"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:textColor="@color/color_3"
                     android:textSize="@dimen/text_size_16" />
+
+                <TextView
+                    android:textSize="@dimen/text_size_16"
+                    android:textColor="@color/colorRed"
+                    android:text="请您再次确认以上信息，确保准确无误且真实有效，保单生效后，信息将无法做任何修改。"
+                    android:layout_marginLeft="@dimen/view_space_18"
+                    android:layout_marginTop="@dimen/view_space_4"
+                    android:layout_marginRight="@dimen/view_space_18"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                </TextView>
+
                 <LinearLayout
                     android:orientation="horizontal"
                     android:layout_marginTop="@dimen/view_space_10"

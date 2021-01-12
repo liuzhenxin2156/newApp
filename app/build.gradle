@@ -1,8 +1,24 @@
-plugins {
-    id 'com.android.application'
-}
+apply plugin: 'com.android.application'
+
+// 加载 local.properties 资源, 在local.properties中配置 签名文件信息
+Properties properties = new Properties();
+properties.load(project.rootProject.file('local.properties').newDataInputStream());
 
 android {
+    signingConfigs {
+        release {
+            keyAlias properties.getProperty('keyAlias')
+            keyPassword properties.getProperty('keyPassword')
+            storeFile file(properties.getProperty('storeFile'))
+            storePassword properties.getProperty('storePassword')
+        }
+        debug {
+            keyAlias properties.getProperty('keyAlias')
+            keyPassword properties.getProperty('keyPassword')
+            storeFile file(properties.getProperty('storeFile'))
+            storePassword properties.getProperty('storePassword')
+        }
+    }
     compileSdkVersion 28
     buildToolsVersion "28.0.2"
 
@@ -14,14 +30,36 @@ android {
         versionName "1.0"
         multiDexEnabled true
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        signingConfig signingConfigs.release
     }
 
     buildTypes {
-        release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        release {// 生产环境
+            // 不显示log
+            buildConfigField "boolean", "LOG_DEBUG", "false"
+            minifyEnabled true//是否对代码进行混淆
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            //指定混淆的规则文件
+            signingConfig signingConfigs.release//设置签名信息
+            //是否支持断点调试
+            zipAlignEnabled true//是否对APK包执行ZIP对齐优化，减小zip体积，增加运行效率
+            shrinkResources true //开启删除无用资源
+            minifyEnabled true //开启删除无用代码
+        }
+        debug {// 测试环境
+            // 显示log
+            buildConfigField "boolean", "LOG_DEBUG", "true"
+            minifyEnabled false//是否对代码进行混淆
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            //指定混淆的规则文件
+            signingConfig signingConfigs.debug//设置签名信息
+            //是否支持断点调试
+            zipAlignEnabled true//是否对APK包执行ZIP对齐优化，减小zip体积，增加运行效率
+            shrinkResources true //开启删除无用资源
+            minifyEnabled true //开启删除无用代码
         }
     }
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
@@ -69,11 +107,12 @@ dependencies {
     //查看大图
     implementation 'com.github.chrisbanes:PhotoView:2.0.0'
 
-    //   RxPermissions 的使用方法详解
-    implementation 'com.github.tbruyelle:rxpermissions:0.12'
+    //权限
+    implementation 'com.github.tbruyelle:rxpermissions:0.10.2'
     implementation 'io.reactivex.rxjava2:rxandroid:2.1.0'
-    implementation 'io.reactivex.rxjava2:rxjava:2.2.4'
 
+    //RxJava
+    implementation 'io.reactivex.rxjava2:rxjava:2.2.17'
     //qpp升级
     implementation 'com.azhon:appupdate:3.0.2'
 
@@ -82,4 +121,10 @@ dependencies {
 
 
     implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:3.0.4'
+
+    //图片查看
+    api('com.github.LuckSiege.PictureSelector:picture_library:v2.2.3') {
+        exclude group: 'com.github.bumptech.glide'
+    }
+  //  implementation 'com.contrarywind:Android-PickerView:3.2.7'
 }

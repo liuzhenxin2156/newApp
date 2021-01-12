@@ -25,7 +25,7 @@ public class AppUtil {
     /**
      * App存储目录
      */
-    public static final String PATH_APP = "NongAnXing";    // 农安星根目录
+    public static final String PATH_APP = "ZhuGeLiang";    // 农安星根目录
     public static final String PATH_APP_LOG = PATH_APP + "/log";    // 日志目录
     public static final String PATH_APP_RESOURCE = PATH_APP + "/.resource";  // 资源目录，隐藏目录
     public static final String PATH_APP_IMAGE = PATH_APP + "/image";   // 图片目录

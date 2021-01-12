@@ -7,8 +7,10 @@ import android.widget.Button;
 import android.widget.ImageView;
 
 import com.example.newapp.R;
+import com.example.newapp.activity.financial_services.Insurance.culling.info.CullingInsuranceInfoActivity;
 import com.example.newapp.base.BaseActivity;
 import com.example.newapp.base.BasePresenter;
+import com.example.newapp.utils.ToastUtil;
 
 /**
  * 扑杀险保险介绍
@@ -72,6 +74,11 @@ public class CullingInsuranceDetailsActivity extends BaseActivity implements Vie
                 finish();
                 break;
             case R.id.insured_now_btn:
+                if (typeID==1){
+                    CullingInsuranceInfoActivity.start(this);
+                }else {
+                    ToastUtil.showToast(this,"暂无养殖险");
+                }
                 break;
             default:
         }

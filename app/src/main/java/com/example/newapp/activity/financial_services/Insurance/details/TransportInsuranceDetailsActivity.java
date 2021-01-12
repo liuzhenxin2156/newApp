@@ -10,12 +10,14 @@ import android.widget.EditText;
 import android.widget.ImageView;
 
 import com.example.newapp.R;
+import com.example.newapp.activity.financial_services.Insurance.culling.info.CullingInsuranceInfoActivity;
 import com.example.newapp.activity.financial_services.Insurance.transport.TransportInsuranceActivity;
 import com.example.newapp.activity.financial_services.Insurance.transport.transport_insured.TransportInsuredActivity;
 import com.example.newapp.base.BaseActivity;
 import com.example.newapp.base.BasePresenter;
 import com.example.newapp.utils.KeyBoardUtil;
 import com.example.newapp.utils.ScreenUtils;
+import com.example.newapp.utils.ToastUtil;
 
 /**
  * 运输险保险介绍
@@ -79,7 +81,11 @@ public class TransportInsuranceDetailsActivity extends BaseActivity implements V
                 finish();
                 break;
             case R.id.insured_now_btn:
-                showInsuredDialog();
+                if (typeID==1){
+                    showInsuredDialog();
+                }else {
+                    ToastUtil.showToast(this,"暂无养殖险");
+                }
                 break;
             default:
         }
@@ -103,7 +109,6 @@ public class TransportInsuranceDetailsActivity extends BaseActivity implements V
                 KeyBoardUtil.closeKeyboard(TransportInsuranceDetailsActivity.this);
                 TransportInsuredActivity.start(TransportInsuranceDetailsActivity.this);
                 exitDialog.dismiss();
-
             }
         });
         exitDialog.show();

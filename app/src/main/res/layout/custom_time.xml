@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/view_height_56"
+        android:background="@color/colorWhite"
+        >
+        <TextView
+            android:id="@+id/cancel_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/view_space_12"
+            android:padding="8dp"
+            android:text="@string/isno"
+            android:textColor="@color/color_6"
+            android:textSize="@dimen/text_size_16"
+            />
+
+        <TextView
+            android:id="@+id/submit_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/view_space_12"
+            android:padding="8dp"
+            android:text="完成"
+            android:textColor="@color/C4"
+            android:textSize="@dimen/text_size_16"
+            />
+    </RelativeLayout>
+
+    <View
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_size_0.5"
+        android:background="@color/diliver_gray"
+        />
+
+    <!--此部分需要完整复制过去，删减或者更改ID会导致初始化找不到内容而报空-->
+    <LinearLayout
+        android:id="@+id/timepicker"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        android:orientation="horizontal"
+        >
+
+        <com.example.newapp.weight.wheelview.listener.WheelView
+            android:id="@+id/year"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            />
+
+        <com.example.newapp.weight.wheelview.listener.WheelView
+
+            android:id="@+id/month"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.1"
+            />
+
+        <com.example.newapp.weight.wheelview.listener.WheelView
+            android:id="@+id/day"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.1"
+            />
+
+        <com.example.newapp.weight.wheelview.listener.WheelView
+            android:id="@+id/hour"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.1"
+            />
+
+        <com.example.newapp.weight.wheelview.listener.WheelView
+            android:id="@+id/min"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.1"
+            />
+
+        <com.example.newapp.weight.wheelview.listener.WheelView
+            android:id="@+id/second"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.1"
+            />
+    </LinearLayout>
+
+
+</LinearLayout>
