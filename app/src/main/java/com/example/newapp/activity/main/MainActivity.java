@@ -92,6 +92,9 @@ public class MainActivity extends BaseActivity implements BottomNavigationView.O
         mFragments.add(HomeMainFragment.newInstance());
         // 初始化展示第一个Fragment
         setFragmentPosition(0);
+
+        int i = Integer.valueOf("000").intValue();
+        LogUtil.d("lzx-----》"," i " + i);
     }
 
     @Override
