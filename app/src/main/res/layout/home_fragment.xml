@@ -285,6 +285,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:visibility="gone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/view_space_12"
@@ -313,6 +314,7 @@
 
 
             <LinearLayout
+                android:visibility="gone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/view_space_12"
@@ -340,6 +342,90 @@
 
                 </androidx.recyclerview.widget.RecyclerView>
             </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_marginLeft="@dimen/view_space_12"
+                android:orientation="horizontal"
+                android:layout_marginRight="@dimen/view_space_12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/today_country_price_ll"
+                    android:layout_marginRight="@dimen/view_space_6"
+                    android:background="@drawable/shape_border_white"
+                    android:layout_weight="1"
+                    android:layout_marginTop="@dimen/view_space_12"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:gravity="center"
+                        android:layout_marginBottom="@dimen/view_space_6"
+                        android:layout_marginTop="@dimen/view_space_6"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:layout_gravity="center"
+                            android:src="@drawable/gt12"
+                            android:layout_width="@dimen/view_space_30"
+                            android:layout_height="@dimen/view_space_30">
+                        </ImageView>
+                        <TextView
+                            android:layout_marginLeft="@dimen/view_space_2"
+                            android:layout_gravity="center"
+                            android:textSize="@dimen/text_size_16"
+                            android:textColor="@color/black"
+                            android:text="今日全国猪价"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                        </TextView>
+                    </LinearLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/city_country_price_ll"
+                    android:layout_marginLeft="@dimen/view_space_6"
+                    android:background="@drawable/shape_border_white"
+                    android:layout_weight="1"
+                    android:layout_marginTop="@dimen/view_space_12"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:gravity="center"
+                        android:layout_marginBottom="@dimen/view_space_6"
+                        android:layout_marginTop="@dimen/view_space_6"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:layout_gravity="center"
+                            android:src="@drawable/gt13"
+                            android:layout_width="@dimen/view_space_30"
+                            android:layout_height="@dimen/view_space_30">
+                        </ImageView>
+                        <TextView
+                            android:layout_marginLeft="@dimen/view_space_2"
+                            android:layout_gravity="center"
+                            android:textSize="@dimen/text_size_16"
+                            android:textColor="@color/black"
+                            android:text="今日成都猪价"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                        </TextView>
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/view_height_60"></LinearLayout>
 
         </LinearLayout>
 

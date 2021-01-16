@@ -59,6 +59,7 @@ import com.example.newapp.utils.ScreenUtils;
 import com.example.newapp.utils.recyclerview.BaseRecyclerViewAdapter;
 import com.example.newapp.utils.recyclerview.BaseRecyclerViewHolder;
 import com.example.newapp.utils.recyclerview.GridSpacingItemDecoration;
+import com.example.newapp.webview.BaseWebViewActivity;
 import com.youth.banner.Banner;
 import com.youth.banner.adapter.BannerImageAdapter;
 import com.youth.banner.holder.BannerImageHolder;
@@ -88,6 +89,9 @@ public class HomeFragment extends BaseFragment implements OnBannerListener , Vie
     private LinearLayout  trust_ll;
     private LinearLayout  fund_ll;
 
+    private LinearLayout today_country_price_ll;//今日全国价钱
+    private LinearLayout city_country_price_ll;
+
 
 
     public static HomeFragment newInstance() {
@@ -113,7 +117,11 @@ public class HomeFragment extends BaseFragment implements OnBannerListener , Vie
         futures_ll = mRootView.findViewById(R.id.futures_ll);
         trust_ll = mRootView.findViewById(R.id.trust_ll);
         fund_ll = mRootView.findViewById(R.id.fund_ll);
+        today_country_price_ll =mRootView.findViewById(R.id.today_country_price_ll);
+        city_country_price_ll = mRootView.findViewById(R.id.city_country_price_ll);
 
+        today_country_price_ll.setOnClickListener(this);
+        city_country_price_ll.setOnClickListener(this);
         loan_ll.setOnClickListener(this);
         insurance_ll.setOnClickListener(this);
         futures_ll.setOnClickListener(this);
@@ -304,6 +312,12 @@ public class HomeFragment extends BaseFragment implements OnBannerListener , Vie
                 break;
             case R.id.fund_ll://基金服务
                 FundActivity.start(getActivity(),1);
+                break;
+            case R.id.today_country_price_ll://今日全国猪价钱
+                BaseWebViewActivity.start(getActivity(),1);
+                break;
+            case R.id.city_country_price_ll://今日城市猪价钱
+                BaseWebViewActivity.start(getActivity(),2);
                 break;
             default:
         }

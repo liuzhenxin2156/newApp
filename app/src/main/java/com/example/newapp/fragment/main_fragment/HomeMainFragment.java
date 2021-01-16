@@ -3,6 +3,7 @@ package com.example.newapp.fragment.main_fragment;
 import androidx.fragment.app.Fragment;
 
 import com.example.newapp.R;
+import com.example.newapp.fragment.country_price.CountryPriceFragment;
 import com.example.newapp.weight.CustomViewPager;
 import com.example.newapp.base.BaseFragment;
 import com.example.newapp.base.BasePresenter;
@@ -53,6 +54,7 @@ public class HomeMainFragment extends BaseFragment {
         list_fragment.add(HomePigFragment.newInstance());
         list_fragment.add(HomePigSowFragment.newInstance());
         list_fragment.add(HomeBreedPigFragment.newInstance());
+        list_fragment.add(CountryPriceFragment.newInstance());
         //将名称加载tab名字列表，正常情况下，我们应该在values/arrays.xml中进行定义然后调用
         list_title = new ArrayList<>();
         list_title.add("首页");
@@ -60,9 +62,10 @@ public class HomeMainFragment extends BaseFragment {
         list_title.add("生猪");
         list_title.add("母猪");
         list_title.add("种猪");
+        list_title.add("全国实时价格");
 
         //设置TabLayout的模式
-        mTabLayout.setTabMode(TabLayout.MODE_FIXED);
+        mTabLayout.setTabMode(TabLayout.MODE_AUTO);
         //为TabLayout添加tab名称
 
         for (int i = 0; i < list_title.size(); i++) {

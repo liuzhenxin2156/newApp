@@ -1,5 +1,7 @@
 package com.example.newapp.utils;
 
+import retrofit2.http.PUT;
+
 public class AppConstants {
 
     //wx APP_ID
@@ -17,6 +19,9 @@ public class AppConstants {
     //隐私政策
     public static final String PRIVACY_URL = "http://api.agridata.org/upload/appdoc/privacy.html";
 
+    public static  final  String COUNTY_PRICE="https://mp.weixin.qq.com/s/MR7XKdslMwlEOcHyouJQ_g";
+
+    public static final String CITY_PRICE = "https://mp.weixin.qq.com/s/ibF0UTD9zZYPrez2BWTDWQ";
     //GPS 购买
     public static final String WEIDIAN_URL = "https://weidian.com/item.html?itemID=3336351319";
 

@@ -273,11 +273,17 @@
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateHidden|adjustResize" />
 
-        <!-- 扑杀险信息 -->
+        <!-- 公益活动 -->
         <activity android:name=".activity.publicwelfare.PublicWelfareActivity"
             android:theme="@style/BaseAppTheme"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateHidden|adjustResize" />
+
+        <!-- webview -->
+        <activity android:name=".webview.BaseWebViewActivity"
+            android:theme="@style/BaseAppTheme"
+            android:screenOrientation="portrait"
+          />
     </application>
 
 </manifest>
