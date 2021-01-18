@@ -86,7 +86,6 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-
                     android:layout_gravity="center_vertical"
                     android:text="我要投保"
                     android:textColor="@color/colorBlack"
@@ -113,7 +112,7 @@
                     android:textColor="@color/color_3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="中路保险">
+                    android:text="宝讯定制">
                 </TextView>
                 <LinearLayout
                     android:id="@+id/sun_insurance_ll"

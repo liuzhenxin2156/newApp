@@ -79,7 +79,7 @@
                         android:layout_marginTop="@dimen/view_space_8"
                         android:layout_marginRight="@dimen/view_space_18"
                         android:layout_toRightOf="@+id/baoxian_ic"
-                        android:text="阳光生猪养殖险"
+                        android:text="宝讯定制"
                         android:textColor="@color/color_3"
                         android:textSize="@dimen/text_size_16"
                         android:textStyle="bold">

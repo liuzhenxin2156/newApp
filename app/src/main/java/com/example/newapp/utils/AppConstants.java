@@ -19,9 +19,10 @@ public class AppConstants {
     //隐私政策
     public static final String PRIVACY_URL = "http://api.agridata.org/upload/appdoc/privacy.html";
 
-    public static  final  String COUNTY_PRICE="https://mp.weixin.qq.com/s/MR7XKdslMwlEOcHyouJQ_g";
-
-    public static final String CITY_PRICE = "https://mp.weixin.qq.com/s/ibF0UTD9zZYPrez2BWTDWQ";
+    //今日全国猪价格
+    public static  final  String COUNTY_PRICE="https://mp.weixin.qq.com/s/jPzlMqisE_xNo-Gs9EFhSg";
+    //今日成都猪价格
+    public static final String CITY_PRICE = "https://mp.weixin.qq.com/s/gmQyg7t4Vuay7I-WDM0G0g";
     //GPS 购买
     public static final String WEIDIAN_URL = "https://weidian.com/item.html?itemID=3336351319";
 
