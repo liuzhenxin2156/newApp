@@ -9,11 +9,14 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.newapp.R;
+import com.example.newapp.activity.eat_pig.EatPigActivity;
 import com.example.newapp.activity.pig_food.PigFoodActivity;
 import com.example.newapp.activity.pig_food.PigFoodAdapter;
+import com.example.newapp.activity.transaction_service.TransactionServiceActivity;
 import com.example.newapp.base.BaseActivity;
 import com.example.newapp.base.BasePresenter;
 import com.example.newapp.data.RecordData;
+import com.example.newapp.utils.AppManager;
 import com.example.newapp.utils.recyclerview.BaseRecyclerViewAdapter;
 import com.example.newapp.utils.recyclerview.BaseRecyclerViewHolder;
 import com.example.newapp.utils.recyclerview.GridSpacingItemDecoration;
@@ -26,6 +29,7 @@ public class PigOnlineActivity extends BaseActivity implements View.OnClickListe
     private RecyclerView recyclerView;
     private PigOnlineAdapter pigOnlineAdapter;
     private ArrayList<RecordData> recordDataList;
+    private TextView back_level_tv;
 
     /**
      * 启动activity
@@ -47,9 +51,23 @@ public class PigOnlineActivity extends BaseActivity implements View.OnClickListe
         addData();
         mBackTv = findViewById(R.id.back_tv);
         recyclerView = findViewById(R.id.recyclerview);
-        mBackTv.setOnClickListener(v -> finish());
+        mBackTv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+                AppManager.getInstance().finishActivity(EatPigActivity.class);
+            }
+        });
+        back_level_tv = findViewById(R.id.back_level_tv);
 
-        GridLayoutManager layoutManager = new GridLayoutManager(this,5);
+        back_level_tv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
+
+        GridLayoutManager layoutManager = new GridLayoutManager(this,4);
         recyclerView.setLayoutManager(layoutManager);
         pigOnlineAdapter = new PigOnlineAdapter(R.layout.gangtie_item, recordDataList,this);
         HashMap<String, Integer> stringIntegerHashMap = new HashMap<>();

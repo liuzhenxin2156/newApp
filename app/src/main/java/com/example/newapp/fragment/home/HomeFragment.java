@@ -14,9 +14,14 @@ import com.chad.library.adapter.base.entity.node.BaseNode;
 import com.example.newapp.R;
 import com.example.newapp.activity.ai.AiActivity;
 import com.example.newapp.activity.animal_protection_products.AnimalProtectionActivity;
+import com.example.newapp.activity.animal_quarantine.AniamlQuarantineActivity;
+import com.example.newapp.activity.awareness_training.TrainingActivity;
 import com.example.newapp.activity.breeding_consulting.BreeConsultActivity;
+import com.example.newapp.activity.breeding_service.BreedingServiceActivity;
 import com.example.newapp.activity.bulk_trade.BulkTradeActivity;
+import com.example.newapp.activity.construction_investment.ConstructionInvestmentActivity;
 import com.example.newapp.activity.cooperation.CooperationActivity;
+import com.example.newapp.activity.eat_pig.EatPigActivity;
 import com.example.newapp.activity.environmental.EnvironmentalActivity;
 import com.example.newapp.activity.epidemic.EpidemicActivity;
 import com.example.newapp.activity.financial_services.FinancialServicesActivity;
@@ -43,7 +48,9 @@ import com.example.newapp.activity.pork_trade.PorkTradeActivity;
 import com.example.newapp.activity.publicwelfare.PublicWelfareActivity;
 import com.example.newapp.activity.quarantine.QuarantineActivity;
 import com.example.newapp.activity.recruitment.RecruitmentActivity;
+import com.example.newapp.activity.smart_pig.SmartPigActivity;
 import com.example.newapp.activity.traceability.TraceabilityActivity;
+import com.example.newapp.activity.transaction_service.TransactionServiceActivity;
 import com.example.newapp.activity.transport_capacity.TransportCapacityActivity;
 import com.example.newapp.activity.software.SoftWareActivity;
 import com.example.newapp.activity.video.VideoActivity;
@@ -132,7 +139,7 @@ public class HomeFragment extends BaseFragment implements OnBannerListener , Vie
         listPic.clear();
         addData();
         recyclerView  =mRootView.findViewById(R.id.recyclerview);
-        GridLayoutManager layoutManager = new GridLayoutManager(getActivity(),5);
+        GridLayoutManager layoutManager = new GridLayoutManager(getActivity(),4);
         recyclerView.setLayoutManager(layoutManager);
         gangTieTypeAdapter = new GangTieTypeAdapter(R.layout.gangtie_item, recordDataList,getActivity(),layoutManager);
         HashMap<String, Integer> stringIntegerHashMap = new HashMap<>();
@@ -157,91 +164,28 @@ public class HomeFragment extends BaseFragment implements OnBannerListener , Vie
                     case 1://金融服务
                         FinancialServicesActivity.start(getActivity());
                         break;
-                    case 2://活体交易
-                        LivePigActivity.start(getActivity());
+                    case 2://交易服务
+                        TransactionServiceActivity.start(getActivity());
                         break;
-                    case 3://产品交易
-                        PorkTradeActivity.start(getActivity());
+                    case 3://养殖服务
+                        BreedingServiceActivity.start(getActivity());
                         break;
-                    case 4://生猪饲喂
-                        PigFoodActivity.start(getActivity());
+                    case 4://动监检疫
+                        AniamlQuarantineActivity.start(getActivity());
                         break;
-                    case 5://大宗贸易
-                        BulkTradeActivity.start(getActivity());
+                    case 5://投资建设
+                        ConstructionInvestmentActivity.start(getActivity());
                         break;
-                    case 6://著工具
-                        MeansProductionActivity.start(getActivity());
+                    case 6://智能养猪
+                        SmartPigActivity.start(getActivity());
                         break;
-                    case 7://动保产品
-                        AnimalProtectionActivity.start(getActivity());
+                    case 7://认识培训
+                        TrainingActivity.start(getActivity());
                         break;
-                    case 8://免疫服务
-                        ImmunizationServiceActivity.start(getActivity());
+                    case 8://玩猪吃猪
+                        EatPigActivity.start(getActivity());
                         break;
-                    case 9://防疫消毒
-                        EpidemicActivity.start(getActivity());
-                        break;
-                    case 10://检疫申报
-                        QuarantineActivity.start(getActivity());
-                        break;
-                    case 11://著咨询
-                        BreeConsultActivity.start(getActivity());
-                        break;
-                    case 12://猪场建设
-                        PigFarmActivity.start(getActivity());
-                        break;
-                    case 13://人员招聘
-                        RecruitmentActivity.start(getActivity());
-                        break;
-                    case 14://合作招募
-                        CooperationActivity.start(getActivity());
-                        break;
-                    case 15://土地信息
-                        LandInfoActivity.start(getActivity());
-                        break;
-                    case 16://运输运力
-                        TransportCapacityActivity.start(getActivity());
-                        break;
-                    case 17://环保测评
-                        EnvironmentalActivity.start(getActivity());
-                        break;
-                    case 18://人工智能
-                        AiActivity.start(getActivity());
-                        break;
-                    case 19://软件定制
-                        SoftWareActivity.start(getActivity());
-                        break;
-                    case 20://视频监管
-                        VideoActivity.start(getActivity());
-                        break;
-                    case 21://互联互通
-                        PigOnlineActivity.start(getActivity());
-                        break;
-                    case 22://逢年过节
-                        PorkFragrantActivity.start(getActivity());
-                        break;
-                    case 23://特别品种
-                        OldFashionedActivity.start(getActivity());
-                        break;
-                    case 24://溯源中国
-                        TraceabilityActivity.start(getActivity());
-                        break;
-                    case 25://国际贸易
-                        PigTradeActivity.start(getActivity());
-                        break;
-                    case 26://教育培训
-                        PigTeachActivity.start(getActivity());
-                        break;
-                    case 27://养猪大赛
-                        PigOlympicsActivity.start(getActivity());
-                        break;
-                    case 28://供销总社
-                        PigIndustryActivity.start(getActivity());
-                        break;
-                    case 29://特别嗜好
-                        PigPetActivity.start(getActivity());
-                        break;
-                    case 30://公益活动
+                    case 9://公益活动
                         PublicWelfareActivity.start(getActivity());
                         break;
                     default:
@@ -329,9 +273,7 @@ public class HomeFragment extends BaseFragment implements OnBannerListener , Vie
         recordDataList = new ArrayList<>();
 
         String [] strings = {"会员服务","金融服务"
-               ,"活体交易","产品交易","生猪饲喂","大宗贸易","生产资料","动保产品","免疫服务","防疫消毒","检疫申报","养殖咨询","猪场建设",
-                "人员招聘","合作招募","土地信息","运输运力","环保测评","人工智能","软件定制","视频监管","互联互通","逢年过节",
-                "特别品种","溯源中国","国际贸易","教育培训","养猪大赛","供销总社","特别嗜好","公益活动"
+               ,"交易服务","养殖服务","动监检疫","投资建设","智能养猪","认识培训","玩猪吃猪","公益活动"
         };
         for (String string : strings) {
             RecordData recordData = new RecordData(-1,null);

@@ -9,11 +9,13 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.newapp.R;
+import com.example.newapp.activity.breeding_service.BreedingServiceActivity;
 import com.example.newapp.activity.pig_farm.PigFarmAdapter;
 import com.example.newapp.activity.pig_food.PigFoodActivity;
 import com.example.newapp.base.BaseActivity;
 import com.example.newapp.base.BasePresenter;
 import com.example.newapp.data.RecordData;
+import com.example.newapp.utils.AppManager;
 import com.example.newapp.utils.recyclerview.BaseRecyclerViewAdapter;
 import com.example.newapp.utils.recyclerview.BaseRecyclerViewHolder;
 import com.example.newapp.utils.recyclerview.GridSpacingItemDecoration;
@@ -26,6 +28,7 @@ public class OldFashionedActivity extends BaseActivity implements View.OnClickLi
     private RecyclerView recyclerView;
     private PigFarmAdapter pigFarmAdapter;
     private ArrayList<RecordData> recordDataList;
+    private TextView back_level_tv;
 
     /**
      * 启动activity
@@ -47,9 +50,24 @@ public class OldFashionedActivity extends BaseActivity implements View.OnClickLi
         addData();
         mBackTv = findViewById(R.id.back_tv);
         recyclerView = findViewById(R.id.recyclerview);
-        mBackTv.setOnClickListener(v -> finish());
+        mBackTv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+                AppManager.getInstance().finishActivity(BreedingServiceActivity.class);
+            }
+        });
+        back_level_tv = findViewById(R.id.back_level_tv);
 
-        GridLayoutManager layoutManager = new GridLayoutManager(this,5);
+        back_level_tv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+
+            }
+        });
+
+        GridLayoutManager layoutManager = new GridLayoutManager(this,4);
         recyclerView.setLayoutManager(layoutManager);
         pigFarmAdapter = new PigFarmAdapter(R.layout.gangtie_item, recordDataList,this);
         HashMap<String, Integer> stringIntegerHashMap = new HashMap<>();

@@ -270,20 +270,51 @@
         <!-- 扑杀险信息 -->
         <activity android:name=".activity.financial_services.Insurance.culling.info.CullingInsuranceInfoActivity"
             android:theme="@style/BaseAppTheme"
-            android:screenOrientation="portrait"
             android:windowSoftInputMode="stateHidden|adjustResize" />
 
         <!-- 公益活动 -->
         <activity android:name=".activity.publicwelfare.PublicWelfareActivity"
             android:theme="@style/BaseAppTheme"
-            android:screenOrientation="portrait"
             android:windowSoftInputMode="stateHidden|adjustResize" />
 
         <!-- webview -->
         <activity android:name=".webview.BaseWebViewActivity"
             android:theme="@style/BaseAppTheme"
-            android:screenOrientation="portrait"
           />
+        <!-- 交易服务 -->
+        <activity android:name=".activity.transaction_service.TransactionServiceActivity"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+
+        <!-- 养殖服务 -->
+        <activity android:name=".activity.breeding_service.BreedingServiceActivity"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+
+        <!-- 投资建设 -->
+        <activity android:name=".activity.construction_investment.ConstructionInvestmentActivity"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+
+        <!-- 动监检疫 -->
+        <activity android:name=".activity.animal_quarantine.AniamlQuarantineActivity"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+
+        <!-- 智能养猪 -->
+        <activity android:name=".activity.smart_pig.SmartPigActivity"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+
+        <!-- 教育培训 -->
+        <activity android:name=".activity.awareness_training.TrainingActivity"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+
+        <!-- 玩猪吃猪 -->
+        <activity android:name=".activity.eat_pig.EatPigActivity"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
     </application>
 
 </manifest>

@@ -48,7 +48,7 @@ public class PigPetActivity extends BaseActivity implements View.OnClickListener
         recyclerView = findViewById(R.id.recyclerview);
         mBackTv.setOnClickListener(v -> finish());
 
-        GridLayoutManager layoutManager = new GridLayoutManager(this,5);
+        GridLayoutManager layoutManager = new GridLayoutManager(this,4);
         recyclerView.setLayoutManager(layoutManager);
         pigPetAdapter = new PigPetAdapter(R.layout.gangtie_item, recordDataList,this);
         HashMap<String, Integer> stringIntegerHashMap = new HashMap<>();

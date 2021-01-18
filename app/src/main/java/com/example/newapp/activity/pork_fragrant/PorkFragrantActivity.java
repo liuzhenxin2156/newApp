@@ -9,10 +9,13 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.newapp.R;
+import com.example.newapp.activity.eat_pig.EatPigActivity;
 import com.example.newapp.activity.pig_online.PigOnlineAdapter;
+import com.example.newapp.activity.transaction_service.TransactionServiceActivity;
 import com.example.newapp.base.BaseActivity;
 import com.example.newapp.base.BasePresenter;
 import com.example.newapp.data.RecordData;
+import com.example.newapp.utils.AppManager;
 import com.example.newapp.utils.recyclerview.BaseRecyclerViewAdapter;
 import com.example.newapp.utils.recyclerview.BaseRecyclerViewHolder;
 import com.example.newapp.utils.recyclerview.GridSpacingItemDecoration;
@@ -25,6 +28,7 @@ public class PorkFragrantActivity extends BaseActivity implements View.OnClickLi
     private RecyclerView recyclerView;
     private PorkFragrantAdapter porkFragrantAdapter;
     private ArrayList<RecordData> recordDataList;
+    private TextView back_level_tv;
 
     /**
      * 启动activity
@@ -46,9 +50,23 @@ public class PorkFragrantActivity extends BaseActivity implements View.OnClickLi
         addData();
         mBackTv = findViewById(R.id.back_tv);
         recyclerView = findViewById(R.id.recyclerview);
-        mBackTv.setOnClickListener(v -> finish());
+        mBackTv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+                AppManager.getInstance().finishActivity(EatPigActivity.class);
+            }
+        });
+        back_level_tv = findViewById(R.id.back_level_tv);
 
-        GridLayoutManager layoutManager = new GridLayoutManager(this,5);
+        back_level_tv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
+
+        GridLayoutManager layoutManager = new GridLayoutManager(this,4);
         recyclerView.setLayoutManager(layoutManager);
         porkFragrantAdapter = new PorkFragrantAdapter(R.layout.gangtie_item, recordDataList,this);
         HashMap<String, Integer> stringIntegerHashMap = new HashMap<>();

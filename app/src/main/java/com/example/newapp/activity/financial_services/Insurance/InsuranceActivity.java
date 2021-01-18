@@ -68,7 +68,7 @@ public class InsuranceActivity extends BaseActivity {
         mBackTv.setOnClickListener(this);
         back_level_tv = findViewById(R.id.back_level_tv);
         back_level_tv.setOnClickListener(this);
-        GridLayoutManager layoutManager = new GridLayoutManager(this,5);
+        GridLayoutManager layoutManager = new GridLayoutManager(this,4);
         recyclerView.setLayoutManager(layoutManager);
         financialServicesAdapter = new FinancialServicesAdapter(R.layout.gangtie_item, recordDataList,this);
         HashMap<String, Integer> stringIntegerHashMap = new HashMap<>();
