@@ -74,6 +74,10 @@ public class AppConstants {
         String PIGTRANSITCAR = "pig_transit_car";                             //生猪运输车辆
         String RESOURCE_PATH = "resource_path";                          // App资源路径
         String DEVICE_ID = "device_id";                              // deviceId
+        String PHOTOPATH = "photo_path";                              // photo_path
+        String ISLOGIN = "is_login";                              // 判断是否登录
+        String USERINFO = "user_info";                              //
+        String NOTICE = "notice";                              //公告栏 弹框
     }
 
     public interface TYPE {

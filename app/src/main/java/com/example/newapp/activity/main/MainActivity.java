@@ -15,6 +15,7 @@ import android.view.KeyEvent;
 import android.view.MenuItem;
 
 import com.example.newapp.R;
+import com.example.newapp.activity.mine.MineFragment;
 import com.example.newapp.base.BaseActivity;
 import com.example.newapp.base.BasePresenter;
 import com.example.newapp.fragment.main_fragment.HomeMainFragment;
@@ -48,31 +49,7 @@ public class MainActivity extends BaseActivity implements BottomNavigationView.O
         context.startActivity(intent);
     }
 
-    /**
-     * Android 系统 大于6.0  需要申请权限
-     * <6.0不需要
-     */
-    private void checkPermissions() {
-        if (Build.VERSION.SDK_INT >= 23) {
-            LogUtil.e("SplashActivity---->", "需要申请权限");
-            showContacts();
-        }
-    }
-    public void showContacts() {
-        rxPermissions.request(Manifest.permission.READ_PHONE_STATE,
-                android.Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.READ_EXTERNAL_STORAGE,
-                Manifest.permission.READ_CONTACTS, Manifest.permission.WRITE_CONTACTS)
-                .subscribe(new Consumer<Boolean>() {
-                    @Override
-                    public void accept(Boolean aBoolean) throws Exception {
-                        if (aBoolean) {//开启权限
 
-                        } else {
-                            ToastUtil.showToast(MainActivity.this, R.string.permissions_error_message);
-                        }
-                    }
-                });
-    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -90,6 +67,7 @@ public class MainActivity extends BaseActivity implements BottomNavigationView.O
     protected void initDatas() {
         mFragments = new ArrayList<>();
         mFragments.add(HomeMainFragment.newInstance());
+        mFragments.add(MineFragment.newInstance());
         // 初始化展示第一个Fragment
         setFragmentPosition(0);
 
@@ -105,7 +83,6 @@ public class MainActivity extends BaseActivity implements BottomNavigationView.O
     @RequiresApi(api = Build.VERSION_CODES.KITKAT)
     @Override
     protected void initViews() {
-        checkPermissions();
         mBottomNavigationView = findViewById(R.id.bottom_view);
         //  BottomNavigationUtils.closeAnimation(mBottomNavigationView);//关闭偏移动画
         mBottomNavigationView.setOnNavigationItemSelectedListener(this);
@@ -142,6 +119,11 @@ public class MainActivity extends BaseActivity implements BottomNavigationView.O
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
         switch (menuItem.getItemId()) {
             case R.id.item_1:
+                setFragmentPosition(0);
+                break;
+            case R.id.item_3:
+                setFragmentPosition(1);
+                break;
             default:
                 setFragmentPosition(0);
                 break;

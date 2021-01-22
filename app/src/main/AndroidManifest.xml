@@ -16,16 +16,17 @@
     <uses-permission android:name="android.permission.CAMERA" /> <!-- 允许程序打开网络套接字 -->
     <uses-permission android:name="android.permission.INTERNET" /> <!-- 允许程序设置内置sd卡的写权限 -->
     <uses-permission android:name="android.permission.VIBRATE" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- 允许程序获取网络状态 -->
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- SD卡读取权限，用户写入离线定位数据 -->
-    <permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" /> <!-- 用于进行网络定位 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/> <!-- 允许程序获取网络状态 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/> <!-- SD卡读取权限，用户写入离线定位数据 -->
+    <permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/> <!-- 用于进行网络定位 -->
     <uses-permission android:name="android.Manifest.permission.ACCESS_COARSE_LOCATION " /> <!-- 用于访问wifi网络信息，wifi信息会用于进行网络定位 -->
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> <!-- 用于获取wifi的获取权限，wifi信息会用来进行网络定位 -->
-    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" /> <!-- 用于读取手机当前的状态 -->
-    <uses-permission android:name="android.permission.READ_PHONE_STATE" /> <!-- 用于申请调用A-GPS模块 -->
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
-    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/> <!-- 用于获取wifi的获取权限，wifi信息会用来进行网络定位 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/> <!-- 用于读取手机当前的状态 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/> <!-- 用于申请调用A-GPS模块 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 
 
     <uses-permission android:name="android.permission.WAKE_LOCK" />
@@ -38,7 +39,7 @@
 
     <uses-permission android:name="android.permission.READ_CONTACTS" />
     <uses-permission android:name="android.permission.WRITE_CONTACTS" />
-    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.CALL_PHONE" />
 
     <uses-feature android:name="android.hardware.camera" />
     <uses-feature android:name="android.hardware.camera.autofocus" />
@@ -51,18 +52,48 @@
         android:allowBackup="true"
         android:icon="@mipmap/app_logo"
         android:label="@string/app_name"
+        android:largeHeap="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
+        android:theme="@style/BaseAppTheme"
         tools:replace="android:theme"
-        android:theme="@style/BaseAppTheme">
-        <activity android:name=".activity.main.MainActivity">
+        tools:targetApi="n">
+        <!-- 适配全面屏 Android O vivo&oppo -->
+        <meta-data
+            android:name="android.max_aspect"
+            android:value="2.2" /> <!-- 适配刘海屏、水滴屏 Android O 小米 -->
+        <meta-data
+            android:name="notch.config"
+            android:value="portrait|landscape" /> <!-- 适配刘海屏、水滴屏 Android O 华为 -->
+        <meta-data
+            android:name="android.notch_support"
+            android:value="true" />
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_provider_paths" />
+        </provider> <!-- 适配Android7.0及以上打开文件的FileProvider -->
+        <activity
+            android:name=".activity.SplashActivity"
+            android:launchMode="standard"
+            android:theme="@style/MyTheme.SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
+        <activity
+            android:name="com.soundcloud.android.crop.CropImageActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseAppTheme" />
+        <activity
+            android:name=".activity.main.MainActivity"
+            android:theme="@style/BaseAppTheme" />
         <activity
             android:name=".activity.vip.VipServiceActivity"
             android:theme="@style/BaseAppTheme" />
@@ -80,239 +111,347 @@
             android:theme="@style/BaseAppTheme" />
         <activity
             android:name=".activity.financial_services.trust.TrustActivity"
-            android:theme="@style/BaseAppTheme"
-            />
+            android:theme="@style/BaseAppTheme" />
         <activity
             android:name=".activity.financial_services.fund.FundActivity"
             android:theme="@style/BaseAppTheme" />
-        <activity android:name=".activity.live_pig.LivePigActivity"
-            android:theme="@style/BaseAppTheme"
-            />
-        <activity android:name=".activity.pork_trade.PorkTradeActivity"
-            android:theme="@style/BaseAppTheme"
-            />
-        <activity android:name=".activity.bulk_trade.BulkTradeActivity"
-            android:theme="@style/BaseAppTheme"
-            />
-        <activity android:name=".activity.means_production.MeansProductionActivity"
-            android:theme="@style/BaseAppTheme"
-            />
-        <activity android:name=".activity.animal_protection_products.AnimalProtectionActivity"
-            android:theme="@style/BaseAppTheme"
-            />
-        <activity android:name=".activity.immunization_service.ImmunizationServiceActivity"
-            android:theme="@style/BaseAppTheme"
-            />
-        <activity android:name=".activity.epidemic.EpidemicActivity"
-            android:theme="@style/BaseAppTheme"
-            />
-        <activity android:name=".activity.quarantine.QuarantineActivity"
-        android:theme="@style/BaseAppTheme"
-        />
+        <activity
+            android:name=".activity.live_pig.LivePigActivity"
+            android:theme="@style/BaseAppTheme" />
+        <activity
+            android:name=".activity.pork_trade.PorkTradeActivity"
+            android:theme="@style/BaseAppTheme" />
+        <activity
+            android:name=".activity.bulk_trade.BulkTradeActivity"
+            android:theme="@style/BaseAppTheme" />
+        <activity
+            android:name=".activity.means_production.MeansProductionActivity"
+            android:theme="@style/BaseAppTheme" />
+        <activity
+            android:name=".activity.animal_protection_products.AnimalProtectionActivity"
+            android:theme="@style/BaseAppTheme" />
+        <activity
+            android:name=".activity.immunization_service.ImmunizationServiceActivity"
+            android:theme="@style/BaseAppTheme" />
+        <activity
+            android:name=".activity.epidemic.EpidemicActivity"
+            android:theme="@style/BaseAppTheme" />
+        <activity
+            android:name=".activity.quarantine.QuarantineActivity"
+            android:theme="@style/BaseAppTheme" />
 
-        <activity android:name=".activity.breeding_consulting.BreeConsultActivity"
-            android:theme="@style/BaseAppTheme"
-            />
-        <activity android:name=".activity.pig_farm.PigFarmActivity"
-            android:theme="@style/BaseAppTheme"
-            />
-        <activity android:name=".activity.recruitment.RecruitmentActivity"
-            android:theme="@style/BaseAppTheme"
-            />
-        <activity android:name=".activity.cooperation.CooperationActivity"
-            android:theme="@style/BaseAppTheme"
-            />
-        <activity android:name=".activity.land_info.LandInfoActivity"
-            android:theme="@style/BaseAppTheme"
-            />
-        <activity android:name=".activity.transport_capacity.TransportCapacityActivity"
-            android:theme="@style/BaseAppTheme"
-            />
-        <activity android:name=".activity.environmental.EnvironmentalActivity"
-        android:theme="@style/BaseAppTheme"
-        />
-        <activity android:name=".activity.ai.AiActivity"
-            android:theme="@style/BaseAppTheme"
-            />
-        <activity android:name=".activity.software.SoftWareActivity"
-            android:theme="@style/BaseAppTheme"
-            />
-        <activity android:name=".activity.pig_online.PigOnlineActivity"
-            android:theme="@style/BaseAppTheme"
-            />
-        <activity android:name=".activity.video.VideoActivity"
-            android:theme="@style/BaseAppTheme"
-            />
+        <activity
+            android:name=".activity.breeding_consulting.BreeConsultActivity"
+            android:theme="@style/BaseAppTheme" />
+        <activity
+            android:name=".activity.pig_farm.PigFarmActivity"
+            android:theme="@style/BaseAppTheme" />
+        <activity
+            android:name=".activity.recruitment.RecruitmentActivity"
+            android:theme="@style/BaseAppTheme" />
+        <activity
+            android:name=".activity.cooperation.CooperationActivity"
+            android:theme="@style/BaseAppTheme" />
+        <activity
+            android:name=".activity.land_info.LandInfoActivity"
+            android:theme="@style/BaseAppTheme" />
+        <activity
+            android:name=".activity.transport_capacity.TransportCapacityActivity"
+            android:theme="@style/BaseAppTheme" />
+        <activity
+            android:name=".activity.environmental.EnvironmentalActivity"
+            android:theme="@style/BaseAppTheme" />
+        <activity
+            android:name=".activity.ai.AiActivity"
+            android:theme="@style/BaseAppTheme" />
+        <activity
+            android:name=".activity.software.SoftWareActivity"
+            android:theme="@style/BaseAppTheme" />
+        <activity
+            android:name=".activity.pig_online.PigOnlineActivity"
+            android:theme="@style/BaseAppTheme" />
+        <activity
+            android:name=".activity.video.VideoActivity"
+            android:theme="@style/BaseAppTheme" />
         <!-- 车辆备案-->
-        <activity android:name=".activity.transport_capacity.vehicle_filing.VehicleFilingActivity"
-            android:theme="@style/BaseAppTheme"/>
+        <activity
+            android:name=".activity.transport_capacity.vehicle_filing.VehicleFilingActivity"
+            android:theme="@style/BaseAppTheme" />
         <!-- 运力发布-->
-        <activity android:name=".activity.transport_capacity.capacity_release.CapacityReleaseActivity"
-            android:theme="@style/BaseAppTheme"/>
+        <activity
+            android:name=".activity.transport_capacity.capacity_release.CapacityReleaseActivity"
+            android:theme="@style/BaseAppTheme" />
         <!-- 运输需求-->
-        <activity android:name=".activity.transport_capacity.demand.DemandActivity"
-            android:theme="@style/BaseAppTheme"/>
+        <activity
+            android:name=".activity.transport_capacity.demand.DemandActivity"
+            android:theme="@style/BaseAppTheme" />
         <!-- 生猪饲喂-->
-        <activity android:name=".activity.transport_capacity.want.WantActivity"
-            android:theme="@style/BaseAppTheme"/>
+        <activity
+            android:name=".activity.transport_capacity.want.WantActivity"
+            android:theme="@style/BaseAppTheme" />
 
         <!-- 仔猪-->
-        <activity android:name=".activity.live_pig.piglet.PigLetActivity"
-            android:theme="@style/BaseAppTheme"/>
+        <activity
+            android:name=".activity.live_pig.piglet.PigLetActivity"
+            android:theme="@style/BaseAppTheme" />
         <!-- 生猪-->
-        <activity android:name=".activity.live_pig.live.LiveActivity"
-            android:theme="@style/BaseAppTheme"/>
+        <activity
+            android:name=".activity.live_pig.live.LiveActivity"
+            android:theme="@style/BaseAppTheme" />
         <!-- 母猪-->
-        <activity android:name=".activity.live_pig.sows.SowsActivity"
-            android:theme="@style/BaseAppTheme"/>
+        <activity
+            android:name=".activity.live_pig.sows.SowsActivity"
+            android:theme="@style/BaseAppTheme" />
         <!-- 种猪-->
-        <activity android:name=".activity.live_pig.breed.BreedActivity"
-            android:theme="@style/BaseAppTheme"/>
+        <activity
+            android:name=".activity.live_pig.breed.BreedActivity"
+            android:theme="@style/BaseAppTheme" />
 
         <!-- 会员注册-->
-        <activity android:name=".activity.vip.vip_register.VipRegisterActivity"
-            android:theme="@style/BaseAppTheme"/>
+        <activity
+            android:name=".activity.vip.vip_register.VipRegisterActivity"
+            android:theme="@style/BaseAppTheme" />
 
         <!-- 会员特价-->
-        <activity android:name=".activity.vip.toll_vip_service.special_offer.VipSpecialOfferActivity"
-            android:theme="@style/BaseAppTheme"/>
+        <activity
+            android:name=".activity.vip.toll_vip_service.special_offer.VipSpecialOfferActivity"
+            android:theme="@style/BaseAppTheme" />
         <!-- 生猪饲喂-->
-        <activity android:name=".activity.pig_food.PigFoodActivity"
-            android:theme="@style/BaseAppTheme"/>
+        <activity
+            android:name=".activity.pig_food.PigFoodActivity"
+            android:theme="@style/BaseAppTheme" />
         <!-- 逢年过节 -->
-        <activity android:name=".activity.pork_fragrant.PorkFragrantActivity"
-            android:theme="@style/BaseAppTheme"/>
+        <activity
+            android:name=".activity.pork_fragrant.PorkFragrantActivity"
+            android:theme="@style/BaseAppTheme" />
         <!-- 特别品种 -->
-        <activity android:name=".activity.old_fashioned.OldFashionedActivity"
-            android:theme="@style/BaseAppTheme"/>
+        <activity
+            android:name=".activity.old_fashioned.OldFashionedActivity"
+            android:theme="@style/BaseAppTheme" />
         <!-- 溯源中国 -->
-        <activity android:name=".activity.traceability.TraceabilityActivity"
-            android:theme="@style/BaseAppTheme"/>
+        <activity
+            android:name=".activity.traceability.TraceabilityActivity"
+            android:theme="@style/BaseAppTheme" />
         <!-- 国际贸易 -->
-        <activity android:name=".activity.pig_trade.PigTradeActivity"
-            android:theme="@style/BaseAppTheme"/>
+        <activity
+            android:name=".activity.pig_trade.PigTradeActivity"
+            android:theme="@style/BaseAppTheme" />
 
         <!-- 教育培训 -->
-        <activity android:name=".activity.pig_teach.PigTeachActivity"
-            android:theme="@style/BaseAppTheme"/>
+        <activity
+            android:name=".activity.pig_teach.PigTeachActivity"
+            android:theme="@style/BaseAppTheme" />
         <!-- 养猪大赛 -->
-        <activity android:name=".activity.pig_olympics.PigOlympicsActivity"
-            android:theme="@style/BaseAppTheme"/>
+        <activity
+            android:name=".activity.pig_olympics.PigOlympicsActivity"
+            android:theme="@style/BaseAppTheme" />
 
         <!-- 供销总社 -->
-        <activity android:name=".activity.pig_industry.PigIndustryActivity"
-            android:theme="@style/BaseAppTheme"/>
+        <activity
+            android:name=".activity.pig_industry.PigIndustryActivity"
+            android:theme="@style/BaseAppTheme" />
 
         <!-- 特别嗜好 -->
-        <activity android:name=".activity.pig_pet.PigPetActivity"
-            android:theme="@style/BaseAppTheme"/>
+        <activity
+            android:name=".activity.pig_pet.PigPetActivity"
+            android:theme="@style/BaseAppTheme" />
 
         <!-- 会员积分 -->
-        <activity android:name=".activity.vip.vip_member.VipMemberActivity"
-            android:theme="@style/BaseAppTheme"/>
+        <activity
+            android:name=".activity.vip.vip_member.VipMemberActivity"
+            android:theme="@style/BaseAppTheme" />
         <!-- 会员缴费 -->
-        <activity android:name=".activity.vip.vip_pay.VipPayActivity"
-            android:theme="@style/BaseAppTheme"/>
+        <activity
+            android:name=".activity.vip.vip_pay.VipPayActivity"
+            android:theme="@style/BaseAppTheme" />
         <!-- 申领发票 -->
-        <activity android:name=".activity.vip.apply_invoice.ApplyInvoiceActivity"
-            android:theme="@style/BaseAppTheme"/>
+        <activity
+            android:name=".activity.vip.apply_invoice.ApplyInvoiceActivity"
+            android:theme="@style/BaseAppTheme" />
         <!-- 退费注销 -->
-        <activity android:name=".activity.vip.refund_logout.RefundLogOutActivity"
-            android:theme="@style/BaseAppTheme"/>
+        <activity
+            android:name=".activity.vip.refund_logout.RefundLogOutActivity"
+            android:theme="@style/BaseAppTheme" />
         <!-- 收费会员服务 -->
-        <activity android:name=".activity.vip.toll_vip_service.TollVipServiceActivity"
-            android:theme="@style/BaseAppTheme"/>
+        <activity
+            android:name=".activity.vip.toll_vip_service.TollVipServiceActivity"
+            android:theme="@style/BaseAppTheme" />
         <!-- 特种收费服务 -->
-        <activity android:name=".activity.vip.special_pay_service.SpecialPayActivity"
-            android:theme="@style/BaseAppTheme"/>
+        <activity
+            android:name=".activity.vip.special_pay_service.SpecialPayActivity"
+            android:theme="@style/BaseAppTheme" />
         <!-- 法律咨询 -->
-        <activity android:name=".activity.vip.free_vip_service.legal.LegalActivity"
-            android:theme="@style/BaseAppTheme"/>
+        <activity
+            android:name=".activity.vip.free_vip_service.legal.LegalActivity"
+            android:theme="@style/BaseAppTheme" />
         <!-- 法规咨询 -->
-        <activity android:name=".activity.vip.free_vip_service.statute.StatuteActivity"
-            android:theme="@style/BaseAppTheme"/>
+        <activity
+            android:name=".activity.vip.free_vip_service.statute.StatuteActivity"
+            android:theme="@style/BaseAppTheme" />
         <!-- 终端对接 -->
-        <activity android:name=".activity.vip.special_pay_service.enddocking.EndDockingActivity"
-            android:theme="@style/BaseAppTheme"/>
+        <activity
+            android:name=".activity.vip.special_pay_service.enddocking.EndDockingActivity"
+            android:theme="@style/BaseAppTheme" />
         <!-- 精液 -->
-        <activity android:name=".activity.live_pig.semen.SemenActivity"
-            android:theme="@style/BaseAppTheme"/>
+        <activity
+            android:name=".activity.live_pig.semen.SemenActivity"
+            android:theme="@style/BaseAppTheme" />
         <!-- 免费服务 -->
-        <activity android:name=".activity.vip.free_vip_service.FreeVipServiceActivity"
-            android:theme="@style/BaseAppTheme"/>
+        <activity
+            android:name=".activity.vip.free_vip_service.FreeVipServiceActivity"
+            android:theme="@style/BaseAppTheme" />
         <!-- 生猪数据报告 -->
-        <activity android:name=".activity.vip.special_pay_service.pig_data_report.PigDataReportActivity"
-            android:theme="@style/BaseAppTheme"/>
+        <activity
+            android:name=".activity.vip.special_pay_service.pig_data_report.PigDataReportActivity"
+            android:theme="@style/BaseAppTheme" />
         <!-- 众筹养猪 -->
-        <activity android:name=".activity.financial_services.crowdfunding_pig.CrowdfundingPigActivity"
-            android:theme="@style/BaseAppTheme"/>
+        <activity
+            android:name=".activity.financial_services.crowdfunding_pig.CrowdfundingPigActivity"
+            android:theme="@style/BaseAppTheme" />
         <!-- 养殖险 -->
-        <activity android:name=".activity.financial_services.Insurance.farming.FarmingInsuranceActivity"
-            android:theme="@style/BaseAppTheme"/>
+        <activity
+            android:name=".activity.financial_services.Insurance.farming.FarmingInsuranceActivity"
+            android:theme="@style/BaseAppTheme" />
         <!-- 养殖险详情 -->
-        <activity android:name=".activity.financial_services.Insurance.details.FarmingInsuranceDetailsActivity"
-            android:theme="@style/BaseAppTheme"/>
+        <activity
+            android:name=".activity.financial_services.Insurance.details.FarmingInsuranceDetailsActivity"
+            android:theme="@style/BaseAppTheme" />
         <!-- 运输险 -->
-        <activity android:name=".activity.financial_services.Insurance.transport.TransportInsuranceActivity"
-            android:theme="@style/BaseAppTheme"/>
+        <activity
+            android:name=".activity.financial_services.Insurance.transport.TransportInsuranceActivity"
+            android:theme="@style/BaseAppTheme" />
         <!-- 运输险详情 -->
-        <activity android:name=".activity.financial_services.Insurance.details.TransportInsuranceDetailsActivity"
-            android:theme="@style/BaseAppTheme"/>
+        <activity
+            android:name=".activity.financial_services.Insurance.details.TransportInsuranceDetailsActivity"
+            android:theme="@style/BaseAppTheme" />
         <!-- 生猪短途运输险保险 -->
-        <activity android:name=".activity.financial_services.Insurance.transport.transport_insured.TransportInsuredActivity"
-            android:theme="@style/BaseAppTheme"/>
+        <activity
+            android:name=".activity.financial_services.Insurance.transport.transport_insured.TransportInsuredActivity"
+            android:theme="@style/BaseAppTheme" />
         <!-- 扑杀险 -->
-        <activity android:name=".activity.financial_services.Insurance.culling.CullingInsuranceActivity"
-            android:theme="@style/BaseAppTheme"/>
+        <activity
+            android:name=".activity.financial_services.Insurance.culling.CullingInsuranceActivity"
+            android:theme="@style/BaseAppTheme" />
         <!-- 扑杀险详情 -->
-        <activity android:name=".activity.financial_services.Insurance.details.CullingInsuranceDetailsActivity"
-            android:theme="@style/BaseAppTheme"/>
+        <activity
+            android:name=".activity.financial_services.Insurance.details.CullingInsuranceDetailsActivity"
+            android:theme="@style/BaseAppTheme" />
         <!-- 扑杀险信息 -->
-        <activity android:name=".activity.financial_services.Insurance.culling.info.CullingInsuranceInfoActivity"
+        <activity
+            android:name=".activity.financial_services.Insurance.culling.info.CullingInsuranceInfoActivity"
             android:theme="@style/BaseAppTheme"
             android:windowSoftInputMode="stateHidden|adjustResize" />
 
         <!-- 公益活动 -->
-        <activity android:name=".activity.publicwelfare.PublicWelfareActivity"
+        <activity
+            android:name=".activity.publicwelfare.PublicWelfareActivity"
             android:theme="@style/BaseAppTheme"
             android:windowSoftInputMode="stateHidden|adjustResize" />
 
         <!-- webview -->
-        <activity android:name=".webview.BaseWebViewActivity"
-            android:theme="@style/BaseAppTheme"
-          />
+        <activity
+            android:name=".webview.BaseWebViewActivity"
+            android:theme="@style/BaseAppTheme" />
         <!-- 交易服务 -->
-        <activity android:name=".activity.transaction_service.TransactionServiceActivity"
+        <activity
+            android:name=".activity.transaction_service.TransactionServiceActivity"
             android:theme="@style/BaseAppTheme"
             android:windowSoftInputMode="stateHidden|adjustResize" />
 
         <!-- 养殖服务 -->
-        <activity android:name=".activity.breeding_service.BreedingServiceActivity"
+        <activity
+            android:name=".activity.breeding_service.BreedingServiceActivity"
             android:theme="@style/BaseAppTheme"
             android:windowSoftInputMode="stateHidden|adjustResize" />
 
         <!-- 投资建设 -->
-        <activity android:name=".activity.construction_investment.ConstructionInvestmentActivity"
+        <activity
+            android:name=".activity.construction_investment.ConstructionInvestmentActivity"
             android:theme="@style/BaseAppTheme"
             android:windowSoftInputMode="stateHidden|adjustResize" />
 
         <!-- 动监检疫 -->
-        <activity android:name=".activity.animal_quarantine.AniamlQuarantineActivity"
+        <activity
+            android:name=".activity.animal_quarantine.AniamlQuarantineActivity"
             android:theme="@style/BaseAppTheme"
             android:windowSoftInputMode="stateHidden|adjustResize" />
 
         <!-- 智能养猪 -->
-        <activity android:name=".activity.smart_pig.SmartPigActivity"
+        <activity
+            android:name=".activity.smart_pig.SmartPigActivity"
             android:theme="@style/BaseAppTheme"
             android:windowSoftInputMode="stateHidden|adjustResize" />
 
         <!-- 教育培训 -->
-        <activity android:name=".activity.awareness_training.TrainingActivity"
+        <activity
+            android:name=".activity.awareness_training.TrainingActivity"
             android:theme="@style/BaseAppTheme"
             android:windowSoftInputMode="stateHidden|adjustResize" />
 
         <!-- 玩猪吃猪 -->
-        <activity android:name=".activity.eat_pig.EatPigActivity"
+        <activity
+            android:name=".activity.eat_pig.EatPigActivity"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+
+        <!-- 注册界面 -->
+        <activity
+            android:name=".activity.register.RegisterActivity"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+
+
+        <!-- 登录界面 -->
+        <activity
+            android:name=".activity.login.LoginActivity"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+
+        <!-- 短信验证码界面 -->
+        <activity
+            android:name=".activity.login.smslogin.SmsLoginActivity"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+
+        <!-- 短信验证码验证界面 -->
+        <activity
+            android:name=".activity.login.phone_verification_code.PhoneVerificationCodeActivity"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+
+        <!-- 忘记密码 -->
+        <activity
+            android:name=".activity.login.forgetPwd.ForgetPwdActivity"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <!-- 忘记密码 -->
+        <activity
+            android:name=".activity.login.forgetPwd.setpwd.SetNewPwdActivity"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <!-- 设置界面 -->
+        <activity
+            android:name=".activity.mine.set.mysetting.MySettingActivity"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <!-- 隐私服务 + 用户协议 -->
+        <activity
+            android:name=".activity.mine.set.agreement.AgreementActivity"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <!-- 账户安全 -->
+        <activity
+            android:name=".activity.mine.set.accountsafe.AccountSafeActivity"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <!-- 修改信息 -->
+        <activity
+            android:name=".activity.mine.changeinfo.ChangeInfoActivity"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <!-- 公告栏 -->
+        <activity
+            android:name=".activity.mine.bulletin.BulletinActivity"
             android:theme="@style/BaseAppTheme"
             android:windowSoftInputMode="stateHidden|adjustResize" />
     </application>

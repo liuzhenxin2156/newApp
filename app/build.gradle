@@ -127,4 +127,8 @@ dependencies {
         exclude group: 'com.github.bumptech.glide'
     }
   //  implementation 'com.contrarywind:Android-PickerView:3.2.7'
+
+    //图片裁剪
+    implementation 'com.soundcloud.android.crop:lib_crop:1.0.0'
+
 }

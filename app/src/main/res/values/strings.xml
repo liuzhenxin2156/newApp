@@ -1,9 +1,9 @@
 <resources>
     <string name="app_name">猪哥亮</string>
     <string name="register">注册</string>
-    <string name="user_name">"用户姓名"</string>
-    <string name="id_card_num">"身份证号码"</string>
-    <string name="phone_num">"手机号码"</string>
+    <string name="user_name">姓名</string>
+    <string name="id_card_num">身份证号码</string>
+    <string name="phone_num">手机号码</string>
 
 
     <string name="please_input_new_pwd_forget">请输入新密码</string>
@@ -19,7 +19,7 @@
     <string name="isno">取消</string>
 
     <string name="permissions_error_message">获取权限失败，请手动开启</string>
-    <string name="show_privacy_message">"尊敬的农安星用户：
+    <string name="show_privacy_message">"尊敬的猪哥亮用户：
 您好!
 　　感谢您对本公司的支持!本公司非常重视您的个人信息和隐私保护。"
                 "为了更好地保障您的个人权益，在您使用我们的产品前，"
@@ -77,6 +77,7 @@
     <string name="logout">确定要注销账号吗？
     永久注销，无法登录!
      所有数据将无法找回！</string>
+    <string name="notice_content">所有发给用户的通告只会通过猪哥亮客户端的公告栏公告发布。服务条款的修改、服务变更、或其它重要事件的通告都会以此形式进行。</string>
 
     <string name="user_agreement">用户协议</string>
     <string name="privacy_policy">隐私政策</string>

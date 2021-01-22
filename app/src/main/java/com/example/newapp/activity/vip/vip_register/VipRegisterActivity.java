@@ -65,7 +65,8 @@ public class VipRegisterActivity extends BaseActivity implements View.OnClickLis
             @Override
             public void onItemClick(View view, BaseRecyclerViewHolder viewHolder, int position) {
                 switch (position){
-                    case 0://
+                    case 0://隐私注册
+
                         break;
                     case 1://
                         break;

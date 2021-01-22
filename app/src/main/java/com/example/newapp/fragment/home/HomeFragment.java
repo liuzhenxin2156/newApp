@@ -77,8 +77,10 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
+/**
+ * app首页
+ */
 public class HomeFragment extends BaseFragment implements OnBannerListener , View.OnClickListener {
-
     private List<Integer> listPic;
     private Banner banner;
     private RecyclerView recyclerView;
