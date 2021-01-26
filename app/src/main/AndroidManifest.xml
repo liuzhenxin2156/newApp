@@ -454,6 +454,16 @@
             android:name=".activity.mine.bulletin.BulletinActivity"
             android:theme="@style/BaseAppTheme"
             android:windowSoftInputMode="stateHidden|adjustResize" />
+        <!-- 历史订单查询 -->
+        <activity
+            android:name=".activity.historyorder.HistoryOrderActivity"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <!-- 会员充值 -->
+        <activity
+            android:name=".activity.member_recharge.MemberRechargeActivity"
+            android:theme="@style/BaseAppTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
     </application>
 
 </manifest>

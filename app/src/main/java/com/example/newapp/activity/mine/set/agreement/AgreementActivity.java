@@ -118,9 +118,9 @@ public class AgreementActivity extends BaseActivity {
             }
         });
         if (mType == 0) {
-            this.webView.loadUrl(AppConstants.AGREEMENT_URL);
+            webView.loadUrl("file:///android_asset/html/service.html");
         } else {
-            this.webView.loadUrl(AppConstants.PRIVACY_URL);
+            webView.loadUrl("file:///android_asset/html/privacy.html");
         }
 
     }

@@ -8,6 +8,7 @@ import android.widget.TextView;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import com.example.newapp.R;
+import com.example.newapp.activity.mine.set.agreement.AgreementActivity;
 import com.example.newapp.activity.vip.VipServiceActivity;
 import com.example.newapp.base.BaseActivity;
 import com.example.newapp.base.BasePresenter;
@@ -66,7 +67,7 @@ public class VipRegisterActivity extends BaseActivity implements View.OnClickLis
             public void onItemClick(View view, BaseRecyclerViewHolder viewHolder, int position) {
                 switch (position){
                     case 0://隐私注册
-
+                        AgreementActivity.start(VipRegisterActivity.this,1);
                         break;
                     case 1://
                         break;

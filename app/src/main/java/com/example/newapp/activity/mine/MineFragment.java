@@ -19,7 +19,9 @@ import androidx.core.content.FileProvider;
 
 import com.bumptech.glide.Glide;
 import com.example.newapp.R;
+import com.example.newapp.activity.historyorder.HistoryOrderActivity;
 import com.example.newapp.activity.login.LoginActivity;
+import com.example.newapp.activity.member_recharge.MemberRechargeActivity;
 import com.example.newapp.activity.mine.bulletin.BulletinActivity;
 import com.example.newapp.activity.mine.set.mysetting.MySettingActivity;
 import com.example.newapp.base.BaseFragment;
@@ -70,6 +72,7 @@ public class MineFragment extends BaseFragment {
 
     private LinearLayout mMySetting_ll;
     private LinearLayout mMyFeedback_ll;
+    private LinearLayout vip_recharge_ll;//会员充值
     private ImageView head_iv;
     private RxPermissions rxPermissions;
     private TextView name_tv;
@@ -97,6 +100,9 @@ public class MineFragment extends BaseFragment {
             GlideUtil.loadCircleImage( fileByPath,getActivity(),head_iv,R.drawable.ic_user_face_default);//加载URL图片
             LogUtil.d("lzx",photoPath);
         }
+        if (UserSp.getInstance().getUserInfo()!=null){
+            name_tv.setText(UserSp.getInstance().getUserInfo().name);
+        }
     }
 
     @Override
@@ -112,6 +118,8 @@ public class MineFragment extends BaseFragment {
         head_iv.setOnClickListener(this);
         order_historical = mRootView.findViewById(R.id.order_historical);
         order_historical.setOnClickListener(this);
+        vip_recharge_ll = mRootView.findViewById(R.id.vip_recharge_ll);
+        vip_recharge_ll.setOnClickListener(this);
     }
 
     @Override
@@ -127,15 +135,18 @@ public class MineFragment extends BaseFragment {
                 MySettingActivity.start(getActivity());
                 break;
             case R.id.bulletin_board_ll://公告栏
-                if (!FirstSpUtils.getInstance().getNoticeShow()){
+                if (FirstSpUtils.getInstance().getNoticeShow()){
                     BulletinActivity.start(getActivity());
                 }else {
                     showNoticeDialog();
                 }
-
                 break;
             case R.id.order_historical://历史订单
+                HistoryOrderActivity.start(getActivity());
+                break;
 
+            case R.id.vip_recharge_ll://会员充值
+                MemberRechargeActivity.start(getActivity());
                 break;
             case R.id.head_iv:
                 showBottomSheet();
@@ -302,8 +313,8 @@ public class MineFragment extends BaseFragment {
         exitDialog.setView(view);
         exitDialog.setCanceledOnTouchOutside(false);
         exitDialog.getWindow().setBackgroundDrawableResource(android.R.color.transparent);
-        TextView confirmTv = (TextView) view.findViewById(R.id.positive_tv);//确定按钮
-        TextView contentTv = (TextView) view.findViewById(R.id.content_tv);
+        TextView confirmTv =  view.findViewById(R.id.positive_tv);//确定按钮
+        TextView contentTv =  view.findViewById(R.id.content_tv);
         contentTv.setText(R.string.notice_content);
         confirmTv.setOnClickListener(new View.OnClickListener() {
             @Override

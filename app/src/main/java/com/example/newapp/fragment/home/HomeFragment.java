@@ -275,7 +275,7 @@ public class HomeFragment extends BaseFragment implements OnBannerListener , Vie
         recordDataList = new ArrayList<>();
 
         String [] strings = {"会员服务","金融服务"
-               ,"交易服务","养殖服务","动监检疫","投资建设","智能养猪","认识培训","玩猪吃猪","公益活动"
+               ,"交易服务","养殖服务","动监检疫","投资建设","智能养猪","认证培训","玩猪吃猪","公益活动"
         };
         for (String string : strings) {
             RecordData recordData = new RecordData(-1,null);

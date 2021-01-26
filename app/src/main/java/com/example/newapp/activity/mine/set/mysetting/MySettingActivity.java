@@ -59,26 +59,21 @@ public class MySettingActivity extends BaseActivity {
 
 
     @Override
-    protected int getContentViewId() {
+    protected int getContentViewId(){
         return R.layout.activity_setting;
     }
 
     @Override
-    protected void initViews() {
+    protected void initViews(){
         ll_agreement = findViewById(R.id.ll_agreement);
         ll_privacy = findViewById(R.id.ll_privacy);
-
         exit_login_bt = findViewById(R.id.btn_exit_login);
         mBackIv = findViewById(R.id.back_iv);
-
         account_safe_ll = findViewById(R.id.account_safe_ll);
-
         mBackIv.setOnClickListener(v -> finish());
         exit_login_bt.setOnClickListener(this);
         ll_agreement.setOnClickListener(this);
         ll_privacy.setOnClickListener(this);
-
-  
         account_safe_ll.setOnClickListener(this);
 
     }
