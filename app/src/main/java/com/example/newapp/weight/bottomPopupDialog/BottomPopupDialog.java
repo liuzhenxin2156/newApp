@@ -15,6 +15,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.core.content.ContextCompat;
 
 
 import com.example.newapp.R;
@@ -263,7 +264,7 @@ public class BottomPopupDialog extends BottomSheetDialog implements AdapterView.
      */
     public void setTitleColor(int titleColor) {
         if (null != this.mTitleTextView) {
-            this.mTitleTextView.setTextColor(mContext.getResources().getColor(titleColor));
+            this.mTitleTextView.setTextColor(ContextCompat.getColor(mContext,titleColor));
         }
     }
 
