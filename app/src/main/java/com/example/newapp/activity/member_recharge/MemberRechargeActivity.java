@@ -95,7 +95,7 @@ public class MemberRechargeActivity extends BaseActivity implements View.OnClick
 
         RechargeTypeBean  rechargeTypeBean3  =  new RechargeTypeBean();
         rechargeTypeBean3.money = 1500+"元";
-        rechargeTypeBean3.times = "三年月";
+        rechargeTypeBean3.times = "三年";
         rechargeTypeBeanList.add(rechargeTypeBean3);
 
         mAdapter.updateDatas(rechargeTypeBeanList);
@@ -115,7 +115,7 @@ public class MemberRechargeActivity extends BaseActivity implements View.OnClick
         mRecyclerView.setAdapter(mAdapter);
         HashMap<String, Integer> stringIntegerHashMap = new HashMap<>();
         stringIntegerHashMap.put(RecyclerViewSpacesItemDecoration.TOP_DECORATION,24);//top间距
-        stringIntegerHashMap.put(RecyclerViewSpacesItemDecoration.BOTTOM_DECORATION,10);//底部间距
+        stringIntegerHashMap.put(RecyclerViewSpacesItemDecoration.BOTTOM_DECORATION,24);//底部间距
         stringIntegerHashMap.put(RecyclerViewSpacesItemDecoration.LEFT_DECORATION,24);//左间距
         stringIntegerHashMap.put(RecyclerViewSpacesItemDecoration.RIGHT_DECORATION,24);//右间距
         mRecyclerView.addItemDecoration(new RecyclerViewSpacesItemDecoration(stringIntegerHashMap));

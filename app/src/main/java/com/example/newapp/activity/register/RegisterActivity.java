@@ -182,8 +182,6 @@ public class RegisterActivity extends BaseActivity implements View.OnClickListen
                 break;
             case R.id.vip_register_btn://注册
                 if (checkInfo()){
-
-
                     UserInfo userInfo = new UserInfo();
                     userInfo.name = user_name_et.getText().toString();
                     userInfo.idCard = id_card_et.getText().toString();
@@ -197,7 +195,6 @@ public class RegisterActivity extends BaseActivity implements View.OnClickListen
                     AppManager.getInstance().finishAllActivity();
                     MainActivity.start(this);
                     ToastUtil.showToast(this,"恭喜您，注册成功~");
-
                 }
                 break;
             case R.id.verification_code_tv://判断验证码

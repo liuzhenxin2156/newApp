@@ -182,7 +182,7 @@ public class MineFragment extends BaseFragment {
 
             @Override
             public void onItemClick(View v, int position) {
-                bottomPopupDialog.dismiss();
+
                 if (position == 0) {    // 相册选择头像
                     disposable = rxPermissions.request(permission1)
                             .subscribe(new Consumer<Boolean>() {
@@ -210,6 +210,7 @@ public class MineFragment extends BaseFragment {
                             });
                     compositeDisposable.add(disposable);
                 }
+                bottomPopupDialog.dismiss();
             }
         });
 
