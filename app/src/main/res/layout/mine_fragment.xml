@@ -246,6 +246,7 @@
     </LinearLayout>
 
     <View
+        android:id="@+id/one"
         android:layout_width="0dp"
         android:layout_height="@dimen/divider_size_0.5"
         android:layout_marginLeft="@dimen/view_space_18"
@@ -254,6 +255,20 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/vip_recharge_ll" />
+
+    <com.example.newapp.weight.TipView
+        android:visibility="gone"
+        android:id="@+id/tip_view"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/one"
+        app:tipBackgroundColor="@color/C4"
+        app:tipText="这是一条重要的提示"
+        app:tipTextColor="@color/colorBlack"
+        app:tipTextSize="14sp"
+        ></com.example.newapp.weight.TipView>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

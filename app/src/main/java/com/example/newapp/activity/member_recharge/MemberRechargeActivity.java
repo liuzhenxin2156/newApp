@@ -120,6 +120,7 @@ public class MemberRechargeActivity extends BaseActivity implements View.OnClick
         stringIntegerHashMap.put(RecyclerViewSpacesItemDecoration.RIGHT_DECORATION,24);//右间距
         mRecyclerView.addItemDecoration(new RecyclerViewSpacesItemDecoration(stringIntegerHashMap));
     }
+
     @Override
     public void onClick(View v) {
         super.onClick(v);

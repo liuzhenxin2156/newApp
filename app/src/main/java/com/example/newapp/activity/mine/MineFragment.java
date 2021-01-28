@@ -36,6 +36,7 @@ import com.example.newapp.utils.GlideUtil;
 import com.example.newapp.utils.LogUtil;
 import com.example.newapp.utils.ScreenUtils;
 import com.example.newapp.utils.ToastUtil;
+import com.example.newapp.weight.TipView;
 import com.example.newapp.weight.bottomPopupDialog.BottomPopupDialog;
 import com.soundcloud.android.crop.Crop;
 import com.tbruyelle.rxpermissions2.RxPermissions;
@@ -79,7 +80,7 @@ public class MineFragment extends BaseFragment {
     private LinearLayout order_historical;
     private CompositeDisposable compositeDisposable = new CompositeDisposable();
     private Disposable disposable;
-
+private TipView tip_view;
     public static MineFragment newInstance() {
         MineFragment fragment = new MineFragment();
         return fragment;
@@ -120,6 +121,7 @@ public class MineFragment extends BaseFragment {
         order_historical.setOnClickListener(this);
         vip_recharge_ll = mRootView.findViewById(R.id.vip_recharge_ll);
         vip_recharge_ll.setOnClickListener(this);
+        tip_view =  mRootView.findViewById(R.id.tip_view);
     }
 
     @Override
