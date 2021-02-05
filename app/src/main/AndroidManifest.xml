@@ -68,6 +68,8 @@
         <meta-data
             android:name="android.notch_support"
             android:value="true" />
+
+
         <provider
             android:name="androidx.core.content.FileProvider"
             android:authorities="${applicationId}.fileprovider"
