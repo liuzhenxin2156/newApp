@@ -528,6 +528,67 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/view_space_22"
+                    android:layout_marginTop="@dimen/view_space_12"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/agree_cb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:button="@drawable/selector_agree_check"
+                        android:checked="true"
+                        android:paddingLeft="@dimen/view_space_10" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="阅读并接受"
+                        android:textColor="@color/color_3"
+                        android:textSize="@dimen/text_size_14"
+                        />
+                    <TextView
+                        android:id="@+id/service_agreement_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="《猪哥亮注册协议》"
+                        android:textColor="#4393f9"
+                        android:textSize="@dimen/text_size_14"
+                        />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/view_space_22"
+                    android:layout_marginTop="@dimen/view_space_6"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:visibility="invisible"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:button="@drawable/selector_agree_check"
+                        android:checked="true"
+                        android:paddingLeft="@dimen/view_space_10" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="可到我的——>公告栏查看"
+                        android:textColor="@color/color_3"
+                        android:textSize="@dimen/text_size_14"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="@dimen/view_space_40">
 
                 </LinearLayout>

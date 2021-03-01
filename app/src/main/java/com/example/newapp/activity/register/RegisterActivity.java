@@ -12,6 +12,7 @@ import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -19,6 +20,7 @@ import android.widget.Toast;
 
 import com.example.newapp.R;
 import com.example.newapp.activity.main.MainActivity;
+import com.example.newapp.activity.mine.set.agreement.AgreementActivity;
 import com.example.newapp.base.BaseActivity;
 import com.example.newapp.base.BasePresenter;
 import com.example.newapp.data.UserInfo;
@@ -72,6 +74,8 @@ public class RegisterActivity extends BaseActivity implements View.OnClickListen
     private Button vip_register_btn;
     private TextView mGet_Verification_Code_Tv;
     private IDCardInfoExtractor idCardInfo;//身份证信息
+    private CheckBox mAgreeCb;    // 同意或者不同意条款的按钮
+    private TextView service_agreement_tv;//注册协议
     private ImageView back_iv;
     private IDCardValidator validator = null;
     private Disposable disposable;
@@ -104,6 +108,9 @@ public class RegisterActivity extends BaseActivity implements View.OnClickListen
         vip_register_btn = findViewById(R.id.vip_register_btn);
         mGet_Verification_Code_Tv = findViewById(R.id.verification_code_tv);
         back_iv = findViewById(R.id.back_iv);
+        this.mAgreeCb = (CheckBox) findViewById(R.id.agree_cb);
+        service_agreement_tv = findViewById(R.id.service_agreement_tv);
+        service_agreement_tv.setOnClickListener(this);
 
         back_iv.setOnClickListener(this);
         sex_et.setOnClickListener(this);
@@ -207,6 +214,9 @@ public class RegisterActivity extends BaseActivity implements View.OnClickListen
                         this.mCountDownTimer.start();
                     }
                 }
+                break;
+            case R.id.service_agreement_tv:
+                AgreementActivity.start(this, 2);//2 注册协议
                 break;
             default:
         }
@@ -354,6 +364,10 @@ public class RegisterActivity extends BaseActivity implements View.OnClickListen
         }
         if (StrUtil.isEmpty(identity_selection_type_et.getText().toString())) {
             ToastUtil.showToast(this, "请进行身份选择");
+            return false;
+        }
+        if (!mAgreeCb.isChecked()) {
+            ToastUtil.showToast(this, 0, "请先阅读并接受《猪哥亮注册协议》");
             return false;
         }
         return true;

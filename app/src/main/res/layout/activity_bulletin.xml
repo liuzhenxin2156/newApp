@@ -28,38 +28,109 @@
             android:textSize="@dimen/text_size_16" />
     </RelativeLayout>
 
-    <RelativeLayout
+    <LinearLayout
+        android:id="@+id/ll_agreement_register"
         android:layout_width="match_parent"
-        android:layout_marginLeft="@dimen/view_space_12"
-        android:layout_height="@dimen/view_space_48">
-        <TextView
-            android:textSize="@dimen/text_size_16"
-            android:textColor="@color/color_3"
-            android:layout_centerVertical="true"
-            android:layout_gravity="center"
-            android:text="更新用户服务和隐私政策"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+        android:layout_height="@dimen/view_height_54"
+        android:background="@drawable/selector_bottom_item_bg"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin">
 
-        </TextView>
         <TextView
-            android:layout_centerVertical="true"
-            android:textSize="@dimen/text_size_16"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="注册协议"
             android:textColor="@color/color_3"
-            android:layout_alignParentRight="true"
-            android:layout_marginRight="@dimen/view_space_12"
-            android:text="2020-1-22"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:textSize="@dimen/text_size_18" />
 
-        </TextView>
-    </RelativeLayout>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:src="@drawable/ic_arrow_right_grey" />
+    </LinearLayout>
     <View
-        android:id="@+id/view_1"
+        xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="@dimen/divider_size_0.5"
-        android:layout_marginLeft="@dimen/view_space_12"
-        android:layout_marginRight="@dimen/view_space_12"
+        android:layout_marginLeft="@dimen/view_space_16"
         android:background="@color/diver_bg"
-         />
+        />
+    <LinearLayout
+        android:id="@+id/ll_agreement"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/view_height_54"
+        android:background="@drawable/selector_bottom_item_bg"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="@string/user_agreement"
+            android:textColor="@color/color_3"
+            android:textSize="@dimen/text_size_18" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:src="@drawable/ic_arrow_right_grey" />
+    </LinearLayout>
+    <View
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_size_0.5"
+        android:layout_marginLeft="@dimen/view_space_16"
+        android:background="@color/diver_bg"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/selector_bottom_item_bg"
+        android:dividerPadding="@dimen/view_space_18"
+        android:orientation="vertical"
+        android:showDividers="middle">
+
+        <LinearLayout
+            android:id="@+id/ll_privacy"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/view_height_54"
+            android:background="@drawable/selector_bottom_item_bg"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/view_space_16"
+            android:paddingRight="@dimen/view_space_16">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="@string/privacy_policy"
+                android:textColor="@color/color_3"
+                android:textSize="@dimen/text_size_18" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:src="@drawable/ic_arrow_right_grey" />
+        </LinearLayout>
+        <View
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divider_size_0.5"
+            android:layout_marginLeft="@dimen/view_space_16"
+            android:background="@color/diver_bg"
+            />
+
+
+
+    </LinearLayout>
 </LinearLayout>

@@ -76,6 +76,7 @@ public class MySettingActivity extends BaseActivity {
         ll_privacy.setOnClickListener(this);
         account_safe_ll.setOnClickListener(this);
 
+
     }
 
     @Override
