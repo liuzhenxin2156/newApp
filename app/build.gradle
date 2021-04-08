@@ -19,13 +19,13 @@ android {
             storePassword properties.getProperty('storePassword')
         }
     }
-    compileSdkVersion 30
-    buildToolsVersion "30.0.2"
+    compileSdkVersion 29
+    buildToolsVersion "29.0.3"
 
     defaultConfig {
         applicationId "com.example.newapp"
-        minSdkVersion 16
-        targetSdkVersion 30
+        minSdkVersion 21
+        targetSdkVersion 29
         versionCode 1
         versionName "1.0"
         multiDexEnabled true
@@ -130,5 +130,8 @@ dependencies {
 
     //图片裁剪
     implementation 'com.soundcloud.android.crop:lib_crop:1.0.0'
+
+    implementation 'com.blankj:utilcode:1.23.2'
+
 
 }

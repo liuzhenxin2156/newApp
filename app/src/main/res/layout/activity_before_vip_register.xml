@@ -580,6 +580,7 @@
                         android:paddingLeft="@dimen/view_space_10" />
 
                     <TextView
+                        android:visibility="gone"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="可到我的——>公告栏查看"

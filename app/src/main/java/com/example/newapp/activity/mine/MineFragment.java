@@ -80,7 +80,7 @@ public class MineFragment extends BaseFragment {
     private LinearLayout order_historical;
     private CompositeDisposable compositeDisposable = new CompositeDisposable();
     private Disposable disposable;
-private TipView tip_view;
+    private TipView tip_view;
     public static MineFragment newInstance() {
         MineFragment fragment = new MineFragment();
         return fragment;

@@ -200,7 +200,7 @@ public interface OnItemClickListener {
     void onItemClick(int position, View v);
 }
 
-    void setOnItemClickListener(OnItemClickListener listener) {
+    public void setOnItemClickListener(OnItemClickListener listener) {
         this.mItemClickListener = listener;
     }
 }

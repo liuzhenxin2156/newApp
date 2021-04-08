@@ -1,0 +1,437 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/toolbar_ll"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/view_height_48">
+
+        <ImageView
+            android:id="@+id/back_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/view_space_4"
+            android:background="?attr/selectableItemBackground"
+            android:padding="@dimen/view_space_10"
+            android:src="@drawable/back_iv" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="投保动物档案"
+            android:textColor="@color/color_3"
+            android:textSize="@dimen/text_size_16" />
+    </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/view_space_18"
+                android:layout_marginRight="@dimen/view_space_18"
+                android:background="@drawable/transport_btn_bg"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/xml_bg"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/view_space_8"
+                        android:layout_marginTop="@dimen/view_space_12"
+                        android:layout_marginRight="@dimen/view_space_22"
+                        android:layout_marginBottom="@dimen/view_space_12"
+                        android:text="养殖场户信息"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/text_size_16" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/view_space_8"
+                    android:layout_marginTop="@dimen/view_space_8"
+                    android:layout_marginRight="@dimen/view_space_8">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="猪场名称:"
+                        android:textColor="@color/color_3"
+                        android:textSize="@dimen/text_size_14">
+
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/pig_name_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/view_space_4"
+                        android:textColor="@color/color_3"
+                        android:textSize="@dimen/text_size_14"
+                        tools:text="北京市昌平区养猪场">
+
+                    </TextView>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/view_space_8"
+                    android:layout_marginTop="@dimen/view_space_8"
+                    android:layout_marginRight="@dimen/view_space_8">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="营业执照号:"
+                        android:textColor="@color/color_3"
+                        android:textSize="@dimen/text_size_14">
+
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/business_license_no_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/view_space_4"
+                        android:textColor="@color/color_3"
+                        android:textSize="@dimen/text_size_14"
+                        tools:text="1111111111X569847">
+
+                    </TextView>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/view_space_8"
+                    android:layout_marginTop="@dimen/view_space_8"
+                    android:layout_marginRight="@dimen/view_space_8">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="地址:"
+                        android:textColor="@color/color_3"
+                        android:textSize="@dimen/text_size_14">
+
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/address_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/view_space_4"
+                        android:textColor="@color/color_3"
+                        android:textSize="@dimen/text_size_14"
+                        tools:text="山西省太原市小店区">
+
+                    </TextView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/view_space_8"
+                    android:layout_marginTop="@dimen/view_space_8"
+                    android:layout_marginRight="@dimen/view_space_8">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="法人姓名:"
+                        android:textColor="@color/color_3"
+                        android:textSize="@dimen/text_size_14">
+
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/legal_person_name_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/view_space_4"
+                        android:textColor="@color/color_3"
+                        android:textSize="@dimen/text_size_14"
+                        tools:text="倪萍">
+
+                    </TextView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/view_space_8"
+                    android:layout_marginTop="@dimen/view_space_8"
+                    android:layout_marginRight="@dimen/view_space_8">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="身份证号:"
+                        android:textColor="@color/color_3"
+                        android:textSize="@dimen/text_size_14">
+
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/id_card_name_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/view_space_4"
+                        android:textColor="@color/color_3"
+                        android:textSize="@dimen/text_size_14"
+                        tools:text="142729198601056317">
+
+                    </TextView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/view_space_8"
+                    android:layout_marginTop="@dimen/view_space_8"
+                    android:layout_marginRight="@dimen/view_space_8">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="电话:"
+                        android:textColor="@color/color_3"
+                        android:textSize="@dimen/text_size_14">
+
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/phone_num_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/view_space_4"
+                        android:textColor="@color/color_3"
+                        android:textSize="@dimen/text_size_14"
+                        tools:text="18585589669">
+
+                    </TextView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/view_space_8"
+                    android:layout_marginTop="@dimen/view_space_8"
+                    android:layout_marginRight="@dimen/view_space_8">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="耳标号:"
+                        android:textColor="@color/color_3"
+                        android:textSize="@dimen/text_size_14">
+
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/ear_tag_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/view_space_4"
+                        android:textColor="@color/color_3"
+                        android:textSize="@dimen/text_size_14"
+                        tools:text="18585589669">
+
+                    </TextView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/view_space_8"
+                    android:layout_marginTop="@dimen/view_space_8"
+                    android:layout_marginRight="@dimen/view_space_8">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="日龄:"
+                        android:textColor="@color/color_3"
+                        android:textSize="@dimen/text_size_14">
+
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/day_age_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/view_space_4"
+                        android:textColor="@color/color_3"
+                        android:textSize="@dimen/text_size_14"
+                        tools:text="666日">
+
+                    </TextView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/view_space_12"
+                    android:background="@drawable/xml_bg"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/view_space_8"
+                        android:layout_marginTop="@dimen/view_space_12"
+                        android:layout_marginRight="@dimen/view_space_22"
+                        android:layout_marginBottom="@dimen/view_space_12"
+                        android:text="附件照片"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/text_size_16" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/positive_photo_id_card_iv"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/view_height_160"
+                        android:layout_marginLeft="@dimen/view_space_12"
+                        android:layout_marginTop="@dimen/view_space_12"
+                        android:layout_marginRight="@dimen/view_space_12"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ic_default"></androidx.appcompat.widget.AppCompatImageView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/view_space_8"
+                        android:text="身份证正面照片"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/text_size_16"></TextView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/opposite_photo_id_card_iv"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/view_height_160"
+                        android:layout_marginLeft="@dimen/view_space_12"
+                        android:layout_marginTop="@dimen/view_space_12"
+                        android:layout_marginRight="@dimen/view_space_12"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ic_default"></androidx.appcompat.widget.AppCompatImageView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/view_space_8"
+                        android:text="身份证反面照片"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/text_size_16"></TextView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/bank_iv"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/view_height_160"
+                        android:layout_marginLeft="@dimen/view_space_12"
+                        android:layout_marginTop="@dimen/view_space_12"
+                        android:layout_marginRight="@dimen/view_space_12"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ic_default"></androidx.appcompat.widget.AppCompatImageView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/view_space_8"
+                        android:text="银行卡照片"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/text_size_16"></TextView>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerView"
+                        android:layout_marginTop="@dimen/view_space_8"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    </androidx.recyclerview.widget.RecyclerView>
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/view_space_8"
+                        android:text="验标资料照片"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/text_size_16"></TextView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/view_height_30">
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/view_height_30">
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

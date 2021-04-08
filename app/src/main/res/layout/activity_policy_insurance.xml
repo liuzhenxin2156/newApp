@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fitsSystemWindows="true"
+    android:background="@color/colorWhite"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/toolbar_ll"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/view_height_48">
+
+        <ImageView
+            android:id="@+id/back_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/view_space_4"
+            android:background="?attr/selectableItemBackground"
+            android:padding="@dimen/view_space_10"
+            android:src="@drawable/back_iv" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="政策性保险"
+            android:textColor="@color/color_3"
+            android:textSize="@dimen/text_size_16" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:padding="@dimen/view_space_6"
+        android:layout_marginLeft="@dimen/view_space_8"
+        android:layout_marginRight="@dimen/view_space_8"
+        android:layout_marginTop="@dimen/view_space_12"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+            <RelativeLayout
+                android:background="?attr/selectableItemBackground"
+                android:layout_weight="1"
+                android:id="@+id/rl"
+                android:layout_marginBottom="@dimen/view_space_6"
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:src="@drawable/gt27"
+                    android:id="@+id/iv_record"
+                    android:layout_marginTop="@dimen/view_space_10"
+                    android:layout_width="@dimen/view_space_30"
+                    android:layout_centerHorizontal="true"
+                    android:layout_height="@dimen/view_space_30"/>
+                <TextView
+                    android:id="@+id/tv_record"
+                    android:layout_below="@+id/iv_record"
+                    android:layout_width="wrap_content"
+                    android:text ="投保信息采集"
+                    android:singleLine="true"
+                    android:gravity="center"
+                    android:layout_marginTop="@dimen/view_space_4"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/color_6"
+                    android:layout_centerHorizontal="true"
+                    android:layout_height="wrap_content"/>
+            </RelativeLayout>
+        <RelativeLayout
+            android:background="?attr/selectableItemBackground"
+            android:layout_weight="1"
+            android:id="@+id/claim_check_rl"
+            android:layout_marginBottom="@dimen/view_space_6"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:src="@drawable/gt28"
+                android:id="@+id/iv_record1"
+                android:layout_marginTop="@dimen/view_space_10"
+                android:layout_width="@dimen/view_space_30"
+                android:layout_centerHorizontal="true"
+                android:layout_height="@dimen/view_space_30"/>
+            <TextView
+                android:id="@+id/tv_record1"
+                android:layout_below="@+id/iv_record1"
+                android:layout_width="wrap_content"
+                android:text ="理赔审核"
+                android:singleLine="true"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/view_space_4"
+                android:textSize="14sp"
+                android:textStyle="bold"
+
+                android:textColor="@color/color_6"
+                android:layout_centerHorizontal="true"
+                android:layout_height="wrap_content"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:visibility="invisible"
+            android:layout_weight="1"
+            android:id="@+id/rl2"
+            android:layout_marginBottom="@dimen/view_space_6"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:src="@drawable/gt27"
+                android:id="@+id/iv_record2"
+                android:layout_marginTop="@dimen/view_space_10"
+                android:layout_width="@dimen/view_space_30"
+                android:layout_centerHorizontal="true"
+                android:layout_height="@dimen/view_space_30"/>
+            <TextView
+                android:id="@+id/tv_record2"
+                android:layout_below="@+id/iv_record2"
+                android:layout_width="wrap_content"
+                android:text ="投保信息采集"
+                android:singleLine="true"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/view_space_4"
+                android:textSize="14sp"
+                android:textStyle="bold"
+
+                android:textColor="@color/color_6"
+                android:layout_centerHorizontal="true"
+                android:layout_height="wrap_content"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:visibility="invisible"
+            android:layout_weight="1"
+            android:id="@+id/rl3"
+            android:layout_marginBottom="@dimen/view_space_6"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:src="@drawable/gt27"
+                android:id="@+id/iv_record3"
+                android:layout_marginTop="@dimen/view_space_10"
+                android:layout_width="@dimen/view_space_30"
+                android:layout_centerHorizontal="true"
+                android:layout_height="@dimen/view_space_30"/>
+            <TextView
+                android:id="@+id/tv_record3"
+                android:layout_below="@+id/iv_record3"
+                android:layout_width="wrap_content"
+                android:text ="投保信息采集"
+                android:singleLine="true"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/view_space_4"
+                android:textSize="14sp"
+                android:textStyle="bold"
+
+                android:textColor="@color/color_6"
+                android:layout_centerHorizontal="true"
+                android:layout_height="wrap_content"/>
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

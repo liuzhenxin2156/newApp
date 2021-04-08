@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+   android:layout_marginLeft="@dimen/view_space_12"
+    android:layout_marginRight="@dimen/view_space_12"
+    android:orientation="vertical"
+    android:gravity="center_vertical"
+    xmlns:tools="http://schemas.android.com/tools">
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/view_space_44">
+        <ImageView
+            android:layout_gravity="center"
+            android:id="@+id/item_select_vaccine_sta"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/loc" />
+
+        <TextView
+            android:layout_gravity="center"
+            android:id="@+id/tv_no"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/color_3"
+            android:textSize="@dimen/text_size_16"
+            tools:text="耳标号201504201042" />
+    </LinearLayout>
+<View
+    android:layout_width="match_parent"
+    android:background="@color/diliver_gray"
+    android:layout_height="@dimen/divider_size_1">
+</View>
+
+</LinearLayout>

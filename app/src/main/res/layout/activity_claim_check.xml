@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <RelativeLayout
+        android:id="@+id/toolbar_ll"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/view_height_48">
+
+        <ImageView
+            android:id="@+id/back_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/view_space_4"
+            android:background="?attr/selectableItemBackground"
+            android:padding="@dimen/view_space_10"
+            android:src="@drawable/back_iv" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="理赔信息采集"
+            android:textColor="@color/color_3"
+            android:textSize="@dimen/text_size_16" />
+    </RelativeLayout>
+    <androidx.core.widget.NestedScrollView
+        android:scrollbars="none"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/view_space_18"
+                    android:layout_marginTop="@dimen/view_space_10"
+                    android:layout_marginRight="@dimen/view_space_18"
+                    android:text="保单号*"
+                    android:textColor="@color/color_6"
+                    android:textSize="@dimen/text_size_14" />
+
+                <EditText
+                    android:id="@+id/policy_nume_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/view_height_44"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/view_space_18"
+                    android:layout_marginTop="@dimen/view_space_10"
+                    android:layout_marginRight="@dimen/view_space_18"
+                    android:background="@drawable/edittext_bg"
+                    android:gravity="left|center"
+                    android:maxLines="1"
+                    android:paddingLeft="@dimen/view_space_8"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="@color/colorBlack"
+                    android:textColorHint="@color/color_6"
+                    android:textSize="@dimen/text_size_16" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/view_space_18"
+                    android:layout_marginTop="@dimen/view_space_10"
+                    android:layout_marginRight="@dimen/view_space_18"
+                    android:text="死亡猪耳标号（可填多个用','分割）*"
+                    android:textColor="@color/color_6"
+                    android:textSize="@dimen/text_size_14" />
+
+                <EditText
+                    android:id="@+id/death_pig_eartag_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/view_height_180"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/view_space_18"
+                    android:layout_marginTop="@dimen/view_space_10"
+                    android:layout_marginRight="@dimen/view_space_18"
+                    android:background="@drawable/edittext_bg"
+                    android:gravity="left"
+                    android:paddingLeft="@dimen/view_space_8"
+                    android:text=""
+                    android:textColor="@color/colorBlack"
+                    android:textColorHint="@color/color_6"
+                    android:textSize="@dimen/text_size_16" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/view_space_18"
+                android:layout_marginTop="@dimen/view_space_12"
+                android:layout_marginRight="@dimen/view_space_18"
+                android:background="@drawable/transport_btn_bg"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/xml_bg"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/view_space_8"
+                        android:layout_marginTop="@dimen/view_space_12"
+                        android:layout_marginRight="@dimen/view_space_22"
+                        android:layout_marginBottom="@dimen/view_space_12"
+                        android:text="照片信息"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/text_size_16" />
+                </LinearLayout>
+
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tips_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/id_card_iv"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginLeft="@dimen/view_space_12"
+                        android:layout_marginTop="@dimen/view_space_4"
+                        android:text="死亡猪照片*"
+                        android:textColor="@color/color_3"
+                        android:textSize="@dimen/text_size_16"></TextView>
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/dead_pig_photos_iv"
+                        android:layout_marginTop="@dimen/view_space_12"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/view_height_160"
+                        android:layout_marginLeft="@dimen/view_space_18"
+                        android:layout_marginRight="@dimen/view_space_18"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ic_default"></androidx.appcompat.widget.AppCompatImageView>
+
+                    <Button
+                        android:id="@+id/dead_pig_photos_bt"
+                        style="?android:attr/borderlessButtonStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/view_height_40"
+                        android:layout_below="@+id/tips_tv"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="@dimen/view_space_28"
+                        android:layout_marginTop="@dimen/view_space_8"
+                        android:layout_marginRight="@dimen/view_space_28"
+                        android:background="@drawable/commit_bg"
+                        android:enabled="true"
+                        android:text="上传死亡猪照片"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/text_size_16" />
+
+                </LinearLayout>
+
+                   <LinearLayout
+                    android:layout_marginTop="@dimen/view_space_18"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/id_card_iv"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginLeft="@dimen/view_space_12"
+                        android:layout_marginTop="@dimen/view_space_4"
+                        android:text="上传无害化处理现场照片*"
+                        android:textColor="@color/color_3"
+                        android:textSize="@dimen/text_size_16"></TextView>
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/disposal_certificate_site_iv"
+                        android:layout_marginTop="@dimen/view_space_12"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/view_height_160"
+                        android:layout_marginLeft="@dimen/view_space_18"
+                        android:layout_marginRight="@dimen/view_space_18"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ic_default"></androidx.appcompat.widget.AppCompatImageView>
+
+                    <Button
+                        android:id="@+id/disposal_certificate_site_bt"
+                        style="?android:attr/borderlessButtonStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/view_height_40"
+                        android:layout_below="@+id/tips_tv"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="@dimen/view_space_28"
+                        android:layout_marginTop="@dimen/view_space_8"
+                        android:layout_marginRight="@dimen/view_space_28"
+                        android:background="@drawable/commit_bg"
+                        android:enabled="true"
+                        android:text="上传无害化处理证明照片"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/text_size_16" />
+                   </LinearLayout>
+                <LinearLayout
+                    android:layout_marginTop="@dimen/view_space_18"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/id_card_iv"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginLeft="@dimen/view_space_12"
+                        android:layout_marginTop="@dimen/view_space_4"
+                        android:text="上传无害化处理证明照片*"
+                        android:textColor="@color/color_3"
+                        android:textSize="@dimen/text_size_16"></TextView>
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/disposal_certificate_photos_iv"
+                        android:layout_marginTop="@dimen/view_space_12"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/view_height_160"
+                        android:layout_marginLeft="@dimen/view_space_18"
+                        android:layout_marginRight="@dimen/view_space_18"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ic_default"></androidx.appcompat.widget.AppCompatImageView>
+
+                    <Button
+                        android:id="@+id/disposal_certificate_photos_bt"
+                        style="?android:attr/borderlessButtonStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/view_height_40"
+                        android:layout_below="@+id/tips_tv"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="@dimen/view_space_28"
+                        android:layout_marginTop="@dimen/view_space_8"
+                        android:layout_marginRight="@dimen/view_space_28"
+                        android:background="@drawable/commit_bg"
+                        android:enabled="true"
+                        android:text="上传无害化处理证明照片"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/text_size_16" />
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/divider_size_0.5"
+                        android:layout_marginLeft="@dimen/view_space_12"
+                        android:layout_marginTop="@dimen/view_space_12"
+                        android:layout_marginRight="@dimen/view_space_12"
+                        android:background="@color/diver_bg" />
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/commit_btn"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/view_height_44"
+                android:layout_marginBottom="@dimen/view_space_12"
+                android:layout_marginLeft="@dimen/view_space_20"
+                android:layout_marginRight="@dimen/view_space_20"
+                android:layout_marginTop="@dimen/view_space_24"
+                android:background="@drawable/commit_bg"
+                android:text="上传信息"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/text_size_16" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/view_space_30">
+
+            </View>
+        </LinearLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+        </LinearLayout>

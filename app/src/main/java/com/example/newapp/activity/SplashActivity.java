@@ -102,7 +102,7 @@ public class SplashActivity extends BaseActivity {
     @SuppressLint("CheckResult")
     public void showContacts() {
         rxPermissions.request(Manifest.permission.READ_PHONE_STATE,
-                Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.READ_EXTERNAL_STORAGE,
+                android.Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.READ_EXTERNAL_STORAGE,
                 Manifest.permission.READ_CONTACTS, Manifest.permission.WRITE_CONTACTS)
                 .subscribe(new Consumer<Boolean>() {
                     @Override

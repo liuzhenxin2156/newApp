@@ -55,6 +55,7 @@ import com.example.newapp.activity.transport_capacity.TransportCapacityActivity;
 import com.example.newapp.activity.software.SoftWareActivity;
 import com.example.newapp.activity.video.VideoActivity;
 import com.example.newapp.activity.vip.VipServiceActivity;
+import com.example.newapp.activity.zcxbx.PolicyInsuranceActivity;
 import com.example.newapp.adapter.GangTieTypeAdapter;
 import com.example.newapp.adapter.GangTieXianHuoAdapter;
 import com.example.newapp.base.BaseFragment;
@@ -190,6 +191,9 @@ public class HomeFragment extends BaseFragment implements OnBannerListener , Vie
                     case 9://公益活动
                         PublicWelfareActivity.start(getActivity());
                         break;
+                    case 10://"电子耳标跟保险对接流程" 政策性保险
+                        PolicyInsuranceActivity.start(getActivity());
+                        break;
                     default:
                 }
             }
@@ -275,7 +279,7 @@ public class HomeFragment extends BaseFragment implements OnBannerListener , Vie
         recordDataList = new ArrayList<>();
 
         String [] strings = {"会员服务","金融服务"
-               ,"交易服务","养殖服务","动监检疫","投资建设","智能养猪","认证培训","玩猪吃猪","公益活动"
+               ,"交易服务","养殖服务","动监检疫","投资建设","智能养猪","认证培训","玩猪吃猪","公益活动","政策性保险"
         };
         for (String string : strings) {
             RecordData recordData = new RecordData(-1,null);

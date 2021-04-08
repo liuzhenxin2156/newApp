@@ -29,7 +29,13 @@ public class GlideUtil {
 
 
     }
+    public static void loadImage(File file, Context context, ImageView imageView, int defResourceId) {
+        RequestOptions options = new RequestOptions();
+        options.placeholder(defResourceId); //添加占位图
+        Glide.with(context).load(file).apply(options).into(imageView);
 
+
+    }
     /**
      * 加载圆形图片
 
